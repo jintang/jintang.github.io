@@ -6,10 +6,11 @@
 title: 堂的博客
 subtitle: 青山绿水常自在，有缘博客来相会
 description: 这是堂的博客，欢迎有缘人来此处
-author: Jintang
+author: 堂
 language: zh-Hans
 email: guanmotang@gmail.com #联系邮箱
 timezone:
+avatar: /uploads/avatar.jpg
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
