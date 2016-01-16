@@ -25,3 +25,4 @@ categories: angular.js
 </select>
 ```
 **上面的效果是：**
+![select效果图](http://7xphbb.com1.z0.glb.clouddn.com/angular_select.png)
