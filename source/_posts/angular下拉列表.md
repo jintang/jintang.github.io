@@ -14,10 +14,10 @@ categories: angular.js
 ```
 
 ``` html
-<!-- as前的变量会实现为：<option value="item.id">
-     as后的变量会实现为：<option>item.name</option>
-     ng-model绑定的值是选中的<option value>，数据是双向绑定的，所以不再事件传值
-     -->
+<!-- as前的变量会实现为：<option value="item.id">，是真实的值 -->
+<!-- as后的变量会实现为：<option>item.name</option>，是显示的值 -->
+<!-- ng-model绑定的值是选中的<option value>，数据是双向绑定的，所以不再事件传值。值得注意的是：default的类型必须是as前变量的值一致 -->
+    
 <select ng-options="item.id as item.name for item in list"
         ng-model="default">
     <!-- 下面这个可以不要，有的话会多一个无用选项 -->
