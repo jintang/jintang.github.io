@@ -3,6 +3,7 @@ date: 2016-02-19 11:14:28
 tags:
 categories: 前端
 ---
+参考：[阮一峰的博客](http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html)
 #### "自适应网页设计"的核心是：利用media属性判断不同的屏幕分辨率，并根据不同的分辨率适配不同的css
 
 
