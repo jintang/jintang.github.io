@@ -6,21 +6,21 @@ categories: angular.js
 ### 1.安装上传照片需要的插件
 1.先新建一个ionic项目 
 ``` 
- ionic start test tabs
+$ ionic start test tabs
 ```
 2.安装插件 
 ```
- cordova plugin add cordova-plugin-image-picker
- cordova plugin add cordova-plugin-camera
+$ cordova plugin add cordova-plugin-image-picker
+$ cordova plugin add cordova-plugin-camera
 ```
 > 我们的yongche项目之前使用的camera插件是org.apache.cordova.camera,此处更新为cordova-plugin-camera,目前老版本的还可以使用
 
+
 3.添加android环境 
 ```
-ionic platform add android
+$ ionic platform add android
 
-```  
-
+```
 ### 2.配置ng-cordova.js
 ``` html
 //在index.html中cordova.js旁边引入ng-cordova.js
