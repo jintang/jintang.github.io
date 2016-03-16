@@ -32,7 +32,7 @@ $ ionic platform add android
 angular.module('starter', ['ionic','ngCordova']).run(...)
 ```
 ### 3.代码实现
-参考:https://cordova.apache.org/docs/en/latest/cordova-plugin-camera/index.html
+参考:[https://cordova.apache.org/docs/en/latest/cordova-plugin-camera/index.html](https://cordova.apache.org/docs/en/latest/cordova-plugin-camera/index.html)
 
 1.controller代码:
 ``` js
