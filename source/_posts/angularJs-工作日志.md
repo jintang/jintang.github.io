@@ -1,7 +1,7 @@
 title: angularJs 工作日志
 date: 2015-12-17 21:53:24
-tags: angular.js
-categories: angular.js
+tags: angular
+categories: angular
 ---
 ## 2015-12-17工作错误（AngularJs）
 
