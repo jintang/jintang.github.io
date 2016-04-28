@@ -88,17 +88,23 @@ sidebar: post
 # social:
   #GitHub:
   #Others:
+social:
+  GitHub: https://github.com/jintangWang
+  # Weibo: http://weibo.com/iissnan
+  简书: http://www.jianshu.com/users/3e9bf6c9437f
+  知乎: http://www.zhihu.com/people/shu-tang-23
+  豆瓣: https://www.douban.com/people/139000964/
 
 # Social Icons
 social_icons:
   enable: true
   # Icon Mappings
   GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+  # Twitter: twitter
+  # Weibo: weibo
+  简书: jianshu
   知乎: zhihu
   豆瓣: douban
-  简书: jianshu
 
 
 # Sidebar Avatar
@@ -109,6 +115,12 @@ social_icons:
 # social:
   #GitHub:
   #Others:
+
+
+duoshuo_info:
+  ua_enable: true
+  admin_enable: false
+  user_id:
 
 
 # TOC in the Sidebar
