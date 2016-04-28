@@ -20,7 +20,7 @@ categories: 前端
 　　<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 ```
-
+<!-- more -->
 
 **1.适配不同css文件**
 

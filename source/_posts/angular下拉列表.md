@@ -12,7 +12,7 @@ categories: angular
     //select默认选中的值
     $scope.default=$scope.list[0].id;
 ```
-
+<!-- more -->
 ``` html
 <!-- as前的变量会实现为：<option value="item.id">，是真实的值 -->
 <!-- as后的变量会实现为：<option>item.name</option>，是显示的值 -->

@@ -14,7 +14,7 @@ tags:
 说实话，我完全找不到，没有隐藏文件夹！而我的在这儿：
 
 `C:\Users\Administrator\AppData\Roaming\Sublime Text 3\Packages\User`
-
+<!-- more -->
 正如大家所看到的，这个AppData文件里面有你所有安装程序的配置，具体的作用还不明确。所以不论你的sublime3装在那儿，这个文件都要在这个文件夹下去找你程序对应的配置文件。这儿有稍微便捷点的方式：
 
 打开`sublime——Preference——Browse Packages..`就可以直接到刚刚那个目录下面，然后在进入到user文件夹，你就可以看到PackageControl.sublime-settings文件了。修改即可！

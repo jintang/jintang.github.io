@@ -29,7 +29,7 @@ categories: 前端
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
 .clearfix{*+height:1%;}
 ```
-
+<!-- more -->
 ### 3.很拉轰的浮动闭合办法：
 ``` css
 .clearfix{overflow:auto;_height:1%}

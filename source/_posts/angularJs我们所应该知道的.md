@@ -17,6 +17,7 @@ categories: angular
 ```
 在刚进入controller的时候会先执行直接放在controller里的代码，然后再执行上面的
 两个方法。所以，无法用上面的方法对进入controller前进行预处理。
+<!-- more -->
 
 ### 2.run():注射器加载完所有模块时，此方法执行一次
 ``` javascript

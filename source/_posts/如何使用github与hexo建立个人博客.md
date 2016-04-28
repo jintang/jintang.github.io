@@ -13,6 +13,7 @@ categories: git
 1.  [git](http://git-scm.com/)：版本控制工具，可以向github推送你的代码，github是免费托管的
 2.  [node.js](https://nodejs.org/en/download/)：一个js环境，很强大的，内置了许多对象与方法，我们在这儿只需要使用npm命令装一些东西，装了node.js就可以使用npm命令了。
 下载安装你对应系统的即可，最新的node.js在安装的过程中会自动配置你的环境变量，所以这个就不用我们操心了。
+<!-- more -->
 
 ## 注册github账号并发布博客页面
  **1.访问github网址：**https://github.com/
