@@ -16,7 +16,13 @@ rss:
 # Specify the date when the site was setup
 #since: 2015
 
-
+# Icon fonts
+# Place your font into next/source/fonts, specify directory-name and font-name here
+# Avialable: default | linecons | fifty-shades | feather
+#icon_font: default
+#icon_font: fifty-shades
+#icon_font: feather
+icon_font: linecons
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -56,7 +62,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
+# scheme: Muse
 scheme: Mist
+# scheme: Pisces
 
 
 
@@ -88,6 +96,9 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  知乎: zhihu
+  豆瓣: douban
+  简书: jianshu
 
 
 # Sidebar Avatar
@@ -135,10 +146,13 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night bright
 
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
+
+# Automatically add list number to toc.
+toc_list_number: true
 
 # Automatically Excerpt
 auto_excerpt:

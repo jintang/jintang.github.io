@@ -5,10 +5,10 @@
 # Site
 title: 堂的博客
 subtitle: 青山绿水常自在，有缘博客来相会
-description: 这是堂的博客，欢迎有缘人来此处
+description: 道不同不相为谋,懒懒的继续编程......
 author: 堂
 language: zh-Hans
-email: guanmotang@gmail.com #联系邮箱
+email: LCX6916356@163.com #联系邮箱
 timezone:
 avatar: /uploads/avatar.jpg
 
@@ -50,6 +50,14 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 2
+category: 2
+tag: 2
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -66,6 +74,54 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: next
+
+# Duoshuo
+duoshuo_shortname: tangqing
+# Disqus
+disqus_shortname: 
+
+# Social links
+social:
+  GitHub: https://github.com/jintangWang
+  # Weibo: http://weibo.com/iissnan
+  简书: http://www.jianshu.com/users/3e9bf6c9437f
+  知乎: http://www.zhihu.com/people/shu-tang-23
+  豆瓣: https://www.douban.com/people/139000964/
+
+# Creative Commons 4.0 International License.(一种许可协议)
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+creative_commons: by-nc-sa
+
+# Google Webmaster tools verification setting(谷歌统计)
+# See: https://www.google.com/webmasters/
+google_site_verification: VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0
+
+# Google Analytics
+# Google分析ID
+google_analytics:
+
+# 百度分析ID
+baidu_analytics: df56565927da6b6824f57415bffe96cf
+
+# Specify the date when the site was setup
+since: 2015
+
+
+# Markdown
+## https://github.com/chjj/marked
+markdown:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
+# Stylus
+stylus:
+  compress: false
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
