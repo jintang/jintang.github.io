@@ -30,10 +30,12 @@ setTimeout(function() {
 }, 1000);
 ```
 (2). 使用angular内置指令:**因为angular内置指令最后会调用$apply()**
-``` javascrpit
+``` javascript
+
 $timeout(function() {
   $scope.time = new Date();
 });
+
 ```
 <!-- more -->
 
