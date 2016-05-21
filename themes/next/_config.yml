@@ -233,6 +233,7 @@ mathjax:
 
 # Baidu Analytics ID
 #baidu_analytics:
+# baidu_tongji: true
 
 # Duoshuo ShortName
 #duoshuo_shortname:
