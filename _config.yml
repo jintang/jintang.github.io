@@ -100,13 +100,18 @@ creative_commons: by-nc-sa
 # Google Analytics
 # Google分析ID
 google_analytics:
-
 # 百度分析ID
 baidu_analytics: df56565927da6b6824f57415bffe96cf
 
+# 自动生成sitemap
+sitemap:
+path: sitemap.xml
+baidusitemap:
+path: baidusitemap.xml
+
+
 # Specify the date when the site was setup
 since: 2015
-
 
 # Markdown
 ## https://github.com/chjj/marked
