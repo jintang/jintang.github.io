@@ -35,6 +35,9 @@ angular.module('starter', ['ionic','ngCordova']).run(...)
 参考:[https://cordova.apache.org/docs/en/latest/cordova-plugin-camera/index.html](https://cordova.apache.org/docs/en/latest/cordova-plugin-camera/index.html)
 <!-- more -->
 1.controller代码:
+- 照片被插件处理为base64编码
+- 上传到处理照片的接口,返回照片的名称(这一步照片其实已经保存在了服务器)
+- 将所有数据提交到接口,此时照片的字段为照片文件名
 ``` js
 angular.module('starter.controllers', [])
 .controller('TestCtrl', function($scope,$ionicActionSheet,$compile,$timeout,$ionicPopup,$window,uploadPictureService) {
