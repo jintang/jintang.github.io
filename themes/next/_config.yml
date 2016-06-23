@@ -43,7 +43,7 @@ menu_icons:
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
-  categories: th
+  categories: th-list
   tags: tags
   archives: archive
   commonweal: heartbeat
@@ -317,7 +317,10 @@ busuanzi_count:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
 
-
+leancloud_visitors:
+  enable: true
+  app_id: MSPJlp223GTtrQkjTTUFj8nK-gzGzoHsz
+  app_key: 7ISVCzDLXieg6RS64MOmkYt4
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
