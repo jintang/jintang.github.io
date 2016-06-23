@@ -1,6 +1,6 @@
 title: angular数据双向绑定bug
 date: 2016-05-05 13:40:58
-tags: 数据双向绑定
+tags: angular数据双向绑定
 categories: angular
 ---
 本文主要参考:[http://www.ngnice.com/posts/2c8208220edb94](http://www.ngnice.com/posts/2c8208220edb94)

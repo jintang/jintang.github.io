@@ -1,6 +1,6 @@
 title: angularJs我们所应该知道的
 date: 2015-12-23 15:45:09
-tags: angular
+tags: angular需知
 categories: angular
 ---
 ### 1.`$scope.$on(name,function)`:
