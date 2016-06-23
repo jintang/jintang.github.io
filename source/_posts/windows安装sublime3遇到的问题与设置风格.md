@@ -1,11 +1,12 @@
 title: windows安装sublime3遇到的问题与设置风格
 date: 2015-12-16 22:58:21
-tags:
+tags: sublime
+categories: sublime
 ---
 > 工欲善其事必先利其器，家里的电脑太烂，网速太垃圾，游戏都玩不了，所以安安静静的配个环境吧。
 
 ### 一、开启debug模式
-如果你在安装sublime的过程中出现了错误，建议要开启sublime3的debug模式，虽然我并没体会到什么区别，但是网上大神都这样说，应该是没有错的。开启方法如下：
+如果你在安装`sublime`的过程中出现了错误，建议要开启sublime3的debug模式，虽然我并没体会到什么区别，但是网上大神都这样说，应该是没有错的。开启方法如下：
 
 将PackageControl.sublime-settings文件中的debug参数设为true，默认是false，表现为：**"debug": true,**  ，配置是个json文件，所以注意格式，特别是前后的"，"。网上都说在安装目录的什么下，比如说
 

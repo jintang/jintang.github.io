@@ -109,6 +109,9 @@ path: sitemap.xml
 baidusitemap:
 path: baidusitemap.xml
 
+search:
+  path: search.xml
+  field: post
 
 # Specify the date when the site was setup
 since: 2015

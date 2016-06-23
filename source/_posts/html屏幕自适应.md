@@ -1,6 +1,6 @@
 title: html屏幕自适应
 date: 2016-02-19 11:14:28
-tags:
+tags: 屏幕自适应
 categories: 前端
 ---
 参考：[阮一峰的博客](http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html)

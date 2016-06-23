@@ -1,6 +1,6 @@
 title: Ionic.AngularJs下上传照片
 date: 2016-03-15 16:58:14
-tags: angular
+tags: $cordovaImagePicker
 categories: angular
 ---
 ### 1.安装上传照片需要的插件

@@ -1,6 +1,6 @@
 title: angular中promise的用法
 date: 2016-04-19 17:22:57
-tags: angular
+tags: promise
 categories: angular
 ---
 本文参考自http://www.cnblogs.com/mliudong/p/4151594.html
