@@ -329,6 +329,10 @@ busuanzi_count:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: true
 
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /uploads/weixin_reward.png
+# alipay: /path/to/alipay-reward-image
+
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
