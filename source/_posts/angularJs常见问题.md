@@ -7,7 +7,7 @@ categories: angular
 
 **原因：**指令前带ng的都是AngularJs的内置指令，对应的值不应该带"花括号"，以ng-show为例，而我是这样写的:
     
-    <div ng-show="{% raw -%}{{myArg}}{%- endraw %}"></div>
+    <div ng-show="{{myArg}}"></div>
 
 应该这样写：
 
@@ -15,7 +15,7 @@ categories: angular
 
 当时百思不得其解，ng-show与ng-hide的规则竟然会相反，原来是因为这样。
 
-** 结论：AngularJs自带的指令不能使用"{% raw -%}{{}}{%- endraw %}"**
+** 结论：AngularJs自带的指令不能使用"双花括号"**
 <!-- more -->
 
 #### Unknown Provider：某某1 <—— 某某2 <—— 某某3：

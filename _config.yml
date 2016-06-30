@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next
+theme: landscape
 
 # Duoshuo
 duoshuo_shortname: tangqing
@@ -105,9 +105,9 @@ baidu_analytics: df56565927da6b6824f57415bffe96cf
 
 # 自动生成sitemap
 sitemap:
-path: sitemap.xml
+  path: sitemap.xml
 baidusitemap:
-path: baidusitemap.xml
+  path: baidusitemap.xml
 
 search:
   path: search.xml
