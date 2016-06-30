@@ -16,8 +16,10 @@ rss:
 # Specify the date when the site was setup
 #since: 2015
 
-
-
+# Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
+# See: https://support.google.com/webmasters/answer/139066
+# Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
+canonical: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -57,8 +59,8 @@ menu_icons:
 
 # Schemes
 # scheme: Muse
-# scheme: Mist
-scheme: Pisces
+scheme: Mist
+# scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -171,7 +173,12 @@ sidebar:
   #display: hide
   #display: remove
 
-
+# Blogrolls
+#links_title: Links
+#links_layout: block
+#links_layout: inline
+#links:
+  #Title: http://example.com/
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -275,7 +282,6 @@ duoshuo_info:
   user_id: 0
   #admin_nickname: Author
 
-
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
 facebook_sdk:
@@ -285,13 +291,19 @@ facebook_sdk:
   like_button:  #true
   webmaster:    #true
 
+# Facebook comments plugin
+# This plugin depends on Facebook SDK.
+# If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
+facebook_comments_plugin:
+  enable: false
+  num_of_posts: 10
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: MSPJlp223GTtrQkjTTUFj8nK-gzGzoHsz
+  app_key: 7ISVCzDLXieg6RS64MOmkYt4
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -315,12 +327,8 @@ busuanzi_count:
 # tencent_analytics:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
-leancloud_visitors:
-  enable: true
-  app_id: MSPJlp223GTtrQkjTTUFj8nK-gzGzoHsz
-  app_key: 7ISVCzDLXieg6RS64MOmkYt4
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
