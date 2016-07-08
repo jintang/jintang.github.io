@@ -1,6 +1,8 @@
 title: angularJs———directive创建自定义指令
 date: 2015-12-13 14:40:37
-tags: angular之directive
+tags: 
+- angular
+- directive
 categories: angular  
 ---
    **directive:中文是"指令”的意思。**

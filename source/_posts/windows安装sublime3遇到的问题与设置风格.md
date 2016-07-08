@@ -1,6 +1,8 @@
 title: windows安装sublime3遇到的问题与设置风格
 date: 2015-12-16 22:58:21
-tags: sublime
+tags: 
+- windows
+- sublime3
 categories: sublime
 ---
 > 工欲善其事必先利其器，家里的电脑太烂，网速太垃圾，游戏都玩不了，所以安安静静的配个环境吧。

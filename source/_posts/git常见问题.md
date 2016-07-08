@@ -1,6 +1,7 @@
 title: git常见问题
 date: 2016-06-24 09:14:44
-tags: git常见错误
+tags: 
+- git常见错误
 categories: git
 ---
 #### git branch -a看不到所有的远程分支：

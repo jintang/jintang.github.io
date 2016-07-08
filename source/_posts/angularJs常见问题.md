@@ -1,6 +1,7 @@
 title: angularJs 常见错误
 date: 2015-12-17 21:53:24
-tags: angular常见错误
+tags: 
+- angular常见错误
 categories: angular
 ---
 #### ng-show和ng-hide作用相反了，即：ng-show="true"时隐藏，ng-hide="true"时显示。
