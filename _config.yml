@@ -88,6 +88,12 @@ social:
   知乎: http://www.zhihu.com/people/shu-tang-23
   豆瓣: https://www.douban.com/people/139000964/
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+    
 # Creative Commons 4.0 International License.(一种许可协议)
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
