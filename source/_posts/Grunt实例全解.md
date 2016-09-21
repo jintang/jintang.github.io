@@ -104,7 +104,7 @@ grunt
 
 查看`uglifyResult.min.js`的内容，已经将`test.js`和`event.js`的内容压缩到一起了，这儿就不放图了，有兴趣的自己试试。
 
-经过上面的基础实例，想必已经对`grunt`的作用和工作原理有所理解，原来就是个这，写个配置文件，运行下grunt命令，就可以压缩文件了，果然方便。上面只是对`grunt`插件`uglify`的演示，其他插件的用法，我们继续。
+经过上面的基础实例，想必已经对`grunt`的作用和工作原理有所理解,只需写个配置文件，运行下grunt命令，就可以压缩文件了，果然方便。上面只是对`grunt`插件`uglify`的演示，其他插件的用法，我们继续。
 
 ### 实例1:单独使用concat插件
 #### `package.json`不变，`Gruntfile.js`如下：
@@ -131,3 +131,5 @@ grunt
 结果如图：
 
 ![concat结果图](http://7xphbb.com1.z0.glb.clouddn.com/grunt/grunt5.png)
+
+`concatResult.js`内容
