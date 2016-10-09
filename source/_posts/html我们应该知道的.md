@@ -3,9 +3,7 @@ date: 2016-09-30 17:05:49
 tags: 
 - html
 - 前端
-categories:
-- html
-- 前端
+categories: 前端
 ---
 ### document.documentElement
 html页面按大小排序：

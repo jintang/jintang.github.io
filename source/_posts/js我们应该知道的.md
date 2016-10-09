@@ -3,7 +3,7 @@ date: 2016-07-08 15:09:44
 tags:
 - 前端
 - css
-categories:
+categories: 前端
 ---
 ### setInterval(function,time)
 1. 此方法是在time的延迟之后才可以循环执行，而不是马上开始循环执行
