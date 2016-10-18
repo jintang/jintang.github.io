@@ -18,6 +18,6 @@ html页面按大小排序：
 这样获取：
 ``` javascript
     document.documentElement.clientHeight;
-    document.documentElement.offsetHeight;//两个都可以
+    //document.documentElement.offsetHeight不可以，有时候会出错
 ```
 

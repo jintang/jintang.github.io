@@ -100,11 +100,11 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 ```
 
-### cacl()
-这是css3中常用到的计算方法，但是当要使用`+ - * /`等运算符的时候，运算符两边要使用**空格**隔开，否则不起作用，如下是正确的方法：
+### calc()
+这是css3中常用到的计算方法，但是当要使用`+ - * /`等运算符的时候，+、-运算符两边要使用**空格**隔开，否则不起作用，如下是正确的方法：
 ``` css
 .box{
-    width:cacl(100% - 10px);/*运算的具体数值要带单位*/
+    width:calc(100% - 10px);/*运算的具体数值要带单位*/
 }
 ```
 
@@ -126,3 +126,36 @@ table { border-collapse:collapse; border-spacing:0; }
 ``` css
     L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
 ```
+
+### background-position
+**提示**：需要把 background-attachment 属性设置为 "fixed"，才能保证该属性在 Firefox 和 Opera 中正常工作。  
+**理解**: 一个宽高固定的div，如果背景图片大于那个宽高，显示的背景图只是从左上角开始的一部分，而并不会缩放该图片  
+`background-position:x y;`
+
+|值          |    描述|  
+| --------   | -----  | 
+| top left<br>top center<br>top right<br>center left<br>center center<br>center right<br>bottom left<br>bottom center<br>bottom right     | 如果您仅规定了一个关键词，那么第二个值将是"center"。<br>默认值：0% 0%。 |  
+| x% y%     |  第一个值是水平位置，第二个值是垂直位置。<br><strong style="color:#f00;">左上角是 0% 0%。右下角是 100% 100%。</strong><br>如果您仅规定了一个值，另一个值将是 50%。   | 
+| xpx ypx        |    第一个值是水平位置，第二个值是垂直位置。<br>左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。<br>如果您仅规定了一个值，另一个值将是50%。<br>您可以混合使用 % 和 position 值。    | 
+
+### transform支持性问题
+Internet Explorer 10、Firefox、Opera 支持 transform 属性。  
+Internet Explorer 9 支持替代的 -ms-transform 属性（仅适用于 2D 转换）。  
+Safari 和 Chrome 支持替代的 -webkit-transform 属性（3D 和 2D 转换）。  
+Opera 只支持 2D 转换。  
+所以这样写基本可以覆盖所有情况：
+``` css
+.box{
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+```
+### @keyframes支持性问题
+目前浏览器都不支持 @keyframes 规则。  
+Firefox 支持替代的 @-moz-keyframes 规则。  
+Opera 支持替代的 @-o-keyframes 规则。  
+Safari 和 Chrome 支持替代的 @-webkit-keyframes 规则。  
+定义：`@keyframes name {keyframes-selector {css-styles;}}`
+`keyframes-selector`可选参数：
+* from/to
+* 0-100%
