@@ -8,9 +8,9 @@ categories: 前端
 ### document.documentElement
 html页面按大小排序：
 1. window:整个浏览器窗口，包含工具栏、菜单栏...
-2. document:整个html，包含<DOCTYPE>
+2. document:整个html，包含`<DOCTYPE>`
 3. html：根节点,`document.documentElement`就是`html`节点
-4. body: 页面主题
+4. body: 页面主体
 
 然后有这样一个问题：如何获取如图的高度?
 
