@@ -6,7 +6,7 @@ tags:
 categories: css
 ---
 >[less开发规范](https://gist.github.com/jintangWang/99a91017011eafbdf6c5893c7cd99d8b),自己归纳的，望有抛砖引玉之用
->[less常用minix](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58) 
+>[less常用minix](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58),有各种兼容浏览器的minix
 
 本文所有的实例都可以在[less常用minix](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58) 找到  
 ### 不同主题的颜色字体等变量定义规范：
@@ -48,7 +48,7 @@ categories: css
 ```
 
 ### 兼容不同浏览器的样式minix：
-以"."开头，其名称与样式的名称一致：  
+以`.`开头，其名称与样式的名称一致：  
 实例1：
 ``` less
 .border-radius(...){
@@ -57,6 +57,7 @@ categories: css
   border-radius: @arguments;
 }
 ```
+<!-- more -->
 实例2：`linear-gradient`的兼容处理  
 这儿就能感觉到`less`的缺陷，判断关键词只有个`when`，为后面sass的用法埋个伏笔
 ``` less
@@ -107,9 +108,8 @@ categories: css
 }
 //gradient结束
 ```
-<!-- more -->
 ### 特殊的minix
-#### 1.一些常用的
+#### 一些常用的
 实例： 
 ``` less
 .clearfix{
@@ -122,7 +122,7 @@ categories: css
   }
 }
 ```
-#### 2.特殊的keyframes(只能生成单属性的动画定义)
+#### 特殊的keyframes(只能生成单属性的动画定义)
 实例： 
 ``` less
 .keyframs(2,@prop,@start,@end){
@@ -142,8 +142,8 @@ categories: css
 .keyframes-opacity(10,@value+0.1);
 }
 ```
-### 五、复合样式minix:
-**注意：此部分废弃，因为项目中大多数是设了部分属性，如`margin-top`和`margin-right`,但如果用了此`minix`，会造成多了`margin-bottom`和`margin-left`属性，即使他们设的是默认属性。这样很不好，如果要修改这个`minix`，由于`less`中的判断只有`when`关键字，所以要写11条(怎么算出来的：$C_4^2+C_4^3+1$)的判断，很麻烦，所以废弃。后面会有`sass`的方法，完美解决这个问题**  
+### 复合样式minix:
+**注意：此部分废弃，因为项目中大多数是设了部分属性，如`margin-top`和`margin-right`,但如果用了此`minix`，会造成多了`margin-bottom`和`margin-left`属性，即使他们设的是默认属性。这样很不好，如果要修改这个`minix`，由于`less`中的判断只有`when`关键字，类似于上面的`line-gradient`,所以要写11条(怎么算出来的：$C_4^2+C_4^3+1$)的判断，很麻烦，所以废弃。后面会有`sass`的方法，完美解决这个问题**  
 实例：
 ``` less
 //根据不同的参数只设置部分属性,其他的还是默认值0
