@@ -1,14 +1,15 @@
-title: less使用全解(附开发规范与基本minix)
+title: less实战全解
 date: 2016-11-10 19:55:49
 tags:
 - less
 - css
 categories: css
 ---
->[less开发规范](https://gist.github.com/jintangWang/99a91017011eafbdf6c5893c7cd99d8b),自己归纳的，望有抛砖引玉之用
->[less常用minix](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58),有各种兼容浏览器的minix
+附上我的**开发规范**与**公用mixin**:
+>- [less开发规范](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58#file-_less-md)
+- [less公用mixin](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58#file-base-less)
 
-本文所有的实例都可以在[less常用minix](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58) 找到  
+本文所有的实例都可以在[less公用mixin](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58#file-base-less) 找到  
 ### 不同主题的颜色字体等变量定义规范：
 假设有一蓝色主题，且起名为"Blue"。那么：   
 
@@ -47,7 +48,7 @@ categories: css
 @font-red:#f00;
 ```
 
-### 兼容不同浏览器的样式minix：
+### 兼容不同浏览器的样式mixin
 以`.`开头，其名称与样式的名称一致：  
 实例1：
 ``` less
@@ -108,7 +109,7 @@ categories: css
 }
 //gradient结束
 ```
-### 特殊的minix
+### 特殊的mixin
 #### 一些常用的
 实例： 
 ``` less
@@ -142,8 +143,8 @@ categories: css
 .keyframes-opacity(10,@value+0.1);
 }
 ```
-### 复合样式minix:
-**注意：此部分废弃，因为项目中大多数是设了部分属性，如`margin-top`和`margin-right`,但如果用了此`minix`，会造成多了`margin-bottom`和`margin-left`属性，即使他们设的是默认属性。这样很不好，如果要修改这个`minix`，由于`less`中的判断只有`when`关键字，类似于上面的`line-gradient`,所以要写11条(怎么算出来的：$C_4^2+C_4^3+1$)的判断，很麻烦，所以废弃。后面会有`sass`的方法，完美解决这个问题**  
+### 复合样式mixin:
+**注意：此部分废弃，因为项目中大多数是设了部分属性，如`margin-top`和`margin-right`,但如果用了此`mixin`，会造成多了`margin-bottom`和`margin-left`属性，即使他们设的是默认属性。这样很不好，如果要修改这个`mixin`，由于`less`中的判断只有`when`关键字，类似于上面的`line-gradient`,所以要写11条(怎么算出来的：$C_4^2+C_4^3+1$)的判断，很麻烦，所以废弃。后面会有`sass`的方法，完美解决这个问题**  
 实例：
 ``` less
 //根据不同的参数只设置部分属性,其他的还是默认值0
@@ -154,7 +155,7 @@ categories: css
   margin-left: @left;
 }
 ```
-为了区分兼容不同浏览器的minix，这个采用"驼峰命名法".
+为了区分兼容不同浏览器的mixin，这个采用"驼峰命名法".
 
 
 

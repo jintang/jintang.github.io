@@ -1,15 +1,15 @@
-title: less使用minix的小技巧
+title: less使用mixin的小技巧
 date: 2016-11-07 17:43:14
 tags: 
 - less
 - css
 categories: css
 ---
->less是一种css的扩展，可以编译成css。将它定位为"工具"即可，最终浏览器/app识别的还是css  
+>less是一种css的扩展，可以编译成css。将它定位为"工具"即可，最终 浏览器/app 识别的还是css  
 
->参考网站：  
-- [less中文官网](http://less.bootcss.com/),是bootstrap帮忙翻译的，但容我吐槽一句：翻译翻一半，惆怅也疼蛋。  
-- [css88的less中文文档](http://www.css88.com/doc/less/features/),这个翻译完了，不喜欢英文的可以看这个
+参考网站：
+>- [less中文官网](http://less.bootcss.com/)，是bootstrap帮忙翻译的，但容我吐槽一句：翻译翻一半，惆怅也疼蛋。  
+- [css88的less中文文档](http://www.css88.com/doc/less/features/)，这个翻译完了，不喜欢英文的可以看这个
 
 
 ### css3中calc在less编译时被计算的解决办法
@@ -21,7 +21,7 @@ categories: css
 ```
 错误`less`:
 ``` less
-//less的minix
+//less的mixin
 .calcWidth(@width){
     width:-moz-calc(@width);
     width:-webkit-calc(@width);
@@ -41,7 +41,7 @@ div{
 原因：`less`把这个当成运算式去执行了  
 **正确`less`**:
 ``` less
-//less的minix
+//less的mixin
 .calcWidth(@width){
     width:-moz-calc(@width);
     width:-webkit-calc(@width);
@@ -104,7 +104,7 @@ div {
 ```
 方法：
 ``` less
-//minix开始
+//mixin开始
 .animation(...){
   animation: @arguments;
   -webkit-animation: @arguments;
@@ -120,7 +120,7 @@ div {
   }
   .opacityLoop((@count+0.1));
 }
-//minix结束
+//mixin结束
 div {
   .animation(blink 1.8s infinite);
 }
@@ -130,19 +130,36 @@ div {
 @keyframes blink {.opacityLoop(0);}
 ```
 经过验证,结果正确。  
-其实，上述的代码是否看起来还有点累赘，`@keyframes`的定义没有用`minix`，但是没有办法,`less`没办法做到，而`sass`可以像下面这样写：
+其实，上述的代码是否看起来还有点累赘，`@keyframes`的定义没有用`mixin`，但是`less`没办法做到，而`sass`可以像下面这样写：
 ``` sass
-.keyframes-mixin ($name, $frames) {
-    @-webkit-keyframes $name {$frames}
-    @-moz-keyframes $name {$frames}
-    @-ms-keyframes $name {$frames}
-    @-o-keyframes $name {$frames}
-    @keyframes $name {$frames}
+//支持多属性的0%和100%
+@mixin keyframes($name,$props,$starts,$ends){
+  @-webkit-keyframes #{$name} {@include frames($props,$starts,$ends);}
+  @-moz-keyframes #{$name} {@include frames($props,$starts,$ends);}
+  @-o-keyframes #{$name} {@include frames($props,$starts,$ends);}
+  @keyframes #{$name} {@include frames($props,$starts,$ends);}
 }
+@mixin frames($props,$starts,$ends){
+  $length:length($props);
+  0% {
+    @for $i from 1 through $length{
+      $prop:nth($props,$i);
+      #{$prop}:nth($starts,$i);
+    }
+  }
+  100%{
+    @for $j from 1 through $length{
+      $prop:nth($props,$j);
+      #{$prop}:nth($ends,$j);
+    }
+  }
+}
+//外部直接调用
+@include keyframes(blink,background-color border-width,#f00 1px,#0f0 5px);
 ```
 
 ### import导入的路径问题
-我们通常会将公共的颜色和minix提取出来，放在一个文件里。那么如何引入此文件呢？  
+我们通常会将公共的颜色和mixin提取出来，放在一个文件里。那么如何引入此文件呢？  
 默认:当前路径
 ``` less
     @import (keyword) "filename";
@@ -161,4 +178,4 @@ div {
 
 **结语：**不论是`less`还是`sass`，都只是个工具，不应该在这上面花费大量的精力来玩花它。附一张百度找的`less`的思维导图,如下：
 ![less思维导图](http://7xphbb.com1.z0.glb.clouddn.com/less%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png)
-话说这思维导图不全，以后有时间自己做个。所谓的有时间，大概是了了无期吧...
+话说这思维导图不全，以后有时间自己做个。所谓的有时间，大概又是了了无期...
