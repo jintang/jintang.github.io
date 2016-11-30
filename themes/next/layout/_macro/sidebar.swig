@@ -124,6 +124,11 @@
           <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-admin="0" data-excerpt-length="70"></ul>
         </div>
 
+        <div class="links-of-blogroll motion-element">
+          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>热评文章</div>
+          <ul  class="ds-top-threads" data-range="monthly" data-num-items="5"></ul>
+        </div>
+
       </section>
 
       {% if display_toc %}
