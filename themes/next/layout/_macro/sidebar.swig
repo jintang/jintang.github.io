@@ -109,7 +109,7 @@
           </div>
         {% endif %}
 
-        <div class="links-of-blogroll motion-element">
+        <div class="links-of-blogroll motion-element clearfix">
           <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>最近访客</div>
           <div class="ds-recent-visitors"
               data-num-items="36"
@@ -117,6 +117,11 @@
               id="ds-recent-visitors" 
               data-num-items="24" >
           </div>
+        </div>
+
+        <div class="links-of-blogroll motion-element">
+          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>最新评论</div>
+          <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-admin="0" data-excerpt-length="70"></ul>
         </div>
 
       </section>
