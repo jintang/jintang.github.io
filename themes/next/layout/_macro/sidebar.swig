@@ -109,6 +109,16 @@
           </div>
         {% endif %}
 
+        <div class="links-of-blogroll motion-element">
+          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>最近访客</div>
+          <div class="ds-recent-visitors"
+              data-num-items="36"
+              data-avatar-size="42"
+              id="ds-recent-visitors" 
+              data-num-items="24" >
+          </div>
+        </div>
+
       </section>
 
       {% if display_toc %}
