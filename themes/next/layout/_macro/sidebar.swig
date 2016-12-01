@@ -92,8 +92,32 @@
           </div>
         {% endif %}
 
-        {# Blogroll #}
-        {% if theme.links %}
+        {# Blogroll:文章页也显示 #}
+        <div class="links-of-blogroll motion-element">
+          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>热评文章</div>
+          <ul  class="ds-top-threads" data-range="monthly" data-num-items="5"></ul>
+        </div>
+
+        {# Blogroll:只在主页显示 #}
+        {% if !display_toc %}
+        <div class="links-of-blogroll motion-element clearfix">
+          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>最近访客</div>
+          <div class="ds-recent-visitors"
+              data-avatar-size="42"
+              id="ds-recent-visitors" 
+              data-num-items="24" >
+          </div>
+        </div>
+        {% endif %}
+
+        {# Blogroll:文章页也显示 #}
+        <div class="links-of-blogroll motion-element">
+          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>最新评论</div>
+          <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-admin="0" data-excerpt-length="70"></ul>
+        </div>
+
+        {# Blogroll:只在主页显示 #}
+        {% if theme.links && !display_toc %}
           <div class="links-of-blogroll motion-element">
             <div class="links-of-blogroll-title">
               <i class="fa fa-{{ theme.links_icon || 'globe' }} fa-fw"></i>
@@ -108,26 +132,6 @@
             </ul>
           </div>
         {% endif %}
-
-        <div class="links-of-blogroll motion-element clearfix">
-          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>最近访客</div>
-          <div class="ds-recent-visitors"
-              data-num-items="36"
-              data-avatar-size="42"
-              id="ds-recent-visitors" 
-              data-num-items="24" >
-          </div>
-        </div>
-
-        <div class="links-of-blogroll motion-element">
-          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>最新评论</div>
-          <ul class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-admin="0" data-excerpt-length="70"></ul>
-        </div>
-
-        <div class="links-of-blogroll motion-element">
-          <div class="links-of-blogroll-title"> <i class="fa fa-globe fa-fw"></i>热评文章</div>
-          <ul  class="ds-top-threads" data-range="monthly" data-num-items="5"></ul>
-        </div>
 
       </section>
 
