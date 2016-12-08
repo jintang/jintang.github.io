@@ -95,18 +95,28 @@ a{
 - `sass`:官方自己封装的都是基本的，比较少，如三角操作函数就没有，所以需要用sass扩展库:[compass](http://compass-style.org/)、[sassCore](http://www.w3cplus.com/sasscore/index.html)
 
 ### 编译
-很多人选择用`less`是因为用`sass`是基于`ruby`的,所以选择了`less`,我在使用的过程中用了这样两个插件，都是`grunt`的，`gulp`当然也有。这是我的两个插件：`grunt-contrib-less`、`grunt-contrib-sass`，使用很简单,就不需要安装ruby环境了,这是我的:
+#### grunt插件编译
+很多人选择用`less`是因为用`sass`是基于`ruby`的,所以选择了`less`,我在使用的过程中用了这样两个插件，都是`grunt`的，`gulp`当然也有。下面我的两个插件：
+
+- [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)
+- [grunt-sass](https://github.com/sindresorhus/grunt-sass)
+
+>此处不使用grunt官方团队的[grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass),因为它需要ruby环境的支持
+
+使用`grunt-sass`,就不需要安装ruby环境了，因为它是用[node-sass](https://github.com/sass/node-sass)编译的,只需要用`npm`安装了`node-sass`就可以编译了。这是我的`Gruntfile.js`:
 ``` js
 grunt.initConfig({
     sass: {
         dist:{
-            options:{
-                style:'expanded',
-                update:true
-            },
-            files:{
-                'WebRoot/css/sass/tvwall.css':'WebRoot/css/sass/tvwall.scss'
-            }
+          options: {
+              sourceMap: true,
+              outputStyle:"expanded"
+          },
+          dist:{
+              files:{
+                  'sass/style.css':'sass/style.scss'
+              }
+          }
         }
     },
     less:{
@@ -136,7 +146,7 @@ grunt.initConfig({
         }
     }
 });
-grunt.loadNpmTasks('grunt-contrib-sass');
+grunt.loadNpmTasks('grunt-sass');
 grunt.loadNpmTasks('grunt-contrib-less');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.registerTask('default', ['less','sass','watch']);
@@ -145,9 +155,10 @@ grunt.registerTask('default', ['less','sass','watch']);
 ``` shell
 grunt watch
 ```
+#### js编译，方便调试
 - `less`是基于JavaScript，所以，是在客户端处理的。官方提供了`less.js`文件，放在html里直接就可以编译，很方便.
-- `sass`是基于服务端的，但有牛人创造了[sass.js](https://github.com/medialize/sass.js),主要由：`sass.js`、`sass.work.js`和`sass.sync.js`组成。如果你的浏览器支持h5的[ Web Worker](https://developer.mozilla.org/en/docs/Web/API/Worker),请使用`sass.js`和`sass.work.js`，我这儿就用的这两个文件。如果不支持，就使用`sass.js`和`sass.sync.js`。两个文件要放在同一个目录下，这样
-，浏览器就可以编译了，很方便开发人员调试。里面有点小坑，下面指出：  
+- `sass`是基于服务端的，但有牛人创造了[sass.js](https://github.com/medialize/sass.js),主要由：`sass.js`、`sass.work.js`和`sass.sync.js`组成。如果你的浏览器支持h5的[ Web Worker](https://developer.mozilla.org/en/docs/Web/API/Worker),请使用`sass.js`和`sass.work.js`，我这儿就用的这两个文件。如果不支持，就使用`sass.js`和`sass.sync.js`。使用如下：  
+
 **(1)直接在html中使用`sass.js`**   
 ``` html
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -211,12 +222,13 @@ define(function defineSassModule(require) {
     } else if (typeof exports === 'object') {
       module.exports = factory();
     } else {
+      /*走到了这个逻辑里，可能是因为用的是sea.js而非require.js*/
       root.Sass = factory();
     }
   }(this,function(){...})
 )
 ```
-所以，`require`之后的对象被绑定到了window上，于是，代码就变成了这样：
+所以，`require`之后的对象被绑定到了window上，于是，代码修改为：
 ``` js
 define(function(require, exports, module) {
     require('/js/sass/sass.js');
@@ -244,6 +256,8 @@ define(function(require, exports, module) {
 ```
 然后在浏览器中开心的调试`sass`吧...   
 
+{% pullquote tip %}
 最终，我还是比较喜欢sass。最后放个我总结的**sass使用规范**和**_base.scss**:
+{% endpullquote %}
 >- [sass使用规范](https://gist.github.com/jintangWang/15b7175268946b9cef21d94625180ee7#file-sass-md)
 - [_base.scss](https://gist.github.com/jintangWang/15b7175268946b9cef21d94625180ee7#file-_base-scss)
