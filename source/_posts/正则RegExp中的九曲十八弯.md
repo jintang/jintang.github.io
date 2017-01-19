@@ -16,7 +16,8 @@ categories: js
 #### 字符串验证正则的方法
 1. `string.match(reg/str)`:
     - 参数为reg时返回符合正则的子串，但是被封装在数组里;不同于`reg.exec()`，如果正则带有标志g,且有多个匹配的子串，会返回有多个元素的数组。
-    - 参数为str时若包含返回该str，不包含时返回null
+    - 参数为str时若包含返回该str，不包含时返回`null`
+**tip:特殊情况**`'1 2 ()'.match('1 2 ()')`，当字符串里面有`()`时`match`直接返回`null`，因为括号是正则中特殊的存在，可以匹配`$N`。此时用`indexOf()`。
 2. `string.replace(reg/str,replacement)`:将字符串  满足reg的子串/指定的str  替换为replacement，返回值为替换后的结果，原变量不变
 3. `string.search(reg)`:作用类似于`string.indexOf()`,返回符合正则的起始下标，如果没找到也为-1
 
