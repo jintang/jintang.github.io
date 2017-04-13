@@ -47,6 +47,7 @@ export default {
     }
 }
 ```
+<!-- more -->
 ### 下载二维码
 利用`canvas`生成图片，让现代浏览器直接输出`image/octet-stream`实现图片自动弹出下载功能  
 html部分：  
