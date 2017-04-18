@@ -169,4 +169,4 @@ function isNotTree(vm){
 
 ### 结语
 - [源代码](https://github.com/jintangWang/hello-vue/tree/master/src/common/component/tree)
-- [实例](https://jintangwang.github.io/hello-vue/)
+- [实例](https://jintangwang.github.io/hello-vue/#/my/tree-demo)
