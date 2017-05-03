@@ -3,7 +3,7 @@ date: 2016-09-30 17:05:49
 tags: 
 - html
 - 前端
-categories: 前端
+categories: HTML
 ---
 ### document.documentElement
 html页面按大小排序：
@@ -20,4 +20,10 @@ html页面按大小排序：
     document.documentElement.clientHeight;
     //document.documentElement.offsetHeight不可以，有时候会出错
 ```
+
+### 调试鼠标hover时提示框的样式
+我们经常需要设计提示框，在`hover`时浮现，但是如何在控制台调试这个提示框的样式呢，每次鼠标移开提示框就消失，不胜其烦，这儿有个小技巧
+
+1. 在提示框上右键*审查元素*,找到对应的dom
+2. 添加`dom断点`:
 

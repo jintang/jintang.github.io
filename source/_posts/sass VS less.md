@@ -4,7 +4,7 @@ tags:
 - less
 - sass
 - css
-categories: css
+categories: Css
 ---
 >为了重构项目的css代码，先体验了`less`，但发现less不能满足我的需求，没办法转为`sass`,在此描述一下自我感受这两者的区别。我描述的只是我直观使用的部分，大部分的不同点百度一下，第一页的全一样。。。
 

@@ -106,8 +106,30 @@ grunt
 
 经过上面的基础实例，想必已经对`grunt`的作用和工作原理有所理解,只需写个配置文件，运行下grunt命令，就可以压缩文件了，果然方便。上面只是对`grunt`插件`uglify`的演示，其他插件的用法，我们继续。
 
-### 实例1:单独使用concat插件
-#### `package.json`不变，`Gruntfile.js`如下：
+### Grunt相关配置
+从上面我们看到了`grunt`有种种插件，各种插件的用法也不尽相同，除此之外，`grunt`还有一些约定，使得每个`grunt`插件都可以配置公共属性：
+#### options
+#### files
+>小技巧: 
+
+> - `src`匹配所有的`.styl`文件：设置`src: '*.styl'`是匹配不到的，因为`*`不匹配`/`。`**`可以匹配`/`，且一个路径中只可以出现一个`**`，所以可以设置为：`src: '**/*.styl'`
+> - 生成多个`dest`文件：`dest`只能是一个字符串，表示单个文件，设置为['result/*.css*']会报错，只能用动态创建文件对象：
+``` js
+files: [
+    {
+        expand: true,
+        src: ['*.styl'],
+        cwd: 'css/stylus/src/',
+        dest: 'css/stylus/result/',
+        ext: '.css'
+    }
+]
+```
+
+
+### 更多实例
+#### 实例1:单独使用concat插件
+##### `package.json`不变，`Gruntfile.js`如下：
 ``` javascript
 grunt.initConfig({
     pkg:grunt.file.readJSON('package.json'),
@@ -124,7 +146,7 @@ grunt.initConfig({
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.registerTask('default', ['concat']);
 ```
-#### 运行`grunt`
+##### 运行`grunt`
 ``` shell
 grunt
 ```

@@ -4,7 +4,7 @@ tags:
 - HTML5
 - localStorage
 - sessionStorage
-categories: 前端
+categories: HTML5
 ---
 >本文参考：[邹润阳](http://jerryzou.com/posts/cookie-and-web-storage/)  
 >Storage的用法：[Storage的API](https://developer.mozilla.org/en-US/docs/Web/API/Storage) 

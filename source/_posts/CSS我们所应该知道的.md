@@ -3,7 +3,7 @@ date: 2015-12-24 17:34:54
 tags: 
 - css
 - 前端
-categories: 前端
+categories: Css
 ---
 ### 文字换行属性:`white-space`
 该属性的常用的值(容器的宽度固定)：

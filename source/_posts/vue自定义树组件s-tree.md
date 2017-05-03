@@ -166,7 +166,7 @@ function isNotTree(vm){
     });
  </script>
 ```
-
+对了，这儿使用[vuex](https://vuex.vuejs.org/zh-cn/)也是可以的。
 ### 结语
 - [源代码](https://github.com/jintangWang/hello-vue/tree/master/src/common/component/tree)
 - [实例](https://jintangwang.github.io/hello-vue/#/my/tree-demo)
