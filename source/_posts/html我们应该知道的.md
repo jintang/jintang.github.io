@@ -24,6 +24,18 @@ html页面按大小排序：
 ### 调试鼠标hover时提示框的样式
 我们经常需要设计提示框，在`hover`时浮现，但是如何在控制台调试这个提示框的样式呢，每次鼠标移开提示框就消失，不胜其烦，这儿有个小技巧
 
-1. 在提示框上右键*审查元素*,找到对应的dom
-2. 添加`dom断点`:
+1. 在提示框上右键*检查*,找到对应的dom![inspect](http://7xphbb.com1.z0.glb.clouddn.com/inspect.gif)
+2. 添加dom断点给`node removal`:![debugger](http://7xphbb.com1.z0.glb.clouddn.com/debug.gif)  
+ 
+然后就可以在断点阻塞到提示框显示的时候开心的调试样式了
 
+### 在location中传递中文参数
+传递的时候：
+``` js
+location.href = window.encodeURI(url + '?key=你妹');
+```
+获取的时候:
+``` js
+let search = window.decodeURI(location.search);
+// 结果是 ?key=你妹
+```

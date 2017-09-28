@@ -75,12 +75,6 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: next
 
-# Duoshuo
-duoshuo_shortname: tangqing
-duoshuo_share: true
-# Disqus
-disqus_shortname: 
-
 # Social links
 social:
   GitHub: https://github.com/jintangWang

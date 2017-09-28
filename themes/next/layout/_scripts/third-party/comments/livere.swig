@@ -1,5 +1,4 @@
-{% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname %}
-
+{% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname and not theme.disqus_shortname and not theme.hypercomments_id and not theme.gentie_productKey %}
   {% if theme.livere_uid %}
     <script type="text/javascript">
       (function(d, s) {
@@ -12,5 +11,4 @@
       })(document, 'script');
     </script>
   {% endif %}
-
 {% endif %}
