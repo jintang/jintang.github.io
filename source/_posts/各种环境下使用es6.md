@@ -30,10 +30,9 @@ npm install babel-core@5
 我们创建了一个用`es6`写的js文件，想要运行，但是不想使用构建工具,可以使用`babel`提供的命令行工具。  
 1. 安装命令行工具:
     ``` shell
-     npm install babel-cli -g // 全局安装
+    npm install babel-cli -g // 全局安装
     ```
 2. 配置编译规则
-    - 在根目录下创建`.babelrc`文件
     - 添加`babel`用来转换的依赖包
     ``` shell
     # ES2015转码规则
@@ -44,8 +43,9 @@ npm install babel-core@5
     $ npm install --save-dev babel-preset-stage-2
     $ npm install --save-dev babel-preset-stage-3
     ```
-    - `.babelrc`中添加配置:  
+    - 在根目录下创建`.babelrc`文件并添加配置:  
     ``` js
+    // 只是为了演示添加的简单配置
     {
       "presets": [
         "es2015",
