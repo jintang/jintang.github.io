@@ -54,3 +54,58 @@ let n = { x, y, ...z };
 n; // { x: 1, y: 2, a: 3, b: 4 }
 ```
 <!-- more -->
+
+### `export`与`import`
+- 命名导出: 对导出多个值很有用。在导入期间，必须使用相应对象的相同名称
+    ``` js
+    // module "modules.js"
+    export function cube(x) {}
+    const foo = Math.PI + Math.SQRT2;
+    export var a = 1;
+    export { cube,foo };
+    // 导入时：
+    import { cube, foo, a } from 'modules.js';
+    ```
+- 默认导出: 可以使用任何名称导入默认导出,且一个模块只能有一个默认的导出
+    ``` js
+    // module "modules.js"
+    export default k = 12;
+    // 导入时：
+    import x from 'modules.js';
+    ```
+    
+**注意：**不能直接使用`var`，`let`或`const`作为默认导出
+``` js
+var a = 1;
+export default a;　　// 正确,可以用这种方式
+export default var a = 1; // 错误
+```
+**原因：**因为`export default`命令其实只是输出一个叫做`default`的变量，所以它后面不能跟变量声明语句，而`export`需要跟变量声明或者大括号作为输出
+``` js
+// modules.js
+function add(x, y) {
+  return x * y;
+}
+export default add;
+// 等同于 export {add as default};
+
+// app.js
+import xxx from 'modules';
+// 等同于 import { default as xxx } from 'modules.js';
+```
+
+**综合用法：**
+一些成熟的框架都是这样导入的：
+```  js
+import React, { Component } from 'react';
+```
+下面就是我们的实例：
+``` js
+// modules.js
+export add() {}
+export reduce() {}
+const calcObj = {add, reduce};
+export default calcObj;
+// 导入时:
+import calcObj, {add, reduce} from 'modules.js'
+```
