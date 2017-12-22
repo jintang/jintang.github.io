@@ -85,7 +85,56 @@ export default {
 
 **最后:**提供对象浅拷贝和深拷贝的方法  
 
-- 浅拷贝：
+1. **浅拷贝：**
+``` js
+    Object.assign({}, obj)
 ```
-    Object.assign()
-```
+2. **深拷贝：**
+    - **`json`转化：**
+    ``` js
+    JSON.parse(JSON.stringify(obj))
+    ```
+    非常简单，但是有两个常见的错误:
+         - 如果属性是函数会被忽略
+         - 如果有循环引用会报错
+         
+    `JSON.stringify()`拥有三个参数(参考[官方描述](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify))，第一个错误可以用下面的代码修复：
+    ``` js
+    JSON.parse(JSON.stringify(json, function(key,val){
+            if(typeof val=='function'){
+                return val+''//手动将其字符串化
+            }
+            return val;
+        }
+    ),function(key,val){
+        if(val.indexOf&&val.indexOf('function')>-1){
+            return eval("(function(){return "+val+" })()")
+        }
+        return val;
+    });
+    ```
+    第二个错误只能望而叹之。
+    - **递归拷贝：**
+        可以使用`lodash`的`_.cloneDeep(obj)`方法,通过学习这个库，咱们可以简单实现这样的一个方法：
+        ``` js
+        function cloneDeep(value) {
+            if(value !== null && typeof(value) == 'object') {
+            var result;
+            if(value.constructor === Object) { // 对象
+                result  = {};
+              for (let i in value) {
+                result[i] = cloneDeep(value[i]);
+              }
+            } else { // 数组
+              result  = [];
+              value.forEach(function(item, index) {
+                result[index] = cloneDeep(item);
+              });
+            }
+            return result;
+          } else {
+            return value;
+          }
+        }
+        ```
+        里面对于循环引用没做处理，因为对`lodash`的封装的`Stack`还不是很明白...
