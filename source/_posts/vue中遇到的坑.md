@@ -119,22 +119,22 @@ export default {
         ``` js
         function cloneDeep(value) {
             if(value !== null && typeof(value) == 'object') {
-            var result;
-            if(value.constructor === Object) { // 对象
-                result  = {};
-              for (let i in value) {
-                result[i] = cloneDeep(value[i]);
-              }
-            } else { // 数组
-              result  = [];
-              value.forEach(function(item, index) {
-                result[index] = cloneDeep(item);
-              });
+                var result;
+                if(value.constructor === Object) { // 对象
+                    result  = {};
+                    for (let i in value) {
+                        result[i] = cloneDeep(value[i]);
+                    }
+                } else { // 数组
+                    result  = [];
+                    value.forEach(function(item, index) {
+                        result[index] = cloneDeep(item);
+                    });
+                }
+                return result;
+            } else {
+                return value;
             }
-            return result;
-          } else {
-            return value;
-          }
         }
         ```
         里面对于循环引用没做处理，因为对`lodash`的封装的`Stack`还不是很明白...

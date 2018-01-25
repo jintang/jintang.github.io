@@ -109,3 +109,25 @@ export default calcObj;
 // 导入时:
 import calcObj, {add, reduce} from 'modules.js'
 ```
+
+### Generator  函数
+``` js
+function* fun() {
+  yield 'a';
+  yield 'b';
+  return 'c';
+}
+/* 该函数并不执行返回的，也不是函数运行结果，
+*  而是一个指向内部状态的指针对象——遍历器对象*/
+var funIte = fun(); 
+
+/* 每次调用next方法，内部指针就从上一次停下来的地方
+开始执行，直到遇到下一个yield语句（或return语句）为止*/
+funIte.next(); // {value: 'a', done: false}
+funIte.next(); // {value: 'b', done: false}
+funIte.next(); // {value: 'c', done: true}
+funIte.next(); // {value: undefined, done: true}
+```
+这种函数有两个特征：
+- function关键字后紧跟`*`
+- 函数内部用`yield`语句。yield意思是'产出'

@@ -28,36 +28,33 @@ var aaa=function(){}
 var aaa=new Function(arg1,arg2...argn);
 ```
 所以,利用`Function()`构造方法就可以实现`eval()`的功能
-
-### setInterval(function,time)
-1. 此方法是在time的延迟之后才可以循环执行，而不是马上开始循环执行
-2. 用`clearInterval()`来清除循环，往往不能马上停止循环，而是会继续执行一次之后再停止。解决办法是用`setTimeout()`的递归来代替`setInterval()`
-3. `clearInterval(myInterval)`之后myInterval的值的问题：
-``` javascript
-    var myInterval;
-    function click1(){
-        clearInterval(myInterval);
-    }
-    function click2(){
-        function click2(){
-            if(!myInterval){
-                myInterval=setInterval(function(){
-                    console.log('循环执行一次');
-                },2000);
-            }
-        }
-    }
-    click2();//首先执行一遍click2()
+<!-- more -->
+### setTimeout(fun,time)与setInterval(fun,time)
+返回值是个唯一标识符，通常是个数字。 用于清除定时器和gc回收，比如：
+``` js
+    var timer = setTimeout(function() {}, 500)
+    clearTimeout(timer); // 清除定时器
+    timer = null; // 释放让gc回收
 ```
-Q:点击click1之后再点击click2,log还打印吗？
-
-A:不再继续打印了，因为`clearInterval(myInterval)`后myInterval是一个整数，是`myInterval=setInterval()`语句指定的唯一辨识符:`intervalID`，所以click1()改为这样：
-``` javascript
-    function click1(){
-        clearInterval(myInterval);
-        myInterval=null;//正好也可以方便js的CG回收该对象
+**注意：**
+1. 在`time`的延迟之后才可以执行第一次，而不是马上开始执行。即使是`setTimeout(fun, 0)`，也是在主线程执行后再执行`fun`.
+    ``` js
+    setTimeout(function() {
+        console.log('a')
+    }, 0)
+    console.log('b')
+    // b
+    // a
+    ```
+2. 要想循环体立即执行，可以这样：
+    ``` js
+    function hand() {
+        setTimeout(function() {
+            hand()
+        }, 500)
+        console.log(new Date())
     }
-```
+    ```
 ### 方法内部的`return false`
 经常可以看到这样的语句:
 ``` javascript
@@ -68,4 +65,63 @@ A:不再继续打印了，因为`clearInterval(myInterval)`后myInterval是一�
     }
 ```
 `return false`等于`e.preventDefault()`
-<!-- more -->
+### 从一个数组中删除子数组
+先看下**第一版**：
+``` js
+function del(arr, delArr) {
+    for (let i = 0; i < arr.length; i ++) {
+      let item = arr[i];  
+      for (let j = 0; j < delArr.length; j++) {
+        let delItem = delArr[j];
+        if (item === delItem) { // 满足某种条件
+            arr.splice(i , 1);
+        }
+      }
+    }
+}
+```
+乍看之下没问题，但有问题。
+``` js
+let arr = [1,2,3,4,5];
+let delArr = [4,5];
+del(arr, delArr);
+console.log(arr) // [1,2,3,5]
+```
+原因很简单，先删除了4，此时5的下标已经往前移动了1，然而循环的i已经到了5当前的下标，所以就跳过了5的判断。下面来个**修复版1**：
+``` js
+function del(arr, delArr) {
+    for (let i = 0; i < delArr.length; i ++) {
+      let delItem = delArr[i];  
+      for (let j = 0; j < arr.length; j++) {
+        let item = arr[j];
+        if (item === delItem) { // 满足某种条件
+            arr.splice(j , 1);
+            break;
+        }
+      }
+    }
+}
+```
+只是换了两个循环的顺序，就ok了。因为两个数组里没有重复数据，所以在删除一个元素之后可以通过`break`直接进行下一次外层循环。得到正确的结果。试试下面的例子：
+``` js
+let arr = [1,2,3,4,4,5];
+let delArr = [4,5];
+del(arr, delArr);
+console.log(arr) // [1,2,3,4]
+```
+可能是`del`方法里用了`break`的原因，去掉之后发现还是同样的结果。原因同**第一版**。  
+再来看看**修复版2**：
+``` js
+function del(arr, delArr) {
+    for (let i = 0; i < delArr.length; i ++) {
+      let delItem = delArr[i];  
+      for (let j = arr.length - 1; j > 0 ; j--) {
+        let item = arr[j];
+        if (item === delItem) { // 满足某种条件
+            arr.splice(j , 1);
+        }
+      }
+    }
+}
+```
+再试试上面的例子，得到的结果正确。不论是数组中有没有重复数据，都可以得到正确的结果。原因想必大家一看就明白了，对`arr`的循环一定要倒序，这样才不会跳过某一项。
