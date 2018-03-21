@@ -235,6 +235,9 @@ use_font_lato: true
 # Third Party Services Settings
 # ---------------------------------------------------------------
 
+# youyan
+youyan_uid: 2157069
+
 # MathJax Support
 mathjax:
   enable: false
@@ -262,7 +265,6 @@ mathjax:
 #add_this_id:
 
 # Share
-#duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -274,9 +276,6 @@ mathjax:
 
 # CNZZ count
 #cnzz_siteid:
-
-# 来必力
-livere_uid: MTAyMC8zMDEwOC82NjYz
 
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410

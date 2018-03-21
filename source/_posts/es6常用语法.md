@@ -5,7 +5,7 @@ tags:
 categories: Javascript
 ---
 
-### `...`
+### ...
 含义：
 **1.** 函数中的剩余参数
 ``` js
@@ -55,7 +55,7 @@ n; // { x: 1, y: 2, a: 3, b: 4 }
 ```
 <!-- more -->
 
-### `export`与`import`
+### export与import
 - 命名导出: 对导出多个值很有用。在导入期间，必须使用相应对象的相同名称
     ``` js
     // module "modules.js"
@@ -80,7 +80,7 @@ var a = 1;
 export default a;　　// 正确,可以用这种方式
 export default var a = 1; // 错误
 ```
-**原因：**因为`export default`命令其实只是输出一个叫做`default`的变量，所以它后面不能跟变量声明语句，而`export`需要跟变量声明或者大括号作为输出
+**原因：**`export`后面需要跟变量声明或者大括号作为输出，而`export default`命令其实只是输出一个叫做`default`的变量，所以它后面不能跟变量声明语句。
 ``` js
 // modules.js
 function add(x, y) {
@@ -117,8 +117,8 @@ function* fun() {
   yield 'b';
   return 'c';
 }
-/* 该函数并不执行返回的，也不是函数运行结果，
-*  而是一个指向内部状态的指针对象——遍历器对象*/
+/* 该函数并不执行返回的值，也不是函数运行结果，
+*  而是一个指向内部状态的指针对象：遍历器对象*/
 var funIte = fun(); 
 
 /* 每次调用next方法，内部指针就从上一次停下来的地方
@@ -130,4 +130,4 @@ funIte.next(); // {value: undefined, done: true}
 ```
 这种函数有两个特征：
 - function关键字后紧跟`*`
-- 函数内部用`yield`语句。yield意思是'产出'
+- 函数内部用`yield`语句。yield意思是*产出*

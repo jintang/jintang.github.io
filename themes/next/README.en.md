@@ -66,17 +66,9 @@ language: zh-Hans
 
 ### Comment support.
 
-NexT has native support for `DuoShuo` and `Disqus` comment systems.
+NexT has native support for `Disqus` comment systems.
 
 Add the following snippets to your `_config.yml`:
-
-```yml
-duoshuo:
-  enable: true
-  shortname: your-duoshuo-shortname
-```
-
-OR
 
 ```yml
 disqus:
