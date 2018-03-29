@@ -236,7 +236,7 @@ use_font_lato: true
 # ---------------------------------------------------------------
 
 # youyan
-youyan_uid: 2157069
+# youyan_uid: 2157069
 
 # MathJax Support
 mathjax:
@@ -292,6 +292,20 @@ facebook_sdk:
 facebook_comments_plugin:
   enable: false
   num_of_posts: 10
+
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://valine.js.org
+valine:
+  enable: true # 是否开启
+  appid: MSPJlp223GTtrQkjTTUFj8nK # 填上之前获取的AppID
+  appkey: 7ISVCzDLXieg6RS64MOmkYt4 # 填上之前获取的AppKey
+  notify: false # 新留言是否需要通知 https://github.com/xCss/Valine/wiki
+  verify: false # 是否需要验证，验证比较反人类建议false关闭
+  placeholder: 请在此输入您的留言 # 默认留言框内的文字
+  avatar: mm # 默认头像
+  guest_info: nick,mail # 默认留言框的头部需要访问者输入的信息
+  pageSize: 10 # pagination size #默认单页的留言条数
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
