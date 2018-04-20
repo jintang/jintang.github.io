@@ -36,3 +36,30 @@ article a{
 	color: #DF0101;
 	font-weight:bold;
 }
+// 行内代码
+$code-block {
+  overflow: auto;
+  margin: 20px 0;
+  padding: 15px;
+  font-size : $code-font-size;
+  color: $highlight-foreground;
+  background: $my-highlight-background;
+  border:1px solid $my-highlight-border;
+  line-height: $line-height-code-block;
+}
+code {
+  padding: 2px 4px;
+  word-break: break-all;
+  color: $my-code-foreground;
+  background: $my-code-background;
+  border-radius: $code-border-radius;
+  font-size : $code-font-size;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+a {
+    border-bottom: none;
+}

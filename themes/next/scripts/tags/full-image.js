@@ -1,6 +1,13 @@
-/* global hexo */
-// Usage: {% fullimage /path/to/image, alt, title %}
-// Alias: {% fi /path/to/image, alt, title %}
+/**
+ * full-image.js | global hexo script.
+ *
+ * Usage:
+ *
+ * {% fullimage /path/to/image, alt, title %}
+ * {% fi /path/to/image, alt, title %}
+ */
+
+'use strict';
 
 function fullImage(args) {
   args = args.join(' ').split(',');
@@ -14,13 +21,13 @@ function fullImage(args) {
   alt = alt.trim();
   title = title.trim();
 
-  var image = ['<img src="' + src + '" class="full-image"'];
+  var image = ['<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="' + src + '" class="full-image"'];
   alt.length > 0 && image.push('alt="' + alt + '"');
   title.length > 0 && image.push('title="' + title + '"');
-  image.push('/>');
+  image.push('/><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>');
 
   return image.join(' ');
 }
 
-hexo.extend.tag.register('fullimage', fullImage);
-hexo.extend.tag.register('fi', fullImage);
+hexo.extend.tag.register('fullimage', fullImage, { ends: false });
+hexo.extend.tag.register('fi', fullImage, { ends: false });
