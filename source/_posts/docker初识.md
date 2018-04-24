@@ -236,7 +236,17 @@ $ docker logs containerId
 最后访问 `localhost:9000`，可以看到结果： hello koa2
 
 ### 发布 image 文件
-...暂无数据
+容器运行成功后，就确认了 image 文件的有效性。这时，我们就可以考虑把 image 文件分享到网上，让其他人使用。假设我们要发布上面用到的 hello-koa2 image，进行如下步骤：
+
+首先，去 hub.docker.com 或 cloud.docker.com 注册一个账户。然后，使用下面的命令：
+``` bash
+$ docker login # 输入注册的用户名和密码
+# 为本地的 image 标注用户名和版本。
+$ docker tag hello-koa2 [username]/[respository]:[tag]
+# 我的是： docker tag hello-koa2 jintang/hello-koa2
+$ docker push jintang/hello-koa2
+```
+现在就可以在 hub.docker.com 上登录自己的账号看到刚发布的 image 了
 
 ### Docker Compose
 Compose 是 Docker 公司推出的一个工具软件，可以管理多个 Docker 容器组成一个应用。你需要定义一个 YAML 格式的配置文件docker-compose.yml，写好多个容器之间的调用关系。然后，只要一个命令，就能同时启动/关闭这些容器。
