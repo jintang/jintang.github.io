@@ -10,6 +10,7 @@ categories: linux
 
 ## 通用的命令
 ``` bash
+$ id # 查看当前用户与其所在的组
 $ which node # 查看node命令所在地址
 $ man ps # 查看ps命令的用法
 ```
@@ -120,13 +121,18 @@ $ top [参数]
     - NI：nice。负值表示高优先级，正值表示低优先级
     - VIRT：进程使用的虚拟内存总量，单位kb。
     - RES：进程使用的、未被换出的物理内存大小，单位kb。
-    - SHR：共享内存大小，单位kb
+    - SHR：共享内存大小，单k位b
     - S：进程状态，参照本节刚开始的说明
     - TIME+：进程使用的CPU时间总计，单位1/100秒
     
 ## 包管理器
 `centos`与`debian`虽然使用的是不同的软件包管理器，但大体的命令都差不多
-- `Redhat`系列(`centos`就是其中使用最广泛的)的包管理方式采用的是基于`RPM`包的`YUM`包管理方式，包分发方式是编译好的二进制文件。
+- `centos`（`Redhat`系列一样）的包管理方式采用的是基于`RPM`包的`YUM`包管理方式，包分发方式是编译好的二进制文件。
+    ```
+    yum [options] [command] [package ...]
+    ```
+    **options:**`-h`（帮助），`-y`（安装过程中的提示选择全部为"yes"），`-q`（不显示安装的过程）
+
     ``` bash
     # yum -y install [package]              下载并安装一个rpm包
     # yum localinstall [package.rpm]    安装一个rpm包，使用你自己的软件仓库解决所有依赖关系
