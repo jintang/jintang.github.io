@@ -7,6 +7,7 @@ categories: Javascript
 
 ### ...
 含义：
+
 **1.** 函数中的剩余参数
 ``` js
 function pick(object, ...keys) {
@@ -17,9 +18,9 @@ function pick(object, ...keys) {
     return result;
 }
 ```
-`keys`  是一个包含所有在  `object`  之后的参数的剩余参数（这与包含所
-有参数的  `arguments`  不同，后者会连第一个参数都包含在内）
-**2.** 数组的扩展运算: 将一个数组分割，返回分离的各个项
+`keys`  是一个包含所有在  `object`  之后的参数的剩余参数（这与包含所有参数的  `arguments`  不同，后者会连第一个参数都包含在内）
+
+**2.** 数组的扩展运算: 将一个数组分割，返回分离的各个项  
 在`vuex`中的辅助函数中常有这样的用法，如下:
 ``` js
 import { mapGetters } from 'vuex'

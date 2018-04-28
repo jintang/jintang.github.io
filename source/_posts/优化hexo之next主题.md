@@ -11,45 +11,81 @@ categories: 博客
 ### 样式方面
 [官方默认样式](http://notes.iissnan.com/)对比[我的主题样式](http://jintang.github.io/)  
 - `next/source/css/_custom/custom.styl`:这里面写自定义样式，浏览器中`f12`调试，看哪儿不好看，直接写在此文件中覆盖。我的自定义样式：
-``` 
+``` css
 // Custom styles.
 ::selection {
   background: #3399FF;
 }
+
 article a{
-    border-bottom: none;
-    color: $my-link-color;
-    &:hover {
-        color: $my-link-hover-color;
-    }
+	border-bottom: none;
+	color: $my-link-color;
+	&:hover {
+	    color: $my-link-hover-color;
+	}
 }
 .posts-expand .post-body ul li{
-    list-style: disc;
+	list-style: disc;
 }
 //最近访客
 #ds-recent-visitors .ds-avatar{
-    float:left;
+	float:left;
 }
 //最新评论
 .ds-recent-comments{
-    padding-left:0;
+	padding-left:0;
 }
 //打赏样式
 #wechat p{
-    margin-top:-16px;
+	margin-top:-16px;
 }
 #alipay{
-    vertical-align:top;
+	vertical-align:top;
+}
+.lrc{
+	width:100%;
+	text-align:center;
+}
+.tip{
+	color: #DF0101;
+	font-weight:bold;
+}
+// 行内代码
+$code-block {
+  overflow: auto;
+  margin: 20px 0;
+  padding: 15px;
+  font-size : $code-font-size;
+  color: $highlight-foreground;
+  background: $my-highlight-background;
+  border:1px solid $my-highlight-border;
+  line-height: $line-height-code-block;
+}
+code {
+  padding: 2px 4px;
+  word-break: break-all;
+  color: $my-code-foreground;
+  background: $my-code-background;
+  border-radius: $code-border-radius;
+  font-size : $code-font-size;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+a {
+    border-bottom: none;
 }
 ```
 <!-- more -->
 - `next/source/css/_variables/custom.styl`:这里面可以自定义一些[Stylus](http://www.zhangxinxu.com/jq/stylus/)的变量，一般用作全局的东西，可以覆盖主题默认的变量。我的自定义变量：
-``` 
+``` css
 //字体:
 // 标题，修改成你期望的字体族
 $font-family-headings = Georgia, sans
 // 正文, 修改成你期望的字体族
-$font-family-base = "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro     Hei",Arial,sans-serif
+$font-family-base = "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro 	Hei",Arial,sans-serif
 
 //行内代码字体颜色
 $my-code-foreground = #c7254e
@@ -63,6 +99,13 @@ $my-highlight-border = #ddd;
 //a标签的颜色
 $my-link-color = #0d8abf;
 $my-link-hover-color = #29B4F0;
+
+//bootstrap的颜色
+$brand-primary = #428bca;
+$brand-success = #5cb85c;
+$brand-info =    #5bc0de;
+$brand-warning = #f0ad4e;
+$brand-danger =  #d9534f;
 ```
 
 ### 主页添加热评文章、最新访客、最新评论
