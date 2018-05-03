@@ -110,6 +110,13 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
+# 百度主动推送,与自动推送相配合以让百度更快收录文章  
+baidu_url_submit:
+  count: 1 ## 提交最新的一个链接
+  host: jintang.github.io ## 在百度站长平台中注册的域名
+  token: hB2IydkPF530Irpz ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
 search:
   path: search.xml
   field: post
@@ -158,6 +165,7 @@ image_minifier:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repository: git@github.com:jintang/jintang.github.io.git
   branch: master
+- type: baidu_url_submitter ## 这是新加的
