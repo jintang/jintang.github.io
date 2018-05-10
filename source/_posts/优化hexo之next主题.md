@@ -17,8 +17,10 @@ categories: 博客
   background: #3399FF;
 }
 
-article a{
-	border-bottom: none;
+a {
+    border-bottom: none;
+}
+article a, .about-page a{ // about页面下也用此样式
 	color: $my-link-color;
 	&:hover {
 	    color: $my-link-hover-color;
@@ -72,10 +74,6 @@ code {
 
 p {
     margin: 0 0 15px;
-}
-
-a {
-    border-bottom: none;
 }
 ```
 <!-- more -->

@@ -58,6 +58,10 @@
               {{ list_categories() }}
             </div>
           </div>
+        {% elif page.type === 'about' %}
+          <div class="about-page">
+            {{ page.content }}
+          </div>
         {% else %}
           {{ page.content }}
         {% endif %}
