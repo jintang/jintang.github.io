@@ -107,7 +107,7 @@ export default {
             return val;
         }
     ),function(key,val){
-        if(val.indexOf&&val.indexOf('function')>-1){
+        if(val.indexOf&&val.indexOf('function') !== -1){
             return eval("(function(){return "+val+" })()")
         }
         return val;
@@ -118,18 +118,22 @@ export default {
         可以使用`lodash`的`_.cloneDeep(obj)`方法,通过学习这个库，咱们可以简单实现这样的一个方法：
         ``` js
         function cloneDeep(value) {
-            if(value !== null && typeof(value) == 'object') {
+            if(value instanceof Object) {
                 var result;
                 if(value.constructor === Object) { // 对象
                     result  = {};
                     for (let i in value) {
                         result[i] = cloneDeep(value[i]);
                     }
-                } else { // 数组
+                } else if (value.constructor === Array) { // 数组
                     result  = [];
                     value.forEach(function(item, index) {
                         result[index] = cloneDeep(item);
                     });
+                } else if (value.constructor === Function) { // 函数
+                    result = new Function("return " + value.toString())();
+                } else { // new String、new Date...的instanceof Object也为true，这些基本类型直接赋值
+                    result = value;
                 }
                 return result;
             } else {
