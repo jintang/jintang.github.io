@@ -2,7 +2,7 @@ title: js我们应该知道的
 date: 2016-07-08 15:09:44
 tags:
 - 前端
-- css
+- js
 categories: Javascript
 ---
 ### eval()方法的替换方法
@@ -29,6 +29,33 @@ var aaa=new Function(arg1,arg2...argn);
 ```
 所以,利用`Function()`构造方法就可以实现`eval()`的功能
 <!-- more -->
+
+### 对象的属性描述符
+对象有很多属性来描述这个对象的特点，这些属性就叫属性描述符。属性描述符有两种主要形式：**数据描述符** 和 **存取描述符** , 详细请参看 [这儿](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+
+- **两者都是的描述符**：
+    - `configurable`: 当且仅当该属性为 `true` 时，该属性描述符才能够被改变，同时该属性也能从对应的对象上被删除。默认为 `false` , 当为 `false` 时, 除 `writable` 特性外的其他特性不可被修改
+    - `enumerable`: 当且仅当该属性为 `true` 时，该属性才能够出现在对象的枚举属性中。默认为 `false` , 当一个属性不可被枚举时，使用 `Object.keys(obj)` 是获取不到该属性的，此时可以用 `Object.getOwnPropertyNames(obj)`
+- **数据描述符**：
+    - `value`: 可以是任何有效的值（数值，对象，函数等）。默认为 `undefined`
+    - `writable`: 当且仅当该属性为 `true` 时， `value` 才能被赋值运算符改变。默认为 `false`
+- **存取描述符**:
+    - `get`: 一个给属性提供 `getter` 的方法，如果没有 `getter` 则为 `undefined` 。该方法返回值被用作属性值。默认为 `undefined`
+    - `set`: 一个给属性提供 `setter` 的方法，如果没有 `setter` 则为 `undefined` 。该方法将接受唯一参数，并将该参数的新值分配给该属性。默认为 `undefined`
+
+`Object` 有两个方法可以操作属性描述符，分别是：`Object.defineProperties(obj, props)` 与 `Object.defineProperty(obj, prop, descriptor)` ,我们知道， `vue` 的双向绑定就是利用 `defineProperty` 定义 `get` 与 `set` 实现的。
+
+操作的描述符必须是这两种形式之一，不能同时是两者。所以下面这种是错误的：
+``` js
+Object.defineProperty(obj, "conflict", {
+  value: 0x9f91102, 
+  get: function() { 
+    return 0xdeadbeef; 
+  } 
+});
+// throws a TypeError: value appears only in data descriptors, get appears only in accessor descriptors
+```
+我们默认新创建的对象那些 `configurable` 等描述符对应的值都是 `true`，他们继承自原型链。如果要自己定义描述符， 用 `Object.create(null)` 来创建对象
 ### setTimeout(fun,time)与setInterval(fun,time)
 返回值是个唯一标识符，通常是个数字。 用于清除定时器和gc回收，比如：
 ``` js

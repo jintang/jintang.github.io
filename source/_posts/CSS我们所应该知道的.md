@@ -8,8 +8,8 @@ categories: Css
 ### 文字换行属性:`white-space`
 该属性的常用的值(容器的宽度固定)：
 
-- `normal`;//默认，超出容器范围时换行
-- `nowrap`;//超出容器的范围也不换行
+- `normal`: 默认，超出容器范围时换行
+- `nowrap`: 超出容器的范围也不换行
 
 ### 为什么要设置`margin:0;padding:0;`
 ``` css
@@ -125,7 +125,7 @@ table { border-collapse:collapse; border-spacing:0; }
 ```
 
 ### box-shadow
-此属性对tr不起作用，因为tr为`display:table-row;`,`box-shadow`只对`display:block;`生效
+此属性对 **tr** 不起作用，因为 **tr** 为`display:table-row;`,`box-shadow`只对`display:block;`生效
 
 ### 常用的`CSS hack`技巧
 ``` css
@@ -138,40 +138,18 @@ table { border-collapse:collapse; border-spacing:0; }
 ```
 
 ### 超链接访问过后hover样式就不出现了   
-因为被点击访问过的超链接样式不在具有hover和active了。解决方法是改变CSS属性的排列顺序:
+因为被点击访问过的超链接样式不在具有 `hover` 和 `active` 了。解决方法是改变 `CSS` 属性的排列顺序 **L-V-H-A**:
 ``` css
-    L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
+a:link {} a:visited {} a:hover {} a:active {}
 ```
 
 ### background-position
-**提示**：需要把 background-attachment 属性设置为 "fixed"，才能保证该属性在 Firefox 和 Opera 中正常工作。  
-**理解**: 一个宽高固定的div，如果背景图片大于那个宽高，显示的背景图只是从左上角开始的一部分，而并不会缩放该图片  
+**提示**：需要把 `background-attachment` 属性设置为 `fixed`，才能保证该属性在 **Firefox** 和 **Opera** 中正常工作。  
+**理解**: 一个宽高固定的 **div** ，如果背景图片大于那个宽高，显示的背景图只是从左上角开始的一部分，而并不会缩放该图片  
 `background-position:x y;`
 
 |值          |    描述|  
 | --------   | -----  | 
 | top left<br>top center<br>top right<br>center left<br>center center<br>center right<br>bottom left<br>bottom center<br>bottom right     | 如果您仅规定了一个关键词，那么第二个值将是"center"。<br>默认值：0% 0%。 |  
 | x% y%     |  第一个值是水平位置，第二个值是垂直位置。<br><strong style="color:#f00;">左上角是 0% 0%。右下角是 100% 100%。</strong><br>如果您仅规定了一个值，另一个值将是 50%。   | 
-| xpx ypx        |    第一个值是水平位置，第二个值是垂直位置。<br>左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。<br>如果您仅规定了一个值，另一个值将是50%。<br>您可以混合使用 % 和 position 值。    | 
-
-### transform支持性问题
-Internet Explorer 10、Firefox、Opera 支持 transform 属性。  
-Internet Explorer 9 支持替代的 -ms-transform 属性（仅适用于 2D 转换）。  
-Safari 和 Chrome 支持替代的 -webkit-transform 属性（3D 和 2D 转换）。  
-Opera 只支持 2D 转换。  
-所以这样写基本可以覆盖所有情况：
-``` css
-.box{
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-```
-### @keyframes支持性问题
-目前浏览器都不支持 @keyframes 规则。  
-Firefox 支持替代的 @-moz-keyframes 规则。  
-Opera 支持替代的 @-o-keyframes 规则。  
-Safari 和 Chrome 支持替代的 @-webkit-keyframes 规则。  
-定义：`@keyframes name {keyframes-selector {css-styles;}}`
-`keyframes-selector`可选参数：
-* from/to
-* 0-100%
+| xpx ypx        |    第一个值是水平位置，第二个值是垂直位置。<br>左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。<br>如果您仅规定了一个值，另一个值将是50%。<br>您可以混合使用 % 和 position 值。
