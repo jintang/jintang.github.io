@@ -6,6 +6,16 @@ categories: git
 ---
 >仅以此记录自己常忘记的命令
 
+### 基本配置
+安装完之后需要一些基本配置：
+1. 生成公钥私钥： `ssh-keygen`
+2. 在配置用户名和邮箱：
+    ``` bash
+    $ git config --global user.name "用户名"
+    $ git config --global user.email "邮箱"
+    ```
+3. 可以用 `git config --list` 查看配置，所有的自定义配置存放在 `~/.gitconfig` 里
+
 ### 本地仓库与远程仓库关联
 ``` shell
 git remote add origin 远程git仓库地址
