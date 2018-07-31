@@ -7,6 +7,9 @@ categories: react-native
 > 记录下自己遇到的...
 
 ### react-native 须知
+#### `Android` api与版本号对应关系
+`react native` 要求我们安装的 `sdk` 都是 api 23 的对应版本，这个对应的版本号是 `Andrid 6.0` ，其他的对应关系请参考 [这儿](https://source.android.com/source/build-numbers)
+
 #### `React`的每个组件里，必须`import React`
 ``` js
 import React from 'react';

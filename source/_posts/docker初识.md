@@ -110,7 +110,7 @@ $ docker rmi hello-world
 ```
 
 ### container文件
-**image 文件生成的容器实例，本身也是一个文件，称为容器文件。** 
+**image 运行时的实例，本身也是一个文件，称为容器文件。** 
 
 container 常用命令:
 ``` bash
@@ -219,7 +219,12 @@ MAINTAINER tang
 # Dockerfile 中每一个指令都会建立一层，使用 WORKDIR 后各层的当前目录就被改为指定的目录
 WORKDIR /usr/src/app
 COPY package*.json ./
-RUN npm install
+
+RUN \
+npm install -g nrm && \
+nrm use taobao && \
+npm install
+
 COPY . .
 EXPOSE 3006
 CMD ["npm", "start"]
@@ -300,7 +305,7 @@ $ docker run \
 - **--link wordpressdb:mysql** ，表示 `WordPress` 容器要连到 `wordpressdb` 容器，冒号表示该容器的别名是 mysql
 - **--volume "$PWD/":/var/www/html：** 将当前目录（$PWD）映射到容器的 `/var/www/html` （Apache 对外访问的默认目录）。因此，当前目录的任何修改，都会反映到容器里面，进而被外部访问到。
 
-现在访问 [localhost:9001](localhost:9001) 即可以看到安装页面，停止两个 container 后就自动删除了。
+现在访问 [localhost:9001](localhost:9001) 即可以看到安装页面，停止两个 container 后因为 `--rm` 就自动删除了。
 
 **下面是使用 compose 的实现方法:** 
 
