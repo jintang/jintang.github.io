@@ -643,7 +643,7 @@ busuanzi_count:
   total_visitors: true
   total_visitors_icon: user
   total_views: true
-  total_views_icon: eye
+  total_views_icon: eye   
 
 # Tencent analytics ID
 # tencent_analytics:
