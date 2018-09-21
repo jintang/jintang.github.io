@@ -9,7 +9,7 @@ categories: Javascript
 
 >在`lodash`的方法里，有两个比较有趣的方法：`debounce`与`throttle`，这两个方法是用来限制连续事件的触发频率的。具体的使用请查看[官方文档](https://lodash.com/docs/4.17.4#debounce)。
 
-## debounce
+## debounce: 防抖
 ``` js
 _.debounce(func, [wait=0], [options={
     leading: false,
@@ -34,6 +34,7 @@ _.debounce(func, [wait=0], [options={
 <p data-height="360" data-theme-id="0" data-slug-hash="GZWqNV" data-default-tab="result" data-user="dcorb" data-embed-version="2" data-pen-title="Debounce. Leading" class="codepen">See the Pen <a href="https://codepen.io/dcorb/pen/GZWqNV/">Debounce. Leading</a> by Corbacho (<a href="https://codepen.io/dcorb">@dcorb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
+
 还有一个`maxWait`属性，请查看**区别**这一部分。
 *注意：*
 ``` js
@@ -49,7 +50,7 @@ $(window).on('scroll', _.debounce(doSomething, 200));
 - `scroll`、`resize`、`输入验证`这种连续触发的事件，触发时运行某些代码，大多数时候你可能不需要每次事件都要运行这些代码。比如`input`输入时验证
 - 有个新增弹框，为了防止快速点击两次确定按钮提交两次接口，可以使用`debounce`
 
-## throttle
+## throttle：节流
 ``` js
 _.throttle(func, [wait=0], [options={
     leading: true,
@@ -60,10 +61,12 @@ _.throttle(func, [wait=0], [options={
 **使用：**  
 参数少了个`maxWait`，其他的不论是参数还是返回值和`debounce`都一样。
 自己尝试一下，无限滚动：
+
 <div style="min-width:900px;transform: translateX(-50%);margin-left: 50%;margin-bottom: -85px;">
 <p data-height="500" data-theme-id="0" data-slug-hash="eJLMxa" data-default-tab="result" data-user="dcorb" data-embed-version="2" data-pen-title="Infinite scrolling throttled" class="codepen">See the Pen <a href="https://codepen.io/dcorb/pen/eJLMxa/">Infinite scrolling throttled</a> by Corbacho (<a href="https://codepen.io/dcorb">@dcorb</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </div>
+
 **使用场景：**
 - `scroll`无限滚动翻页，此时不能用`debounce`，因为一直连续触发，只要你没有中间暂停时间超过`wait`，那你滚动的那么多事件都会合并为一次。此时用`throttle`,连续触发的事件在每`wait`事件内触发的多次会合并为一次，还是可以连续触发，只不过频率降低了
 
