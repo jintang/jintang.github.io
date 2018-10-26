@@ -216,8 +216,12 @@ gradlew clean
 ![react-native-run](http://7xphbb.com1.z0.glb.clouddn.com/react-native-run.png)
 `React Native`从0.5.0版本开始已经内置`Babel`转换器
 
-#### Android Studios 用到的快捷键
-很少写原声代码，但是有两个快捷键还是需要知道一下，以免不必要的重启
+#### Android Studios 常用快捷键
 ```
 
 ```
+
+#### XCode 常用快捷键
+- 快速打开某一个文件: **command + shift + O**
+- 返回至上一次光标位置： **control + command + ← , control + command + →**
+- 快速查看当前class的方法： **control + 6**
