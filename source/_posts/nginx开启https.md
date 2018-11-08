@@ -13,9 +13,9 @@ categories: nginx
 那么，我们去买一个 `https` 证书来配置，==...发现有免费的，那自然用免费的，申请下载请参考 [这儿](http://www.zslin.com/web/article/detail/72)，文章中阿里云的免费证书已经不可以申请了，所以我申请了腾讯云的免费证书，不枉我玩了那么多腾讯游戏...手动笑哭
 
 ### 修改nginx配置
-免费的证书有 1 年的使用时间，下载下来的证书长这样：![https腾讯云证书](http://7xphbb.com1.z0.glb.clouddn.com/ca-dir.png)
+免费的证书有 1 年的使用时间，下载下来的证书长这样：![https腾讯云证书](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/ca-dir.png)
 <!-- more -->
-在 `/etc/nginx` 下创建个 `ssl` 文件夹，此路径下的文件如图：![nginx目录](http://7xphbb.com1.z0.glb.clouddn.com/nginx-dir.png)
+在 `/etc/nginx` 下创建个 `ssl` 文件夹，此路径下的文件如图：![nginx目录](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/nginx-dir.png)
 将下载下来 `nginx` 下的证书上传到 `ssl` 文件夹下。然后修改 `nginx.conf` 文件，只需要添加一个 `server` 配置，其他的都不变：
 ``` yml
 http {

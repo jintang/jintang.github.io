@@ -64,13 +64,13 @@ export default install;
 ```
 ### 使用自定义指令:`v-marked`
 里面的缩进和空格也是`markdown`语法的一部分  
-![vue mark](http://7xphbb.com1.z0.glb.clouddn.com/vue_mark.png)  
+![vue mark](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/vue_mark.png)  
 **结果： **   
-![vue mark result](http://7xphbb.com1.z0.glb.clouddn.com/vue_mark_result.png)  
+![vue mark result](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/vue_mark_result.png)  
 
 **ps:**
 代码语法高亮的样式可以有多种选择:  
-![highlight style](http://7xphbb.com1.z0.glb.clouddn.com/highlight.png)
+![highlight style](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/highlight.png)
 
 ### `vue`自定义指令相关知识
 

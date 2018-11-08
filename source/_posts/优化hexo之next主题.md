@@ -125,7 +125,7 @@ $brand-danger =  #d9534f;
  data-num-items="5"     //显示最新文章的条数，默认值5
 ```
 
-我要显示在**侧边栏**，所以我将通用代码添加到`sidebar.swig`,此文件在`next/layout/_macro`目录下。我要放在许可协议![许可协议](http://7xphbb.com1.z0.glb.clouddn.com/blog_license.png)的下面：
+我要显示在**侧边栏**，所以我将通用代码添加到`sidebar.swig`,此文件在`next/layout/_macro`目录下。我要放在许可协议![许可协议](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/blog_license.png)的下面：
 
 首先，在文件中找到证书对应的代码：  
 ``` html

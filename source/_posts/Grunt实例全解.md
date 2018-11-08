@@ -17,7 +17,7 @@ npm install -g grunt-cli
 #### 新建一个空文件夹，并添加两个文件：`package.json`与`Gruntfile.js`
 > 这两个文件要在项目的根目录下
 
-![新建的grunt项目](http://7xphbb.com1.z0.glb.clouddn.com/grunt/grunt1.png)
+![新建的grunt项目](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/grunt/grunt1.png)
 
 `package.json`中添加如下代码，`Gruntfile.js`中暂且不管：
 ``` javascript
@@ -37,12 +37,12 @@ npm install -g grunt-cli
 npm install
 ```
 结果如图：
-![npm install后结果图](http://7xphbb.com1.z0.glb.clouddn.com/grunt/grunt2.png)
+![npm install后结果图](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/grunt/grunt2.png)
 <!-- more -->
 #### 创建测试的用例
 如图：
 
-![测试用例](http://7xphbb.com1.z0.glb.clouddn.com/grunt/grunt3.png)
+![测试用例](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/grunt/grunt3.png)
 
 里面的代码也是随便写的，只用来演示,为了对比效果，将代码粘贴如下：
 
@@ -100,7 +100,7 @@ grunt
 ```
 结果如图：
 
-![uglify的结果](http://7xphbb.com1.z0.glb.clouddn.com/grunt/grunt4.png)
+![uglify的结果](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/grunt/grunt4.png)
 
 查看`uglifyResult.min.js`的内容，已经将`test.js`和`event.js`的内容压缩到一起了，这儿就不放图了，有兴趣的自己试试。
 
@@ -152,6 +152,6 @@ grunt
 ```
 结果如图：
 
-![concat结果图](http://7xphbb.com1.z0.glb.clouddn.com/grunt/grunt5.png)
+![concat结果图](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/grunt/grunt5.png)
 
 `concatResult.js`内容

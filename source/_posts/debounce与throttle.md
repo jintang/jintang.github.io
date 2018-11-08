@@ -21,9 +21,9 @@ _.debounce(func, [wait=0], [options={
 **使用：**  
 `debounce()`接受一些配置参数，返回一个 *new debounced function*，这个对象拥有`cancel`、`flush`方法，这两个方法都不咋用，就看看配置参数就行了。
 默认的效果图：
-![debounce默认效果图](http://7xphbb.com1.z0.glb.clouddn.com/debounce.webp)
+![debounce默认效果图](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/debounce.webp)
 使用`leading`属性的效果图：
-![debounce使用leading属性的效果图](http://7xphbb.com1.z0.glb.clouddn.com/debounce-leading.webp)
+![debounce使用leading属性的效果图](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/debounce-leading.webp)
 所以，当设置`leading:true, trailing: false`时会在`wait`时间段的开始触发合并后的事件。
 
 <!-- more -->

@@ -213,7 +213,7 @@ gradlew clean
 `react native` 要求我们安装的 `sdk` 都是 api 23 的对应版本，这个对应的版本号是 `Andrid 6.0` ，其他的对应关系请参考 [这儿](https://source.android.com/source/build-numbers)
 
 #### `require`只能使用静态字符串，因为它是在编译期执行，而不是运行期。js执行过程:
-![react-native-run](http://7xphbb.com1.z0.glb.clouddn.com/react-native-run.png)
+![react-native-run](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/react-native-run.png)
 `React Native`从0.5.0版本开始已经内置`Babel`转换器
 
 #### Android Studios 常用快捷键

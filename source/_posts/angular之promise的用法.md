@@ -70,7 +70,7 @@ promiseA花费的时间为:1000ms;
 promiseB花费的时间为:500ms;
 promiseC花费的时间为:800ms;
 虽然promiseB花费的时间最短,但是还是按链式执行,结果如下:
-![结果](http://7xphbb.com1.z0.glb.clouddn.com/promise.png)
+![结果](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/promise.png)
 
 
 ## 用法

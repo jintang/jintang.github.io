@@ -26,4 +26,4 @@ categories: angular
 </select>
 ```
 **上面的效果是：**
-![select效果图](http://7xphbb.com1.z0.glb.clouddn.com/angular_select.png)
+![select效果图](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/angular_select.png)

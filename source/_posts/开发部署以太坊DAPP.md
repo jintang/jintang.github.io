@@ -167,12 +167,12 @@ let info = infoContract.at('合约地址');
 
 ## 使用
 我通过 webpack 启动了客户端，每次点击 `Update Info` 按钮都会生成一条交易。
-![dapp_transcation](https://www.tu260.com/upload/477427dae0d2cbf39a8db5aef0bfd0db.png)
+![dapp_transcation](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/dapp_transcation.png)
 交易可以看作是从一个帐户发送到另一个帐户的消息。它能包含一个二进制数据（合约负载）和以太币。如果目标账户含有代码，此代码会被执行，并以 payload 作为入参。如果目标账户是零账户（账户地址为 0 )，此交易将创建一个 新合约 。 如前文所述，合约的地址不是零地址，而是通过合约创建者的地址和从该地址发出过的交易数量计算得到的（所谓的“nonce”）
 
 *说明：* 一经创建，每笔交易都收取一定数量的 gas 。无论执行到什么位置，一旦 gas 被耗尽（比如降为负值），将会触发一个 `out-of-gas` 异常。当前调用帧（call frame）所做的所有状态修改都将被回滚。
 
 ## 总结
 可以用下图来描述 `DAPP` 的原理。
-![DAPP_theory](https://www.tu260.com/upload/22e196def75b0414ccc5ab620f640d7b.png)
+![DAPP_theory](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/DAPP_theory.png)
 我们的 demo 完成了 客户端 和 合约端。

@@ -165,7 +165,7 @@ div {
     @import (keyword) "filename";
 ```
 现在，我有一个`demo1.less`需要引用`base.less`，他们的路径如图:
-![引用base.less](http://7xphbb.com1.z0.glb.clouddn.com/less%E4%B9%8Bimport.png)  
+![引用base.less](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/less%E4%B9%8Bimport.png)  
 使用相对路径：
 ``` less
     @import (keyword) "../../../furnace/less/base.less";    
@@ -177,5 +177,5 @@ div {
 **ps**:还可以直接从你的 node_modules 文件夹中加载 LESS 文件。  
 
 **结语：**不论是`less`还是`sass`，都只是个工具，不应该在这上面花费大量的精力来玩花它。附一张百度找的`less`的思维导图,如下：
-![less思维导图](http://7xphbb.com1.z0.glb.clouddn.com/less%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png)
+![less思维导图](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/less%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.png)
 话说这思维导图不全，以后有时间自己做个。所谓的有时间，大概又是了了无期...

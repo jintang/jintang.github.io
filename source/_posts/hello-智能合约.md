@@ -165,7 +165,7 @@ Contract mined! address: 0x8500c68000dbbebea6d5673d28927b28b9470854 transactionH
 # 查看账号余额，发现变少了
 ```
 同时也可以在日志中看到挖矿记录等
-![mine-log](http://7xphbb.com1.z0.glb.clouddn.com/mine-log.png)
+![mine-log](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/mine-log.png)
 ## 运行合约
 ``` bash
 > hello.say()

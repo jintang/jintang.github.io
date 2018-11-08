@@ -88,7 +88,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 ```
 结果如下:  
-![多类选择器结果](http://7xphbb.com1.z0.glb.clouddn.com/css-float-1.png)
+![多类选择器结果](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/css-float-1.png)
 
 总结:  
 **多类选择器**会匹配其所有***子元素***任意组合的样式，如：  
@@ -105,7 +105,7 @@ table { border-collapse:collapse; border-spacing:0; }
 **只要这两个地方统一了,一般浏览器上就不会再出现乱码.如果还有,看看是不是浏览器设定的编码格式不统一.**
 
 ### 浏览器的滚动条:
-![百度首页更多产品bug](http://7xphbb.com1.z0.glb.clouddn.com/jike_baidu_product_bug.jpg)  在批改极客学院作业的过程中，有个小bug印象特别深刻，让我想了一个周都没有想明白，表现为：
+![百度首页更多产品bug](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/jike_baidu_product_bug.jpg)  在批改极客学院作业的过程中，有个小bug印象特别深刻，让我想了一个周都没有想明白，表现为：
 当移动到右侧的更多产品时，会向下弹出来该下拉列表，而且会向左偏移一段距离。原因是为了沾满整个屏幕，给此div设置了`min-height=667`，而这个高度大于我的屏幕高度，所以导致右侧出来了一个滚动条，这个滚动条是占宽度的。所以会向左偏移。
 
 解决方案：设置滚动条的宽高为0，如下：

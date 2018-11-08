@@ -25,10 +25,10 @@ require.async('./'+moduleName,function(m){
 ### 同步加载多个模块
 在改写项目的时候，有这样一个插件：
 
-![kendo](http://7xphbb.com1.z0.glb.clouddn.com/seajs/kendo.png)  
+![kendo](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/seajs/kendo.png)  
 
 没错....要使用这个插件，必须加载这些模块：`kendo.button.min.js`、`kendo.core.min.js`、`kendo.draganddrop.min.js`、`kendo.userevents.min.js`、`kendo.window.min.js`。你又猜对了，这些模块间是有依赖关系的，原项目用的是`requirejs`，依赖如图：
-![kendo_depend](http://7xphbb.com1.z0.glb.clouddn.com/seajs/kendo_depend.png)
+![kendo_depend](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/seajs/kendo_depend.png)
 
 改写如下：
 ``` javascript

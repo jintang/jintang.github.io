@@ -14,7 +14,7 @@ html页面按大小排序：
 
 然后有这样一个问题：如何获取如图的高度?
 
-![高度](http://7xphbb.com1.z0.glb.clouddn.com/html_height.png)
+![高度](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/html_height.png)
 这样获取：
 ``` javascript
     document.documentElement.clientHeight;
@@ -24,8 +24,8 @@ html页面按大小排序：
 ### 调试鼠标hover时提示框的样式
 我们经常需要设计提示框，在`hover`时浮现，但是如何在控制台调试这个提示框的样式呢，每次鼠标移开提示框就消失，不胜其烦，这儿有个小技巧
 
-1. 在提示框上右键*检查*,找到对应的dom![inspect](http://7xphbb.com1.z0.glb.clouddn.com/inspect.gif)
-2. 添加dom断点给`node removal`:![debugger](http://7xphbb.com1.z0.glb.clouddn.com/debug.gif)  
+1. 在提示框上右键*检查*,找到对应的dom![inspect](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/inspect.gif)
+2. 添加dom断点给`node removal`:![debugger](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/debug.gif)  
  
 然后就可以在断点阻塞到提示框显示的时候开心的调试样式了
 

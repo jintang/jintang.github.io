@@ -64,7 +64,7 @@ $ ps -L 1213
 $ ps -C mongod -f
 ```
 `ps -aux`显示的结果：
-![ps_result](http://7xphbb.com1.z0.glb.clouddn.com/linux_ps_result.png)
+![ps_result](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/linux_ps_result.png)
 **列的含义：**
 - USER： 账号
 - PID： progress id
@@ -96,7 +96,7 @@ $ top [参数]
 - i 使top不显示任何闲置或者僵死进程。
 
 **结果：**
-![top-result](http://7xphbb.com1.z0.glb.clouddn.com/linux-top-result.png)
+![top-result](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/linux-top-result.png)
 **含义：**
 1. top：
     - 08:01:27 当前时间

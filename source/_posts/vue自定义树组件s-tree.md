@@ -71,7 +71,7 @@ export default {
 ```
 <!-- more -->
 #### 效果图
-![s-tree](http://7xphbb.com1.z0.glb.clouddn.com/vue_tree.png)
+![s-tree](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/vue_tree.png)
 ### 组件原理
 下面是一部分需要注意的地方讲解，其他的请查看底部的源代码链接
 #### 使用递归组件

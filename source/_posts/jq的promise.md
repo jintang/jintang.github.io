@@ -121,7 +121,7 @@ js:
     }
 ```
 点击"查询"按钮的输出结果为：
-![jq defer](http://7xphbb.com1.z0.glb.clouddn.com/jq/jq_promise1.png)
+![jq defer](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/jq/jq_promise1.png)
 
 从结果可以看出：`resolve()`触发了`done(callback)`。其实：
 - defer.resolve():触发 done 的回调执行,并传值给回调方法。
@@ -170,7 +170,7 @@ js:
     }
 ```
 结果如图：
-![链式调用结果](http://7xphbb.com1.z0.glb.clouddn.com/jq/jq_promise2.png)
+![链式调用结果](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/jq/jq_promise2.png)
 **写法2**
 ``` javascript
     function search(){

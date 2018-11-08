@@ -49,7 +49,7 @@ for (var j=0;j<Arr.length;j++){
 }
 ```
 这是`RegExp`对象`$1...$9`值的变化：  
-![$1...$9的值](http://7xphbb.com1.z0.glb.clouddn.com/regExp1.png)![$1...$9的值](http://7xphbb.com1.z0.glb.clouddn.com/regExp2.png)  
+![$1...$9的值](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/regExp1.png)![$1...$9的值](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/regExp2.png)  
 可以看到，每次循环`$1...$4`是新匹配的4个  
 附上[trigkit4](https://segmentfault.com/u/trigkit4)的正则表达式思维导图一张：  
-![正则思维导图](http://7xphbb.com1.z0.glb.clouddn.com/repExp%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.gif)
+![正则思维导图](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/repExp%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE.gif)
