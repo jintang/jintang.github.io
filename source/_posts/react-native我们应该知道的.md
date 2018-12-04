@@ -217,9 +217,10 @@ gradlew clean
 `React Native`从0.5.0版本开始已经内置`Babel`转换器
 
 #### Android Studios 常用快捷键
-```
-
-```
+打开 `andorid studio` ，会默认根据 `gradle` 同步项目。同步完成后才可以 Build 与 Run，一般可以直接 Run
+- 快速打开某一个文件: **command + shift + O**
+- 根据 `gradle` 同步项目： `File -> Sync Project with Gradle Files`
+- Run: **control + R**
 
 #### XCode 常用快捷键
 - 快速打开某一个文件: **command + shift + O**
