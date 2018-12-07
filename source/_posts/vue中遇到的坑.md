@@ -89,13 +89,13 @@ export default {
 ``` js
     Object.assign({}, obj)
 ```
-2. **深拷贝：**
-    - **`json`转化：**
+2. **深拷贝：** 参考 [这儿](https://smalldata.tech/blog/2018/11/01/copying-objects-in-javascript)
+    - **将对象序列化为字符串，然后将其反序列化**
     ``` js
     JSON.parse(JSON.stringify(obj))
     ```
     非常简单，但是有两个常见的错误:
-         - 如果属性是函数会被忽略
+         - 如果属性是不可序列化值类型，结果并不是期盼的值。比如 函数会被忽略， `Date` 类型会被 `JSON.parse()` 解释为字符串
          - 如果有循环引用会报错
          
     `JSON.stringify()`拥有三个参数(参考[官方描述](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify))，第一个错误可以用下面的代码修复：
@@ -131,8 +131,16 @@ export default {
                         result[index] = cloneDeep(item);
                     });
                 } else if (value.constructor === Function) { // 函数
+                    // 方式1
                     result = new Function("return " + value.toString())();
-                } else { // new String、new Date...的instanceof Object也为true，这些基本类型直接赋值
+                    // 方式2
+                    result = function() {
+                        return value.apply(this, arguments);
+                    }
+                } else if (value instanceof Date) { // new Date() 时间对象
+                    result = new Date();
+                    result.setTime(result.getTime());
+                } else { // new String...的instanceof Object也为true，这个直接赋值，
                     result = value;
                 }
                 return result;
