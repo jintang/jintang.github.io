@@ -105,7 +105,7 @@ table { border-collapse:collapse; border-spacing:0; }
 **只要这两个地方统一了,一般浏览器上就不会再出现乱码.如果还有,看看是不是浏览器设定的编码格式不统一.**
 
 ### 浏览器的滚动条:
-![百度首页更多产品bug](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/jike_baidu_product_bug.jpg)  在批改极客学院作业的过程中，有个小bug印象特别深刻，让我想了一个周都没有想明白，表现为：
+![百度首页更多产品bug](https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/jike_baidu_product_bug.jpg)  在批改极客学院作业的过程中，有个小bug印象特别深刻，让我想了很久都没有想明白，表现为：
 当移动到右侧的更多产品时，会向下弹出来该下拉列表，而且会向左偏移一段距离。原因是为了沾满整个屏幕，给此div设置了`min-height=667`，而这个高度大于我的屏幕高度，所以导致右侧出来了一个滚动条，这个滚动条是占宽度的。所以会向左偏移。
 
 解决方案：设置滚动条的宽高为0，如下：
@@ -143,13 +143,60 @@ table { border-collapse:collapse; border-spacing:0; }
 a:link {} a:visited {} a:hover {} a:active {}
 ```
 
-### background-position
-**提示**：需要把 `background-attachment` 属性设置为 `fixed`，才能保证该属性在 **Firefox** 和 **Opera** 中正常工作。  
-**理解**: 一个宽高固定的 **div** ，如果背景图片大于那个宽高，显示的背景图只是从左上角开始的一部分，而并不会缩放该图片  
-`background-position:x y;`
+### 子元素的宽度占满父元素剩余的宽度
 
-|值          |    描述|  
-| --------   | -----  | 
-| top left<br>top center<br>top right<br>center left<br>center center<br>center right<br>bottom left<br>bottom center<br>bottom right     | 如果您仅规定了一个关键词，那么第二个值将是"center"。<br>默认值：0% 0%。 |  
-| x% y%     |  第一个值是水平位置，第二个值是垂直位置。<br><strong style="color:#f00;">左上角是 0% 0%。右下角是 100% 100%。</strong><br>如果您仅规定了一个值，另一个值将是 50%。   | 
-| xpx ypx        |    第一个值是水平位置，第二个值是垂直位置。<br>左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。<br>如果您仅规定了一个值，另一个值将是50%。<br>您可以混合使用 % 和 position 值。
+#### 利用 [BFC](https://www.cnblogs.com/libin-1/p/7098468.html) (block formatting context)
+右边子元素填充父元素剩余宽度：
+``` html
+<div class="container">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+```
+``` css
+.container {
+    width:600px;
+    height:200px;
+}
+.left {
+    width:200px;
+    height:100%;
+    background:blue;
+    float:left;
+}
+.right {
+    width:auto; // 重点
+    height:100%;
+    background:red;
+    overflow:hidden; // 重点，此属性使得盒子成为 BFC
+}
+```
+左边子元素填充父元素剩余宽度：
+``` html
+<div class="container">
+    <div class="right"></div>
+    <div class="left"></div>
+</div>
+```
+``` css
+.container {
+    width:600px;
+    height:200px;
+}
+.right {
+    width:200px;
+    height:100%;
+    background:red;
+    float: right;
+}
+.left {
+    width:auto;
+    height:100%;
+    background:blue;
+    overflow:hidden;
+}
+```
+**注意：** `float` 的 元素放在前面， `BFC` 的元素放在后面以自适应父元素剩余宽度
+
+#### 利用 `flex` 布局
+给要填充父元素剩余宽度的元素设置 `flex: 1`
