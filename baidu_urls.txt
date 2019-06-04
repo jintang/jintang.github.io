@@ -1,1 +1,1 @@
-http://jintang.github.io/2019/06/03/flutter-CI/
+http://jintang.github.io/2019/06/03/flutter 使用 CI 打包/
