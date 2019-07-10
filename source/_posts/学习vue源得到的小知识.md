@@ -1,7 +1,8 @@
 title: 学习vue源码得到的知识
 date: 2018-12-10 17:57:59
 tags:
-categories:
+- vue
+categories: 前端
 ---
 ### Vue.extend(): 创建 "Vue" 的 子类
 

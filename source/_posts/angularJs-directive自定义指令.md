@@ -3,7 +3,7 @@ date: 2015-12-13 14:40:37
 tags: 
 - angular
 - directive
-categories: angular  
+categories: 前端  
 ---
    **directive:中文是"指令”的意思。**
    

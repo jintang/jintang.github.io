@@ -2,9 +2,8 @@ title: jq的promise
 date: 2016-09-30 09:23:51
 tags: 
 - jQuery
-- ajax
 - promise
-categories: jQuery
+categories: 前端
 ---
 >之前用angular的$http向接口发起请求，里面的回调写法感觉很好看，最近用jquery，也找到相同的写法，展示于此处。
 

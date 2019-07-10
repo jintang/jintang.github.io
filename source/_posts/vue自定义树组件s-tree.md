@@ -2,9 +2,7 @@ title: vue自定义树组件s-tree
 date: 2017-04-18 13:14:14
 tags: 
 - vue
-- tree
-- 自定义组件
-categories: vue
+categories: 前端
 ---
 >本组件是基于`Vue2`的自定义tree组件，参考了[weibangtuo](https://github.com/weibangtuo/vue-tree)的实现，实现了以下功能:    
 

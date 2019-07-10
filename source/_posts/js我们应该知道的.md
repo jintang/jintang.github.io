@@ -1,9 +1,8 @@
 title: js我们应该知道的
 date: 2016-07-08 15:09:44
 tags:
-- 前端
-- js
-categories: Javascript
+- javascript
+categories: 前端
 ---
 ### eval()方法的替换方法
 js里有个神奇的方法：`eval()`，但是不建议使用，原因看看[知乎的回答](https://www.zhihu.com/question/20591877)，但是有时候我们确实需要一个这样作用的方法，下面是替换的方法：  

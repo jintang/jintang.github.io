@@ -2,7 +2,7 @@ title: react-native我们应该知道的
 date: 2018-05-11 09:16:20
 tags:
 - react-native
-categories: react-native
+categories: 前端
 ---
 > 记录下自己遇到的...
 

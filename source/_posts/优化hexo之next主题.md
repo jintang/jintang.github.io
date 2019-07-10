@@ -2,9 +2,8 @@ title: 优化hexo之next主题
 date: 2016-12-01 13:13:07
 tags: 
 - hexo
-- next
-- duoshuo
-categories: 博客
+- 博客
+categories: 杂说
 ---
 >[next](http://theme-next.iissnan.com/)主题是一款黑白色的主题，简单大方，时间久了难免有点厌烦。于是自己遍想做点优化和美化,让它色彩缤纷些。下面的方法也适用于其他主题
 

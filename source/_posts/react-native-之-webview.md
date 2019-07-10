@@ -2,7 +2,7 @@ title: react-native 之 webview
 date: 2018-12-04 16:07:11
 tags:
 - react-native
-categories: react-native
+categories: 前端
 ---
 > 前段时间公司要求写个游戏嵌入到 App 中，我们通过 `webview` 链接到 App 中，中间遇到了很多坑，在此记录一下。
 

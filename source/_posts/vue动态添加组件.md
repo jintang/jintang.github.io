@@ -2,7 +2,7 @@ title: vue动态添加组件
 date: 2018-03-27 17:24:21
 tags: 
 - vue
-categories: vue
+categories: 前端
 ---
 > 大多数时候，我们都用单文件.vue文件来实现功能。比如添加一个dialog，代码如下：
 

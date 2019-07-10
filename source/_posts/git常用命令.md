@@ -2,7 +2,7 @@ title: git常用命令
 date: 2016-06-24 09:14:44
 tags: 
 - git
-categories: git
+categories: 杂说
 ---
 >仅以此记录自己常忘记的命令
 

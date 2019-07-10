@@ -2,7 +2,7 @@ title: react vs vue
 date: 2018-09-05 16:14:03
 tags:
 - react
-- react native
+- react-native
 - vue
 categories: 前端
 ---

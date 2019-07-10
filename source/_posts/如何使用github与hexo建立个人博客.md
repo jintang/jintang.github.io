@@ -2,9 +2,8 @@ title:  如何使用github与hexo建立个人博客
 date: 2015-12-09 14:38:10
 tags: 
 - hexo
-- git
 - 博客
-categories: 博客 
+categories: 杂说 
 ---
 >   刚刚用github与hexo搭建了个人博客，对于这么个专属于自己的东西还是蛮开心的，不过过程中也遇到了很多不懂的东西，所以还是想把这个过程写下来，希望对新人有些帮助！
 

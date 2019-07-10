@@ -2,8 +2,7 @@ title: Ionic监听手机硬键盘的返回键
 date: 2016-06-22 17:45:35
 tags: 
 - ionic
-- $ionicPlatform
-categories: ionic 
+categories: 前端 
 ---
 > 我们用ionic打包的app在真机上需要处理手机硬键盘的返回键,下面提供几种方法:
 

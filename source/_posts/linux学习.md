@@ -2,7 +2,7 @@ title: linux学习
 date: 2018-01-23 14:38:48
 tags: 
 - linux
-categories: linux
+categories: 杂说
 ---
 >谷歌云有一个免费1年的服务，那就申请一个学习学习啦。对于`linux`之前只用过`ubuntu`，装啥环境感觉非常方便。用这篇文章来记录下自己的理解。
 

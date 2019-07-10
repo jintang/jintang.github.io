@@ -2,8 +2,7 @@ title: Grunt实例全解
 date: 2016-08-29 17:02:08
 tags: 
 - Grunt
-- 自动化
-categories: Grunt
+categories: 杂说
 ---
 > 早闻自动化部署大名，可惜我性子懒散，至今才了解了解。官网看了是一头雾水，直到跟着[叶小钗](http://www.cnblogs.com/yexiaochai/p/3603389.html)一笔一画，才了解这个`Grunt`是怎么一回事，回头再看[官方案例](http://www.gruntjs.net/sample-gruntfile)。对它也再无神秘的面纱，纸上得来终觉浅，绝知此事要躬行。
 

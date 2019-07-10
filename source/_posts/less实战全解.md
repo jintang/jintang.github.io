@@ -3,7 +3,7 @@ date: 2016-11-10 19:55:49
 tags:
 - less
 - css
-categories: css
+categories: 前端
 ---
 附上我的**开发规范**与**公用mixin**:
 >- [less开发规范](https://gist.github.com/jintangWang/7633204455a2b992f08252f82fac1d58#file-_less-md)

@@ -1,9 +1,9 @@
 title: 使用handsontable插件修改bug心得
 date: 2016-10-18 10:33:32
 tags: 
+- jQuery
 - handsontable
-- jq
-categories: jQuery
+categories: 前端
 ---
 >这段日子有个坑爹的项目——南网，这篇文章就来纪念它。里面有用到一个jq插件：[handsontable](https://handsontable.com/),作用是生成一个类似excel的表格，不得不说功能十分强大，实现了类似excel的各种功能，使用的api也比较简单，然而...后面有些莫名其妙的bug，奈何于水平有限，其源码也太长(30000+)，各种嵌套，无法从正确的逻辑中找到出问题的地方，只能在关键的地方强制使用自己的逻辑，下面就说说怎么找这个bug关键的地方
 

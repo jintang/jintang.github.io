@@ -2,8 +2,7 @@ title: dart需知
 date: 2019-04-24 16:12:30
 tags: 
 - dart
-categories:
-- dart
+categories: flutter
 ---
 
 谷歌开发了 `dart` 语言，目前已经可以用作 `web` 端 和 移动端(`flutter`)，在谷歌的展望中以后还可以做桌面端，大一统啊。 此处记录下一些基本又重要，自己会选择性忽视和经常要用的点。

@@ -3,7 +3,7 @@ date: 2016-11-07 17:43:14
 tags: 
 - less
 - css
-categories: Css
+categories: 前端
 ---
 >less是一种css的扩展，可以编译成css。将它定位为"工具"即可，最终 浏览器/app 识别的还是css  
 

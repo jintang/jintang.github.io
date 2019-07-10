@@ -3,7 +3,7 @@ date: 2017-09-28 14:07:23
 tags: 
 - es6
 - babel
-categories: Javascript
+categories: 前端
 ---
 >不讲为什么使用es6，只讲es6如何在各种环境下使用。目前浏览器...环境都不支持es6，所以我们需要[babel](http://babeljs.cn/)
 

@@ -2,7 +2,7 @@ title: docker初识
 date: 2018-04-24 09:11:44
 tags:
 - docker
-categories: docker
+categories: 杂说
 ---
 > 参考链接： 
 >   - [阮大神](http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)，有些介绍直接 copy 了阮大神的，因为阮大神写得很通俗易懂，嘿嘿

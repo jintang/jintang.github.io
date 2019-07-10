@@ -1,8 +1,8 @@
 title: angular下拉列表
 date: 2016-01-07 23:26:18
 tags: 
-- angular下拉列表
-categories: angular
+- angular
+categories: 前端
 ---
 先自定义用的变量
 ``` javascript

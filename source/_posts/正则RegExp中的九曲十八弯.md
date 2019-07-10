@@ -2,7 +2,7 @@ title: 正则RegExp中的九曲十八弯
 date: 2016-10-25 18:01:23
 tags: 
 - 正则
-categories: Javascript
+categories: 前端
 ---
 >很多知识都是有许多不被注意的细节，一不小心就会拐错了弯，翻了车。今天说几个正则需要注意的地方。   
 

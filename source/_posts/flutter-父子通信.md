@@ -26,7 +26,7 @@ categories:
 import 'package:flutter/material.dart';
 
 // 1. 创建 globalKey
-GlobalKey<_HomePageState> globalKey = GlobalKey();
+GlobalKey<HomePageState> globalKey = GlobalKey();
 
 class MyApp extends StatelessWidget {
   @override
@@ -56,10 +56,10 @@ class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Container();

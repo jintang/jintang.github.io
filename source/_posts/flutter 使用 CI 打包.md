@@ -3,7 +3,7 @@ date: 2019-06-03 10:01:06
 tags:
 - flutter
 - CI
-categories: CI
+categories: flutter
 ---
 
 > `CI` (continuous integration) : 持续集成。用来做一些自动化工作，比如程序的打包，单元测试，部署等。

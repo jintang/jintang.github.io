@@ -1,8 +1,8 @@
 title: debounce与throttle
 date: 2017-12-23 14:31:00
 tags: 
-- 前端
-categories: Javascript
+- javascript
+categories: 前端
 ---
 - [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
 - [官方文档](https://lodash.com/docs/4.17.4#debounce)

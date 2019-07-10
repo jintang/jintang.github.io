@@ -2,8 +2,7 @@ title: seajs使用中的坑
 date: 2016-09-21 18:44:45
 tags: 
 - seajs
-- 模块化
-categories: Javascript
+categories: 前端
 ---
 >早有耳闻`模块化`的优点，最近在使用的过程中才慢慢加深了感触，恩...确实方便，下面讲讲我遇到的坑,提一下,seajs是CMD规范
 

@@ -2,7 +2,7 @@ title: vue我们应该知道的
 date: 2018-05-11 09:42:20
 tags: 
 - vue
-categories: vue
+categories: 前端
 ---
 ### route开启h5模式
 路由里面加一个 `mode: 'history'`  

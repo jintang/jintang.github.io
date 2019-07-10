@@ -2,8 +2,7 @@ title: CSS我们所应该知道的
 date: 2015-12-24 17:34:54
 tags: 
 - css
-- 前端
-categories: Css
+categories: 前端
 ---
 ### 文字换行属性:`white-space`
 该属性的常用的值(容器的宽度固定)：

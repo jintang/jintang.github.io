@@ -2,8 +2,7 @@ title: vue中上传照片生成带图片的二维码
 date: 2017-04-13 13:33:01
 tags: 
 - vue
-- File
-categories: vue
+categories: 前端
 ---
 本例使用了：
 

@@ -2,8 +2,7 @@ title: html我们应该知道的
 date: 2016-09-30 17:05:49
 tags: 
 - html
-- 前端
-categories: HTML
+categories: 前端
 ---
 ### document.documentElement
 html页面按大小排序：

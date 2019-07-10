@@ -2,7 +2,7 @@ title: vue中遇到的坑
 date: 2017-05-17 10:04:05
 tags:
 - vue
-categories: vue
+categories: 前端
 ---
 >仅以此记录 vue 中遇到的坑
 

@@ -1,9 +1,8 @@
 title: .shtml中include标签的用法
 date: 2016-07-13 14:34:40
 tags: 
-- 前端
 - SSI
-categories: HTML
+categories: 前端
 ---
 > 我们的`html`文件类似的有`.shtml`、`shtm`，这种和`html`文件的区别在于：
 

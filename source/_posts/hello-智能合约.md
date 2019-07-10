@@ -1,7 +1,8 @@
 title: hello 智能合约
 date: 2018-08-03 01:46:20
 tags:
-categories:
+- 智能合约
+categories: 区块链
 ---
 
 > 欢迎查看 跟着大佬一起动手系列，点击[这儿](https://learnblockchain.cn/2017/11/24/init-env/)查看大佬的博文

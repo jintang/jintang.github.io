@@ -2,8 +2,7 @@ title: vue静态资源放在src/assets与static目录下的区别
 date: 2017-11-03 09:22:02
 tags: 
 - vue
-- webpack
-categories: vue
+categories: 前端
 ---
 > - [官方链接](http://vuejs-templates.github.io/webpack/static.html)
 > - [翻译链接](https://segmentfault.com/q/1010000009842688)

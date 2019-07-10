@@ -2,9 +2,8 @@ title: vue中封装使用markdown并语法高亮
 date: 2017-03-22 09:23:15
 tags: 
 - vue
-- marked
 - highlight.js
-categories: vue
+categories: 前端
 ---
 >最近学习Vue2.0，感觉很有意思，给大家分享一个在`vue`项目中写`markdown`的方法。国际惯例,先附上一些链接。  
 

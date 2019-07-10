@@ -3,7 +3,7 @@ date: 2016-04-19 17:22:57
 tags: 
 - angular
 - promise
-categories: angular
+categories: 前端
 ---
 本文参考自http://www.cnblogs.com/mliudong/p/4151594.html
 
