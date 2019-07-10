@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[网页关键渲染路径]]></title>
       <url>http://jintang.github.io/2019/07/02/%E7%BD%91%E9%A1%B5%E5%85%B3%E9%94%AE%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%84/</url>
-      <content type="html"><![CDATA[<blockquote><p>详细请阅读 <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/" target="_blank" rel="noopener">google文档</a> ，这儿记录一些关键的总结<br><code>udacity</code> 有个课程也讲得很详细： <a href="https://classroom.udacity.com/courses/ud884" target="_blank" rel="noopener">课程</a></p></blockquote><h3 id="浏览器首次渲染的几个步骤"><a href="#浏览器首次渲染的几个步骤" class="headerlink" title="浏览器首次渲染的几个步骤"></a>浏览器首次渲染的几个步骤</h3><ol><li>处理 <code>HTML</code> 标记并构建 <code>DOM</code> 树。</li><li>处理 <code>CSS</code> 标记并构建 <code>CSSOM</code> 树。</li><li>将 <code>DOM</code> 与 <code>CSSOM</code> 合并成一个渲染树。渲染树不包括不可见的元素（如： <code>header</code> 下所有，<code>display:none;</code> 的元素，但包括 <code>visibility:hidden;</code> 的元素）</li><li>Layout : 根据渲染树来布局，以计算每个节点的几何信息。</li><li>Paint : 将各个节点绘制到屏幕上。</li></ol><p><strong>优化关键渲染路径就是指最大限度缩短执行上述第 1 步至第 5 步耗费的总时间。</strong> 这样一来，就能尽快将内容渲染到屏幕上，此外还能缩短首次渲染后屏幕刷新的时间，即为交互式内容实现更高的刷新率。</p><a id="more"></a><h3 id="检测并分析"><a href="#检测并分析" class="headerlink" title="检测并分析"></a>检测并分析</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><ol><li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" target="_blank" rel="noopener">Lighthouse Chrome 扩展程序</a></li><li><p><code>Navigation Timing API</code>:</p><p>首先了解一下页面加载时的浏览器事件：<br><img src="https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/browser-timing.png" alt="浏览器加载过程"><br>几个关键的事件：</p><ul><li><code>domInteractive</code> 表示 DOM 准备就绪的时间点。</li><li><code>domContentLoaded</code> 一般表示 DOM 和 CSSOM 均准备就绪的时间点。(如果没有阻塞解析器的 JavaScript，则 <code>DOMContentLoaded</code> 将在 <code>domInteractive</code> 后立即触发。)</li><li><p><code>domComplete</code> 表示网页及其所有子资源都准备就绪的时间点。</p><p>示例代码：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Critical Path: Measure<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"style.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    function measureCRP() &#123;</span></span><br><span class="line"><span class="undefined">        var t = window.performance.timing,</span></span><br><span class="line"><span class="undefined">        interactive = t.domInteractive - t.domLoading,</span></span><br><span class="line"><span class="undefined">        dcl = t.domContentLoadedEventStart - t.domLoading,</span></span><br><span class="line"><span class="undefined">        complete = t.domComplete - t.domLoading;</span></span><br><span class="line"><span class="undefined">        var stats = document.createElement('p');</span></span><br><span class="line"><span class="undefined">        stats.textContent = 'interactive: ' + interactive + 'ms, ' +</span></span><br><span class="line"><span class="undefined">            'dcl: ' + dcl + 'ms, complete: ' + complete + 'ms';</span></span><br><span class="line"><span class="undefined">        document.body.appendChild(stats);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"measureCRP()"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello <span class="tag">&lt;<span class="name">span</span>&gt;</span>web performance<span class="tag">&lt;/<span class="name">span</span>&gt;</span> students!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"awesome-photo.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ul></li></ol><h4 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h4><p>还是看 <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp" target="_blank" rel="noopener">google开发文档</a> ，特别详细清晰。</p><h3 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h3><p>当有 block 的资源时， <strong>CRP(Critical Rendering Path)</strong> 如图：<br><img src="https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/crp-process.png" alt="crp-progress"></p><p>所以，我们<strong>优化关键渲染路径的常规步骤如下：</strong></p><ol><li>对关键路径进行分析和特性描述，三个关键渲染路径指标：资源数、字节数、长度。</li><li>最大限度减少关键资源的数量：删除它们，延迟它们的下载，将它们标记为异步等。</li><li>优化关键字节数以缩短下载时间（往返次数，<code>Tcp</code> 会对大文件进行多次往返）。</li><li>优化其余关键资源的加载顺序：您需要尽早下载所有关键资产，以缩短关键路径长度。</li></ol><blockquote><p>注意： 这些资源并不是 blocked : images</p></blockquote><h4 id="优化-JavaScript-的使用"><a href="#优化-JavaScript-的使用" class="headerlink" title="优化 JavaScript 的使用"></a>优化 JavaScript 的使用</h4><p>无论我们使用 <code>&lt;script&gt;</code> 标记还是内联 <code>JavaScript</code> 代码段，您都可以期待两者能够以相同方式工作。 在两种情况下，浏览器都会先暂停构建 <code>DOM</code> 并执行脚本，然后才会处理剩余文档。</p><p>由于 <code>JavaScript</code> 还可以操作 <code>CSS</code> ，阻塞解析器的 <code>JavaScript</code> 会强制浏览器等待 <code>CSSOM</code> 构建完成并暂停 <code>DOM</code> 的构建，继而大大延迟首次渲染的时间。 <strong>如果是外部 <code>JavaScript</code> 文件，浏览器必须停下来，等待从磁盘、缓存或远程服务器获取脚本，这就可能给关键渲染路径增加数十至数千毫秒的延迟。</strong></p><p><strong>所以</strong>， <code>JavaScript</code> 资源会阻塞解析器，除非将其标记为 <code>async</code> 或通过专门的 <code>JavaScript</code> 代码段进行添加。</p><ol><li><p>使用异步 <code>JavaScript</code> 资源<br>向某些 <code>script</code> 标记添加异步关键字 <code>async</code> ，如分析工具的 <code>Js</code> 。这样就不会 block <code>DOM</code> 的构建，也不会 block <code>CSSOM</code> 的构建。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"app.js"</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>在之前没有 <code>async</code> 的时候，我们一般将脚本写在 <code>onload</code> 事件里，这样可以减少 block 的时间。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>延迟解析非必需的 <code>JavaScript</code><br>为了最大限度减少浏览器渲染网页的工作量，应延迟任何非必需的脚本（即对构建首次渲染的可见内容无关紧要的脚本）。</p></li><li>避免运行时间长的 <code>JavaScript</code><br>运行时间长的 <code>JavaScript</code> 会阻止浏览器构建 <code>DOM</code> 、 <code>CSSOM</code> 以及渲染网页，所以任何对首次渲染无关紧要的初始化逻辑和功能都应延后执行。如果需要运行较长的初始化序列，请考虑将其拆分为若干阶段，以便浏览器可以间隔处理其他事件。</li></ol><h4 id="优化-CSS-的使用"><a href="#优化-CSS-的使用" class="headerlink" title="优化 CSS 的使用"></a>优化 CSS 的使用</h4><p><code>CSS</code> 是构建渲染树的必备元素，首次构建网页时， <code>JavaScript</code> 常常受阻于 CSS。确保将任何非必需的 <code>CSS</code> 都标记为非关键资源（例如打印和其他媒体查询），并应确保尽可能减少关键 <code>CSS</code> 的数量，以及尽可能缩短传送时间。</p><ol><li>将 <code>CSS</code> 置于文档 <code>head</code> 标签内<br>尽早在 <code>HTML</code> 文档内指定所有 <code>CSS</code> 资源，以便浏览器尽早发现 <code>&lt;link&gt;</code> 标记并尽早发出 <code>CSS</code> 请求。</li><li>避免使用 <code>CSS import</code><br>一个样式表可以使用 <code>CSS import (@import)</code> 指令从另一样式表文件导入规则。不过，应避免使用这些指令，因为它们会在关键路径中增加往返次数：只有在收到并解析完带有 <code>@import</code> 规则的 <code>CSS</code> 样式表之后，才会发现导入的 <code>CSS</code> 资源。</li><li>内联阻塞渲染的 <code>CSS</code><br>为获得最佳性能，您可能会考虑将关键 <code>CSS</code> 直接内联到 <code>HTML</code> 文档内。这样做不会增加关键路径中的往返次数，并且如果实现得当，在只有 <code>HTML</code> 是阻塞渲染的资源时，可实现“一次往返”关键路径长度。</li><li><p>通过媒体查询减少会 block 首次加载的 <code>CSS</code> 。如：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style-print.css"</span> <span class="attr">media</span>=<span class="string">"print"</span>&gt;</span></span><br></pre></td></tr></table></figure><p>这样的话， 浏览器仍然会下载两个 <code>CSS</code> 文件，但是首次关键路径渲染不会让 <code>style-print.css</code> block 住， 只有在 <code>print</code> (打印) 时才会渲染 <code>style-print.css</code> ，</p></li></ol><h3 id="综合实例"><a href="#综合实例" class="headerlink" title="综合实例"></a>综合实例</h3><p>这儿有个题目： <a href="https://github.com/udacity/frontend-nanodegree-mobile-portfolio" target="_blank" rel="noopener">udacity/frontend-nanodegree-mobile-portfolio</a></p><p>这是我的作业： <a href="https://github.com/jintangWang/frontend-nanodegree-mobile-portfolio" target="_blank" rel="noopener">jintangWang/frontend-nanodegree-mobile-portfolio</a></p><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul><li>迁徙到 <code>http2</code></li><li><code>webpack</code> 代码拆分</li><li>…</li></ul>]]></content>
+      <content type="html"><![CDATA[<blockquote><p>详细请阅读 <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/" target="_blank" rel="noopener">google文档</a> ，这儿记录一些关键的总结<br><code>udacity</code> 有个课程也讲得很详细： <a href="https://classroom.udacity.com/courses/ud884" target="_blank" rel="noopener">课程</a></p></blockquote><h3 id="浏览器首次渲染的几个步骤"><a href="#浏览器首次渲染的几个步骤" class="headerlink" title="浏览器首次渲染的几个步骤"></a>浏览器首次渲染的几个步骤</h3><ol><li>处理 <code>HTML</code> 标记并构建 <code>DOM</code> 树。</li><li>处理 <code>CSS</code> 标记并构建 <code>CSSOM</code> 树。</li><li>将 <code>DOM</code> 与 <code>CSSOM</code> 合并成一个渲染树。渲染树不包括不可见的元素（如： <code>header</code> 下所有，<code>display:none;</code> 的元素，但包括 <code>visibility:hidden;</code> 的元素）</li><li>Layout : 根据渲染树来布局，以计算每个节点的几何信息。</li><li>Paint : 将各个节点绘制到屏幕上。</li></ol><p><strong>优化关键渲染路径就是指最大限度缩短执行上述第 1 步至第 5 步耗费的总时间。</strong> 这样一来，就能尽快将内容渲染到屏幕上，此外还能缩短首次渲染后屏幕刷新的时间，即为交互式内容实现更高的刷新率。</p><a id="more"></a><h3 id="检测并分析"><a href="#检测并分析" class="headerlink" title="检测并分析"></a>检测并分析</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><ol><li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk" target="_blank" rel="noopener">Lighthouse Chrome 扩展程序</a></li><li><p><code>Navigation Timing API</code>:</p><p>首先了解一下页面加载时的浏览器事件：<br><img src="https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/browser-timing.png" alt="浏览器加载过程"><br>几个关键的事件：</p><ul><li><code>domInteractive</code> 表示 DOM 准备就绪的时间点。</li><li><code>domContentLoaded</code> 一般表示 DOM 和 CSSOM 均准备就绪的时间点。(如果没有阻塞解析器的 JavaScript，则 <code>DOMContentLoaded</code> 将在 <code>domInteractive</code> 后立即触发。)</li><li><p><code>domComplete</code> 表示网页及其所有子资源都准备就绪的时间点。</p><p>示例代码：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Critical Path: Measure<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"style.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">measureCRP</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> t = <span class="built_in">window</span>.performance.timing,</span></span><br><span class="line"><span class="undefined">        interactive = t.domInteractive - t.domLoading,</span></span><br><span class="line"><span class="undefined">        dcl = t.domContentLoadedEventStart - t.domLoading,</span></span><br><span class="line"><span class="undefined">        complete = t.domComplete - t.domLoading;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> stats = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</span></span><br><span class="line"><span class="actionscript">        stats.textContent = <span class="string">'interactive: '</span> + interactive + <span class="string">'ms, '</span> +</span></span><br><span class="line"><span class="actionscript">            <span class="string">'dcl: '</span> + dcl + <span class="string">'ms, complete: '</span> + complete + <span class="string">'ms'</span>;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.body.appendChild(stats);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"measureCRP()"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello <span class="tag">&lt;<span class="name">span</span>&gt;</span>web performance<span class="tag">&lt;/<span class="name">span</span>&gt;</span> students!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"awesome-photo.jpg"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></li></ul></li></ol><h4 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h4><p>还是看 <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp" target="_blank" rel="noopener">google开发文档</a> ，特别详细清晰。</p><h3 id="优化方案"><a href="#优化方案" class="headerlink" title="优化方案"></a>优化方案</h3><p>当有 block 的资源时， <strong>CRP(Critical Rendering Path)</strong> 如图：<br><img src="https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/crp-process.png" alt="crp-progress"></p><p>所以，我们<strong>优化关键渲染路径的常规步骤如下：</strong></p><ol><li>对关键路径进行分析和特性描述，三个关键渲染路径指标：资源数、字节数、长度。</li><li>最大限度减少关键资源的数量：删除它们，延迟它们的下载，将它们标记为异步等。</li><li>优化关键字节数以缩短下载时间（往返次数，<code>Tcp</code> 会对大文件进行多次往返）。</li><li>优化其余关键资源的加载顺序：您需要尽早下载所有关键资产，以缩短关键路径长度。</li></ol><blockquote><p>注意： 这些资源并不是 blocked : images</p></blockquote><h4 id="优化-JavaScript-的使用"><a href="#优化-JavaScript-的使用" class="headerlink" title="优化 JavaScript 的使用"></a>优化 JavaScript 的使用</h4><p>无论我们使用 <code>&lt;script&gt;</code> 标记还是内联 <code>JavaScript</code> 代码段，您都可以期待两者能够以相同方式工作。 在两种情况下，浏览器都会先暂停构建 <code>DOM</code> 并执行脚本，然后才会处理剩余文档。</p><p>由于 <code>JavaScript</code> 还可以操作 <code>CSS</code> ，阻塞解析器的 <code>JavaScript</code> 会强制浏览器等待 <code>CSSOM</code> 构建完成并暂停 <code>DOM</code> 的构建，继而大大延迟首次渲染的时间。 <strong>如果是外部 <code>JavaScript</code> 文件，浏览器必须停下来，等待从磁盘、缓存或远程服务器获取脚本，这就可能给关键渲染路径增加数十至数千毫秒的延迟。</strong></p><p><strong>所以</strong>， <code>JavaScript</code> 资源会阻塞解析器，除非将其标记为 <code>async</code> 或通过专门的 <code>JavaScript</code> 代码段进行添加。</p><ol><li><p>使用异步 <code>JavaScript</code> 资源<br>向某些 <code>script</code> 标记添加异步关键字 <code>async</code> ，如分析工具的 <code>Js</code> 。这样就不会 block <code>DOM</code> 的构建，也不会 block <code>CSSOM</code> 的构建。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"app.js"</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>在之前没有 <code>async</code> 的时候，我们一般将脚本写在 <code>onload</code> 事件里，这样可以减少 block 的时间。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>延迟解析非必需的 <code>JavaScript</code><br>为了最大限度减少浏览器渲染网页的工作量，应延迟任何非必需的脚本（即对构建首次渲染的可见内容无关紧要的脚本）。</p></li><li>避免运行时间长的 <code>JavaScript</code><br>运行时间长的 <code>JavaScript</code> 会阻止浏览器构建 <code>DOM</code> 、 <code>CSSOM</code> 以及渲染网页，所以任何对首次渲染无关紧要的初始化逻辑和功能都应延后执行。如果需要运行较长的初始化序列，请考虑将其拆分为若干阶段，以便浏览器可以间隔处理其他事件。</li></ol><h4 id="优化-CSS-的使用"><a href="#优化-CSS-的使用" class="headerlink" title="优化 CSS 的使用"></a>优化 CSS 的使用</h4><p><code>CSS</code> 是构建渲染树的必备元素，首次构建网页时， <code>JavaScript</code> 常常受阻于 CSS。确保将任何非必需的 <code>CSS</code> 都标记为非关键资源（例如打印和其他媒体查询），并应确保尽可能减少关键 <code>CSS</code> 的数量，以及尽可能缩短传送时间。</p><ol><li>将 <code>CSS</code> 置于文档 <code>head</code> 标签内<br>尽早在 <code>HTML</code> 文档内指定所有 <code>CSS</code> 资源，以便浏览器尽早发现 <code>&lt;link&gt;</code> 标记并尽早发出 <code>CSS</code> 请求。</li><li>避免使用 <code>CSS import</code><br>一个样式表可以使用 <code>CSS import (@import)</code> 指令从另一样式表文件导入规则。不过，应避免使用这些指令，因为它们会在关键路径中增加往返次数：只有在收到并解析完带有 <code>@import</code> 规则的 <code>CSS</code> 样式表之后，才会发现导入的 <code>CSS</code> 资源。</li><li>内联阻塞渲染的 <code>CSS</code><br>为获得最佳性能，您可能会考虑将关键 <code>CSS</code> 直接内联到 <code>HTML</code> 文档内。这样做不会增加关键路径中的往返次数，并且如果实现得当，在只有 <code>HTML</code> 是阻塞渲染的资源时，可实现“一次往返”关键路径长度。</li><li><p>通过媒体查询减少会 block 首次加载的 <code>CSS</code> 。如：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style-print.css"</span> <span class="attr">media</span>=<span class="string">"print"</span>&gt;</span></span><br></pre></td></tr></table></figure><p>这样的话， 浏览器仍然会下载两个 <code>CSS</code> 文件，但是首次关键路径渲染不会让 <code>style-print.css</code> block 住， 只有在 <code>print</code> (打印) 时才会渲染 <code>style-print.css</code> ，</p></li></ol><h3 id="综合实例"><a href="#综合实例" class="headerlink" title="综合实例"></a>综合实例</h3><p>这儿有个题目： <a href="https://github.com/udacity/frontend-nanodegree-mobile-portfolio" target="_blank" rel="noopener">udacity/frontend-nanodegree-mobile-portfolio</a></p><p>这是我的作业： <a href="https://github.com/jintangWang/frontend-nanodegree-mobile-portfolio" target="_blank" rel="noopener">jintangWang/frontend-nanodegree-mobile-portfolio</a></p><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul><li>迁徙到 <code>http2</code></li><li><code>webpack</code> 代码拆分</li><li>…</li></ul>]]></content>
       
         <categories>
             
@@ -30,6 +30,8 @@
       
         <categories>
             
+            <category> flutter </category>
+            
             <category> CI </category>
             
         </categories>
@@ -52,7 +54,7 @@
       
         <categories>
             
-            <category> dart </category>
+            <category> flutter </category>
             
         </categories>
         
@@ -79,7 +81,7 @@
         
         <tags>
             
-            <tag> 杂说 </tag>
+            <tag> 计算机 </tag>
             
         </tags>
         
@@ -110,6 +112,18 @@
       <url>http://jintang.github.io/2019/03/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%20%E2%80%94%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/</url>
       <content type="html"><![CDATA[<blockquote><p>机器学习算法可以分为三大类：监督学习、无监督学习和强化学习。</p><ul><li>监督学习可用于一个特定的数据集（训练集）具有某一属性（标签），但是其他数据没有标签或者需要预测标签的情况。</li><li>无监督学习可用于给定的没有标签的数据集（数据不是预分配好的），目的就是要找出数据间的潜在关系。</li><li>强化学习位于这两者之间，每次预测都有一定形式的反馈，但是没有精确的标签或者错误信息。</li></ul></blockquote><p>有几种常见的关于监督学习和无监督学习的算法。比如决策树、朴素贝叶斯分类、最小二乘法（是一种计算线性回归的方法）。在这儿，主要介绍一种无监督学习的算法：奇异值分解（SVD）, 在线性代数中，SVD 是复杂矩阵的因式分解。</p><h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><h4 id="矩阵的特征值和特征向量"><a href="#矩阵的特征值和特征向量" class="headerlink" title="矩阵的特征值和特征向量"></a>矩阵的特征值和特征向量</h4><p>设 A 是 n 阶矩阵，若存在数 $\lambda$ 及非零的 n 维列向量 $\nu$ ,使得<br>$$A\nu=\lambda\nu$$<br>成立，则称$\lambda$是矩阵 A 的<strong>特征值</strong>，称非零向量 $\nu$ 是矩阵 A 属于特征值 $\lambda$ 的<strong>特征向量</strong><br><br><a id="more"></a><br><strong>计算步骤：</strong></p><ol><li>计算 A 的特征多项式 $|\lambda I- A|$</li><li>判断特征方程 $|\lambda I- A| = 0$ 有没有根。由行列式计算可知，行列式$|\lambda I- A|$的值是n次多项式。如果没有根，则 A 没有特征值，从而也没有特征向量。如果 $|\lambda I- A|$ 有根，共有 n 个根（其中可能有复根，也可能有重根），这些根就是 A 的全部特征值。进行下一步</li><li>对于 A 的每一个特征值 $\lambda_j$ ，求解齐次线性方程组 $|\lambda_j I - A|X = 0$，则方程组的每一个非零解都是A的属于特征值$\lambda_j$的特征向量（说明有无穷多个）</li></ol><p><strong>举个例子：</strong><br>设 $A=\left[ \begin{array}{cc} 1 &amp; 2 \\ 2 &amp; 4 \\ \end{array} \right]$<br>A的特征多项式为 $|\lambda I- A| = \left[ \begin{array}{cc} \lambda - 1 &amp; -2 \\ -2 &amp; \lambda - 4 \\ \end{array} \right] = \lambda(\lambda - 5)$<br>得到特征值 $\lambda_1 = 0, \lambda_2 = 5$<br>将 $\lambda_1$ 带入 $|\lambda_j I - A|X = 0$ :<br>$$|\lambda_j I - A| = \left[ \begin{array}{cc} -1 &amp; -2 \\ -2 &amp; -4 \\ \end{array} \right] = \left[ \begin{array}{cc} 1 &amp; 2 \\ 0 &amp; 0 \\ \end{array} \right]$$<br>故 $\lambda_1$ 的特征向量的基础解系为 $\left[ \begin{array}{cc} -2 &amp; 1 \end{array} \right]$</p><p>将 $\lambda_2$ 带入 $|\lambda_j I - A|X = 0$ :<br>$$|\lambda_j I - A| = \left[ \begin{array}{cc} 4 &amp; -2 \\ -2 &amp; 1 \\ \end{array} \right] = \left[ \begin{array}{cc} -2 &amp; 1 \\ 0 &amp; 0 \\ \end{array} \right]$$<br>故 $\lambda_1$ 的特征向量的基础解系为 $\left[ \begin{array}{cc} 1 &amp; 2 \end{array} \right]$</p><h4 id="对角化分解"><a href="#对角化分解" class="headerlink" title="对角化分解"></a>对角化分解</h4><p>给定一个大小为$m\times m$的矩阵A（方阵），其对角化分解可以写成<br>$$A=U\Lambda U^{-1}$$<br>其中，U的每一列都是特征向量，$\Lambda$对角线上的元素是从大到小排列的特征值，若将U记作$U=\left( \vec{u}_1,\vec{u}_2,…,\vec{u}_m \right)$ ，则:<br>$$AU=A\left(\vec{u}_1,\vec{u}_2,…,\vec{u}_m\right)=\left(\lambda_1 \vec{u}_1,\lambda_2 \vec{u}_2,…,\lambda_m \vec{u}_m\right)$$<br>$$=\left(\vec{u}_1,\vec{u}_2,…,\vec{u}_m\right) \left[ \begin{array}{ccc} \lambda_1 &amp; \cdots &amp; 0 \\ \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; \cdots &amp; \lambda_m \\ \end{array} \right]$$<br>$$\Rightarrow AU=U\Lambda \Rightarrow A=U\Lambda U^{-1}$$</p><p>更为特殊的是，当矩阵A是一个对称矩阵时，则存在一个对称对角化分解，即</p><p>$$A=Q\Lambda Q^T$$</p><p>其中，Q的每一列都是相互正交的特征向量，且是单位向量，$\Lambda$对角线上的元素是从大到小排列的特征值。</p><p>当然，将矩阵Q记作$Q=\left(\vec{q}_1,\vec{q}_2,…,\vec{q}_m\right)$，则矩阵A也可以写成如下形式：</p><p>$$A=\lambda_1 \vec{q}_1\vec{q}_1^T+\lambda_2 \vec{q}_2\vec{q}_2^T+…+\lambda_m \vec{q}_m\vec{q}_m^T$$</p><p><strong>举个例子：</strong><br>如给定一个大小为$2\times 2$的矩阵$A=\left[ \begin{array}{cc} 2 &amp; 1 \\ 1 &amp; 2 \\ \end{array} \right]$，根据</p><p>$\left|\lambda I-A\right|=\left| \begin{array}{cc} \lambda-2 &amp; -1 \\ -1 &amp; \lambda-2 \\ \end{array} \right|=0$求得特征值为$\lambda_1=3，\lambda_2=1$，相应地，</p><p>$\vec{q}_1=\left[ \begin{array}{cc} \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \\ \end{array} \right], \vec{q}_2=\left[ \begin{array}{cc} - \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \\ \end{array} \right]$，则</p><p>$$A=\lambda_1 \vec{q}_1\vec{q}_1^T+\lambda_2 \vec{q}_2\vec{q}_2^T =\left[ \begin{array}{cc} 2 &amp; 1 \\ 1 &amp; 2 \\ \end{array} \right].$$</p><p>这样，我们就很容易地得到了矩阵A的对称对角化分解。</p><p><strong>与奇异值分解的关系：</strong>对于正定对称矩阵而言，奇异值分解和对称对角化分解结果相同。</p><h3 id="SVD的定义"><a href="#SVD的定义" class="headerlink" title="SVD的定义"></a>SVD的定义</h3><p>设我们的矩阵A是一个m×n的矩阵，那么我们定义矩阵A的SVD为：<br>$$A=UΣV^T$$</p><p>其中U是一个m×m的矩阵，Σ是一个m×n的矩阵，除了主对角线上的元素以外全为0，主对角线上的每个元素都称为奇异值，V是一个n×n的矩阵。U和V都是酉矩阵，即满足$U^T U=I,V^T V=I$</p><p><strong>如何求取：</strong></p><ul><li>如果我们将A和A的转置做矩阵乘法，那么会得到m×m的一个方阵$AA^T$。既然$AA^T$是方阵，那么我们就可以进行特征分解，得到的特征值和特征向量满足下式：<br>$$(AA^T)\nu_i=λ_i \nu_i$$<br>这样我们就可以得到矩阵$AA^T$的m个特征值和对应的m个特征向量u了。将$AA^T$的所有特征向量张成一个m×m的矩阵U，就是我们SVD公式里面的U矩阵了。一般我们将U中的每个特征向量叫做A的左奇异向量。</li><li>将A的转置和A做矩阵乘法，那么会得到n×n的一个方阵$A^T A$。既然$A^T A$是方阵，那么我们就可以进行特征分解，得到的特征值和特征向量满足下式：<br>$$(A^T A)\nu_i=\lambda_i \nu_i$$<br>这样我们就可以得到矩阵 $A^T A$ 的n个特征值和对应的n个特征向量$\nu$了。将$A^T A$的所有特征向量张成一个n×n的矩阵V，就是我们SVD公式里面的V矩阵了。一般我们将V中的每个特征向量叫做A的右奇异向量。</li><li>由于Σ除了对角线上是奇异值其他位置都是0，那我们只需要求出每个奇异值σ就可以了。<br>$$A=UΣV^T ⇒ AV=UΣV^T V ⇒ AV=UΣ⇒ A\nu_i=σ_i u_i ⇒ σi=A\nu_i /u_i$$<br>特征值和奇异值满足此关系：$σ_i=\sqrtλ_i$ ,可以通过计算$A^T A$的特征值取平方根来求奇异值（<strong>注意，$AA^T$ 和 $A^T A$ 的特征值相同，<a href="https://link.zhihu.com/?target=https%3A//math.stackexchange.com/questions/1249497/largest-eigenvalues-of-aa-equals-to-aa" target="_blank" rel="noopener">证明链接</a> </strong>）</li></ul><p><strong>求取步骤：</strong></p><ol><li>计算 $AA^T$ 和 $A^T A$；</li><li>分别计算 $AA^T$ 和 $A^T A$ 的特征向量及其特征值；</li><li>$AA^T$ 的特征向量组成 U；而 $A^T A$ 的特征向量组成 V；</li><li>对 $AA^T$ 和 $A^T A$ 的非零特征值求平方根，对应上述特征向量的位置，填入 Σ 的对角元。</li></ol><p><strong>举个例子：</strong><br>设 $A=\left[ \begin{array}{cc} 2 &amp; 4 \\ 1 &amp; 3 \\ 0 &amp; 0 \\ 0 &amp; 0 \\ \end{array} \right]$</p><p><em>首先</em>，计算 $AA^T$:<br>$$AA^T = \left[ \begin{array}{cc} 2 &amp; 4 \\ 1 &amp; 3 \\ 0 &amp; 0 \\ 0 &amp; 0 \\ \end{array} \right] \left[ \begin{array}{cc} 2 &amp; 1 &amp; 0 &amp; 0 \\ 4 &amp; 3 &amp; 0 &amp; 0 \\ \end{array} \right] = \left[ \begin{array}{cc} 20 &amp; 14 &amp; 0 &amp; 0 \\ 14 &amp; 10 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ \end{array} \right]$$<br>根据特征向量方程$|\lambda I- A| = 0$:<br>$$\left| \begin{array}{cc} \lambda - 20 &amp; -14 &amp; 0 &amp; 0 \\ -14 &amp; \lambda - 10 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; \lambda &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; \lambda \\ \end{array} \right| = \left| \begin{array}{cc} \lambda - 20 &amp; - 14 \\ - 14 &amp; \lambda - 10 \\ \end{array} \right| \left| \begin{array}{cc} \lambda &amp; 0 \\ 0 &amp; \lambda \\ \end{array} \right| = 0$$</p><p>即: $ ((λ-20)(λ-10)−196)λ^2 = 0$， 得到特征值：$ λ_1=λ_2=0, λ_3=15+\sqrt 221≈29.866, λ_4=15− \sqrt 221≈0.134$</p><p>根据特征值代入原方程，可解得对应的特征向量。这些特征向量即作为列向量，形成矩阵:<br>$$U=\left[ \begin{array}{cc} 0.82 &amp; -0.58 &amp; 0 &amp; 0 \\ 0.58 &amp; 0.82 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ \end{array} \right]$$</p><p><em>同理可得</em>：</p><p>$$V=\left[ \begin{array}{cc} 0.40 &amp; -0.91 \\ 0.91 &amp; 0.40 \\ \end{array} \right] $$</p><p><em>然后</em>， Σ 上的对角线元素由 $AA^T$ 的特征值的算术平方根组成</p><p>$$Σ=\left[ \begin{array}{cc} 5.46 &amp; 0 \\ 0 &amp; 0.37 \\ 0 &amp; 0 \\ 0 &amp; 0 \\ \end{array} \right] $$</p><p><em>最后</em>, 得到 A 的 SVD 分解：<br>$$\left[ \begin{array}{cc} 2 &amp; 4 \\ 1 &amp; 3 \\ 0 &amp; 0 \\ 0 &amp; 0 \\ \end{array} \right] ≈ \left[ \begin{array}{cc} 0.82 &amp; -0.58 &amp; 0 &amp; 0 \\ 0.58 &amp; 0.82 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ \end{array} \right] \left[ \begin{array}{cc} 5.46 &amp; 0 \\ 0 &amp; 0.37 \\ 0 &amp; 0 \\ 0 &amp; 0 \\ \end{array} \right] \left[ \begin{array}{cc} 0.40 &amp; -0.91 \\ 0.91 &amp; 0.40 \\ \end{array} \right] $$</p><p><strong>结果分析：</strong></p><ul><li>上述分解中会构建出一个矩阵∑，该矩阵只有对角元素，其他元素均为0(近似于0)。另一个惯例就是，∑的对角元素是从大到小排列的。这些对角元素称为奇异值。</li><li>奇异值与特征值(PCA 数据中重要特征)是有关系的。这里的奇异值就是矩阵 $AA^T$ 特征值的平方根。</li><li>普遍的事实：在某个奇异值的数目(r 个=&gt;奇异值的平方和累加到总值的90%以上)之后，其他的奇异值都置为0(近似于0)。这意味着数据集中仅有 r 个重要特征，而其余特征则都是噪声或冗余特征。</li></ul><h3 id="SVD的性质"><a href="#SVD的性质" class="headerlink" title="SVD的性质"></a>SVD的性质</h3><p>对于奇异值,它跟我们特征分解中的特征值类似，在奇异值矩阵中也是按照从大到小排列，而且奇异值的减少特别的快，在很多情况下，前10%甚至1%的奇异值的和就占了全部的奇异值之和的99%以上的比例。</p><p>也就是说，我们也可以用最大的k个的奇异值和对应的左右奇异向量来近似描述矩阵。也就是说：</p><p>其中k要比n小很多，也就是一个大的矩阵A可以用三个小的矩阵表示</p><ul><li>$U_{m×k}$,</li><li>$Σ_{k×k}$</li><li>$V^T_{k\times n}$<br>如下图所示，现在我们的矩阵A只需要灰色的部分的三个小矩阵就可以近似描述了。<br><img src="https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/svd.png" alt="k"></li></ul><p>由于这个重要的性质，SVD可以用于PCA降维，来做数据压缩和去噪。也可以用于推荐算法，将用户和喜好对应的矩阵做特征分解，进而得到隐含的用户需求来做推荐。同时也可以用于NLP中的算法，比如潜在语义索引（LSI）。</p><h3 id="奇异值分解的应用"><a href="#奇异值分解的应用" class="headerlink" title="奇异值分解的应用"></a>奇异值分解的应用</h3><ol><li>隐性语义检索<br>隐性语义索引：矩阵 = 文档 + 词语<br><img src="https://i.imgur.com/EPoEEET.png" alt="yuyisuoyin"></li><li>推荐系统<ul><li>利用 SVD 从数据中构建一个主题空间。</li><li>再在该空间下计算其相似度。(从高维-低维空间的转化，在低维空间来计算相似度，SVD 提升了推荐系统的效率。)</li></ul></li><li>图像压缩<br>例如：32<em>32=1024 =&gt; 32</em>2+2<em>1+32</em>2=130(2*1表示去掉了除对角线的0), 几乎获得了10倍的压缩比。</li></ol><h3 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h3><ol><li>逆矩阵（inverse matrix）：<br>又称反矩阵。在线性代数中，给定一个n阶方阵 A，若存在一n阶方阵 B ，使得 $AB=BA=I_n$，其中 $I_n$ 为n阶单位矩阵，则称 A 是可逆的，且 B 是 A的逆矩阵，记作 $A^{-1}$。</li></ol><p>只有方阵（n×n的矩阵）才可能有逆矩阵。若方阵 A 的逆矩阵存在，则称 A 为非奇异方阵或可逆方阵。</p><ol start="2"><li><p>向量正交：指它们的内积等于零.治元前面已经讲过了。</p></li><li><p>单位矩阵：<br>n阶单位矩阵，是一个 $n * n$ 的方形矩阵，其主对角线元素为1，其余元素为0。单位矩阵以 $I_n$ 表示, 如果阶数可忽略，也可简记为 I（或者E）。 如:<br>$$<br>I_{2}={\begin{bmatrix}1&amp;0\\0&amp;1\end{bmatrix}}<br>$$</p></li><li>行列式值得计算（必须是方阵）：<br>2 X 2 矩阵：<br>$$A = \left[ \begin{array}{cc} 2 &amp; 1 \\ 1 &amp; 2 \\ \end{array} \right]$$</li></ol>]]></content>
       
+        <categories>
+            
+            <category> 机器学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 奇异值分解 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -118,6 +132,18 @@
       <url>http://jintang.github.io/2019/03/19/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%AD%A6%E4%B9%A0/</url>
       <content type="html"><![CDATA[<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>理解n阶行列式的概念，正确的计算三阶、四阶行列式，还有简单的n阶行列式的值</p><h3 id="基本方法"><a href="#基本方法" class="headerlink" title="基本方法"></a>基本方法</h3><p>按行（列）展开公式，通过降阶来实现。但是在展开之前往往先通过对行列式的恒等变形，以在新的行列式中能构造出叫多的0或有公因式，从而简化计算。</p><p>常用技巧有：三角化法、递推法、数学归纳法、公式法等</p><h3 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h3><ol><li>把某行的k倍加到另一行，行列式的值不变</li></ol>]]></content>
       
+        <categories>
+            
+            <category> 机器学习 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 线性代数 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -128,14 +154,14 @@
       
         <categories>
             
-            <category> js </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> js </tag>
+            <tag> javascript </tag>
             
         </tags>
         
@@ -146,6 +172,18 @@
       <url>http://jintang.github.io/2018/12/10/%E5%AD%A6%E4%B9%A0vue%E6%BA%90%E5%BE%97%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/</url>
       <content type="html"><![CDATA[<h3 id="Vue-extend-创建-“Vue”-的-子类"><a href="#Vue-extend-创建-“Vue”-的-子类" class="headerlink" title="Vue.extend(): 创建 “Vue” 的 子类"></a>Vue.extend(): 创建 “Vue” 的 子类</h3><h3 id="window-performance-监控代码性能"><a href="#window-performance-监控代码性能" class="headerlink" title="window.performance: 监控代码性能"></a>window.performance: 监控代码性能</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> perf = inBrowser &amp;&amp; <span class="built_in">window</span>.performance;</span><br><span class="line">mark(<span class="string">'start'</span>)</span><br><span class="line"><span class="comment">// do something</span></span><br><span class="line">mark(<span class="string">'end'</span>)</span><br></pre></td></tr></table></figure><h3 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h3><ol><li><p>遍历数组：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = props.length</span><br><span class="line"><span class="keyword">while</span> (i--) &#123;   、</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>js 中一个值与自身都不相等: NaN 。通过下面的方式判断</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (newVal === value || (newVal !== newVal &amp;&amp; value !== value)) &#123;</span><br><span class="line">  <span class="comment">// newVal 是 NaN</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>IE11 才开始支持 <code>__proto__</code> , 之前的不支持<br>如何拦截 读取和写入 纯对象/数组</p></li><li><p>缓存一个纯函数: cached 实现？</p></li></ol>]]></content>
       
+        <categories>
+            
+            <category> 前端 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
         
     </entry>
     
@@ -156,7 +194,7 @@
       
         <categories>
             
-            <category> react-native </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -184,6 +222,8 @@
         <tags>
             
             <tag> 算法 </tag>
+            
+            <tag> 数据结构 </tag>
             
         </tags>
         
@@ -258,6 +298,18 @@
       <url>http://jintang.github.io/2018/08/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0/</url>
       <content type="html"><![CDATA[<h3 id="Hash-函数"><a href="#Hash-函数" class="headerlink" title="Hash 函数"></a>Hash 函数</h3><p>区块链中区块相连是依靠：后一个区块持有前一个区块的 hash ，这个 hash 一般放在区块头中。 Hash 函数一般有两类：</p><ol><li>MD 系列： 如 MD5 ，已被证实不是特别安全</li><li>SH 系列： 是美国国家安全局 (NSA) 设计。经历了SHA-0，SHA-1，SHA-2，SHA-3系列发展，比特币采用SHA256算法，该算法属于SHA-2系列，在中本聪发明比特币时（2008）被公认为最安全最先进的算法之一</li></ol>]]></content>
       
+        <categories>
+            
+            <category> 区块链 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 区块链 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -266,6 +318,18 @@
       <url>http://jintang.github.io/2018/08/03/hello-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/</url>
       <content type="html"><![CDATA[<blockquote><p>欢迎查看 跟着大佬一起动手系列，点击<a href="https://learnblockchain.cn/2017/11/24/init-env/" target="_blank" rel="noopener">这儿</a>查看大佬的博文</p></blockquote><h2 id="什么是智能合约"><a href="#什么是智能合约" class="headerlink" title="什么是智能合约"></a>什么是智能合约</h2><p><strong>以太坊上的程序称之为智能合约，它是代码和数据(状态)的集合。</strong></p><p>如果做比喻的话智能合约更像是JAVA程序，JAVA程序通过JAVA虚拟机（JVM）将代码解释字节进行执行，以太坊的智能合约通过以太坊虚拟机（EVM）解释成字节码进行执行。</p><p>智能合约可以理解为在区块链上可以自动执行的（由消息驱动的）、以代码形式编写的合同（特殊的交易）。</p><p>比特币的交易是可以编程的，但是比特币脚本有很多的限制，能够编写的程序也有限，而以太坊具有 <a href="https://zh.wikipedia.org/wiki/%E5%9C%96%E9%9D%88%E5%AE%8C%E5%82%99%E6%80%A7" target="_blank" rel="noopener">图灵完备</a>，通俗来说可以完全模拟一台计算机所能做的所有事情。比特币可以执行一些简单脚本，但是他就不是图灵完备，比如循环指令比特币就无法执行。</p><h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><p>用户不可能直接编写以太坊虚拟机（EVM）字节码，所以以太坊提供了几种编写智能合约的高级语言。</p><p>Solidity：类似JavaScript，这是以太坊推荐的旗舰语言，也是最流行的智能合约语言。具体用法参加Solidity文档，地址：<a href="https://solidity.readthedocs.io/en/latest/" target="_blank" rel="noopener">https://solidity.readthedocs.io/en/latest/</a></p><blockquote><p>还有Viper，Serpent，LLL及Bamboo，建议大家还是使用Solidity。Serpent官方已经不再推荐，建议Serpent的用户转换到Viper，他们都是类Python语言。</p></blockquote><p>可以根据不同的习惯选择不同的高级语言，目前最流行的是Solidity。</p><p>我们下面使用 <a href="https://ethereum.github.io/browser-solidity/" target="_blank" rel="noopener">Browser-Solidity</a> IDE （也就是 Remix ）进行合约的编写和编译</p><a id="more"></a><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="以太坊客户端：-geth-安装"><a href="#以太坊客户端：-geth-安装" class="headerlink" title="以太坊客户端： geth 安装"></a>以太坊客户端： geth 安装</h3><p>在这儿我们使用 Geth ，全称是 go-ethereum，是以太坊的 go 语言命令行客户端，也是最流行的客户端 —— <a href="https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum" target="_blank" rel="noopener">geth官方安装指引</a> 。</p><p>Geth提供了一个交互式命令控制台，通过命令控制台中包含了以太坊的各种功能（API）。拥有账户管理、挖矿、转账、智能合约的部署和执行等等功能。其中，EVM就是由以太坊客户端提供的。</p><blockquote><p>相对于Geth，Mist则是图形化操作界面的以太坊客户端。</p></blockquote><h3 id="使用geth启动环境"><a href="#使用geth启动环境" class="headerlink" title="使用geth启动环境"></a>使用geth启动环境</h3><blockquote><p>智能合约的开发需要使用以太坊的资源，所以是需要付费的，这个费用表现为 以太币。下面我们用 geth 启动开发者网络（模式）,会自动分配一个有大量余额的开发者账户给我们使用。</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">geth --datadir testNet --dev console 2&gt;&gt; test.log</span><br></pre></td></tr></table></figure><p>参数解析，更多请查看<a href="https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options" target="_blank" rel="noopener">这儿</a>:</p><ul><li><code>–dev</code> 启用开发者网络（模式），开发者网络会使用POA共识，默认预分配一个开发者账户并且会自动开启挖矿。</li><li><code>–datadir</code> 后面的参数是区块数据及秘钥存放目录。<br>第一次输入命令后，它会放在当前目录下新建一个testNet目录来存放数据。</li><li><code>console</code> 进入控制台</li><li><code>2&gt;&gt; test.log</code> 表示把控制台日志输出到test.log文件</li></ul><p>为了更好的理解，建议新开一个命令行终端，实时显示日志：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f test.log</span><br></pre></td></tr></table></figure><h3 id="准备账户"><a href="#准备账户" class="headerlink" title="准备账户"></a>准备账户</h3><p>智能合约的部署是指把合约字节码发布到区块链上，并使用一个特定的地址来标示这个合约，这个地址称为合约账户。</p><blockquote><p>以太坊中有两类账户：</p><ul><li>外部账户：该类账户被私钥控制（由人控制），没有关联任何代码。</li><li>合约账户: 该类账户被它们的合约代码控制且有代码与之关联。</li></ul></blockquote><blockquote><p><strong>外部账户与合约账户的区别和关系：</strong></p><p>一个外部账户可以通过创建和用自己的私钥来对交易进行签名，来发送消息给另一个外部账户或合约账户。在两个外部账户之间传送消息是价值转移的过程。</p><p>但从外部账户到合约账户的消息会激活合约账户的代码，允许它执行各种动作（比如转移代币，写入内部存储，挖出一个新代币，执行一些运算，创建一个新的合约等等）。</p><p>只有当外部账户发出指令时，合同账户才会执行相应的操作。</p></blockquote><p>智能合约的部署是指把合约字节码发布到区块链上，并使用一个特定的地址来标示这个合约，这个地址称为合约账户。</p><p>部署智能合约需要一个外部账户，我们先来看看分配的开发者账户，这个开发者账户里有充足的以太币。</p><p><em>查看账户:</em><br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; eth.accounts</span><br><span class="line"><span class="comment"># ["0x231b0a1ce4258e708cec69831f89d752822e25aa"] 返回了分配的开发者账户</span></span><br></pre></td></tr></table></figure><p></p><p><em>查看账户余额：</em><br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; eth.getBalance(eth.accounts[0])</span><br><span class="line"><span class="comment"># 1.15792089237316195423570985008687907853269984665640564039457584007913129639927e+77 数字非常大</span></span><br></pre></td></tr></table></figure><p></p><p>开发者账户因余额太多，如果用这个账户来部署合约时会无法看到余额变化，为了更好的体验完整的过程，这里选择创建一个新的账户。</p><p><em>创建账户:</em><br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; personal.newAccount(<span class="string">"tang"</span>)</span><br><span class="line"><span class="comment"># 返回了新的账号 "0x44e805ccb02b8c14e41d1e166e46d7b615c911ca"， tang 是账号密码</span></span><br><span class="line">&gt; eth.accounts</span><br><span class="line"><span class="comment"># ["0x231b0a1ce4258e708cec69831f89d752822e25aa", "0x44e805ccb02b8c14e41d1e166e46d7b615c911ca"] 多了一个</span></span><br><span class="line">&gt; eth.getBalance(eth.accounts[1])</span><br><span class="line"><span class="comment"># 0 查看的是第二个账号的余额</span></span><br></pre></td></tr></table></figure><p></p><p><em>给新账号转账:</em> 转 1 ether 以太币, ether 是 以太币 的单位，以太币的最小单位是 wei ，详情查看 <a href="https://github.com/ethereum/wiki/wiki/JavaScript-API#web3towei" target="_blank" rel="noopener">这儿</a><br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; eth.sendTransaction(&#123;from: <span class="string">'0x231b0a1ce4258e708cec69831f89d752822e25aa'</span>, to: <span class="string">'0x44e805ccb02b8c14e41d1e166e46d7b615c911ca'</span>, value: web3.toWei(1, <span class="string">"ether"</span>)&#125;)</span><br><span class="line"><span class="comment"># "0xf7953104df919ca3d44f262ed291c1a19a82ad34469af6bd4e2a1b7357d93a4f"</span></span><br><span class="line">&gt; eth.getBalance(eth.accounts[1])</span><br><span class="line"><span class="comment"># 1000000000000000000</span></span><br></pre></td></tr></table></figure><p></p><p><em>解锁账户:</em> 在部署合约前需要先解锁账户（就像银行转账要输入密码一样）<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; personal.unlockAccount(eth.accounts[1],<span class="string">"tang"</span>, 0);</span><br><span class="line"><span class="comment"># true  第二个参数是对应账号的密码</span></span><br></pre></td></tr></table></figure><p></p><h2 id="编写、编译、部署-合约代码"><a href="#编写、编译、部署-合约代码" class="headerlink" title="编写、编译、部署 合约代码"></a>编写、编译、部署 合约代码</h2><p><em>solidity代码如下:</em><br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^<span class="number">0.4</span><span class="number">.18</span>;</span><br><span class="line">contract hello &#123;</span><br><span class="line">    string greeting;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">string _greeting</span>) <span class="title">public</span> </span>&#123;</span><br><span class="line">        greeting = _greeting;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">say</span>(<span class="params"></span>) <span class="title">constant</span> <span class="title">public</span> <span class="title">returns</span> (<span class="params">string</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> greeting;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p><p>我们定义了一个名为hello的合约，在合约初始化时保存了一个字符串（我们会传入hello world），每次调用say返回字符串。</p><p>把这段代码写(拷贝)到 <a href="https://ethereum.github.io/browser-solidity/" target="_blank" rel="noopener">Browser-Solidity</a>，Browser-Solidity 要选中 <code>Auto Compile</code> 。如果没有错误，说明编译成功。点击Details获取部署代码（警告可以不理）。</p><p>在弹出的对话框中找到WEB3DEPLOY部分，点拷贝，粘贴到随便的一个编辑器后，修改初始化字符串为hello world。最后结果为：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _greeting = <span class="string">"hello world"</span> ;</span><br><span class="line"><span class="comment">// Creates a contract object</span></span><br><span class="line"><span class="keyword">var</span> helloContract = web3.eth.contract([&#123;<span class="string">"constant"</span>:<span class="literal">true</span>,<span class="string">"inputs"</span>:[],<span class="string">"name"</span>:<span class="string">"say"</span>,<span class="string">"outputs"</span>:[&#123;<span class="string">"name"</span>:<span class="string">""</span>,<span class="string">"type"</span>:<span class="string">"string"</span>&#125;],<span class="string">"payable"</span>:<span class="literal">false</span>,<span class="string">"stateMutability"</span>:<span class="string">"view"</span>,<span class="string">"type"</span>:<span class="string">"function"</span>&#125;,&#123;<span class="string">"inputs"</span>:[&#123;<span class="string">"name"</span>:<span class="string">"_greeting"</span>,<span class="string">"type"</span>:<span class="string">"string"</span>&#125;],<span class="string">"payable"</span>:<span class="literal">false</span>,<span class="string">"stateMutability"</span>:<span class="string">"nonpayable"</span>,<span class="string">"type"</span>:<span class="string">"constructor"</span>&#125;]);</span><br><span class="line"><span class="comment">// deploy new contract</span></span><br><span class="line"><span class="keyword">var</span> hello = helloContract.new(</span><br><span class="line">   _greeting, <span class="comment">// constructorParam, 可存在多个</span></span><br><span class="line">   &#123;</span><br><span class="line">     <span class="keyword">from</span>: web3.eth.accounts[<span class="number">1</span>],  <span class="comment">// 部署账号</span></span><br><span class="line">     data: <span class="string">'0x608060405234801561001057600080fd5b5060405161027c38038061027c83398101604052805101805161003a906000906020840190610041565b50506100dc565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061008257805160ff19168380011785556100af565b828001600101855582156100af579182015b828111156100af578251825591602001919060010190610094565b506100bb9291506100bf565b5090565b6100d991905b808211156100bb57600081556001016100c5565b90565b610191806100eb6000396000f3006080604052600436106100405763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663954ab4b28114610045575b600080fd5b34801561005157600080fd5b5061005a6100cf565b6040805160208082528351818301528351919283929083019185019080838360005b8381101561009457818101518382015260200161007c565b50505050905090810190601f1680156100c15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054604080516020601f600260001961010060018816150201909516949094049384018190048102820181019092528281526060939092909183018282801561015b5780601f106101305761010080835404028352916020019161015b565b820191906000526020600020905b81548152906001019060200180831161013e57829003601f168201915b50505050509050905600a165627a7a7230582095d42238dd45ab5b9cf241235d3dbba2dae94a09053bc96b0935ed98ac9a4ec10029'</span>,  <span class="comment">// 合约编译后的字节码</span></span><br><span class="line">     gas: <span class="string">'4700000'</span> <span class="comment">// 以太坊用 gas 计算要智能合约需要的以太币</span></span><br><span class="line">   &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">e, contract</span>)</span>&#123; <span class="comment">// 部署后的回调函数</span></span><br><span class="line">    <span class="comment">// <span class="doctag">NOTE:</span> The callback will fire twice!</span></span><br><span class="line">    <span class="comment">// Once the contract has the transactionHash property set and once its deployed on an address.</span></span><br><span class="line">    <span class="built_in">console</span>.log(e, contract);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> contract.address !== <span class="string">'undefined'</span>) &#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">'Contract mined! address: '</span> + contract.address + <span class="string">' transactionHash: '</span> + contract.transactionHash);</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure><p></p><p><code>eth.contract</code> ：<a href="https://solidity.readthedocs.io/en/develop/abi-spec.html" target="_blank" rel="noopener">api说明</a></p><blockquote><p>需要修改的地方：</p><ul><li>第1行：修改字符串为 hello world</li><li>第6行：修改部署账户为新账户索引，即使用新账户来部署合约。</li></ul></blockquote><p>然后一行一行拷贝到 geth 中执行。出现以下类似 log 说明 <strong>部署成功</strong>。<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Contract mined! address: 0x8500c68000dbbebea6d5673d28927b28b9470854 transactionHash: 0x16c8aa6129693edaf22b43fd043748857d05511251f65b5e9f9faf8355b95656</span><br><span class="line">&gt; eth.getBalance(eth.accounts[1])</span><br><span class="line"><span class="comment"># 查看账号余额，发现变少了</span></span><br></pre></td></tr></table></figure><p></p><p>同时也可以在日志中看到挖矿记录等<br><img src="https://tang-blog-1257996120.cos-website.ap-chengdu.myqcloud.com/mine-log.png" alt="mine-log"></p><h2 id="运行合约"><a href="#运行合约" class="headerlink" title="运行合约"></a>运行合约</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; hello.say()</span><br><span class="line"><span class="comment"># hello world</span></span><br></pre></td></tr></table></figure><p>不知道为什么公司的电脑运行成功了，而家里的电脑却报错了 <code>TypeError: &#39;say&#39; is not a function</code>，明明合约创建成功了。</p><p>跟上面截图的最底部的 error: <code>waiting for transactions</code> 没关系，公司的电脑上也有这行日志。</p>]]></content>
       
+        <categories>
+            
+            <category> 区块链 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 智能合约 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -318,7 +382,7 @@
       
         <categories>
             
-            <category> 移动端 </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -358,7 +422,7 @@
       
         <categories>
             
-            <category> 前端 </category>
+            <category> 杂说 </category>
             
         </categories>
         
@@ -378,7 +442,7 @@
       
         <categories>
             
-            <category> vue </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -398,7 +462,7 @@
       
         <categories>
             
-            <category> react-native </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -418,7 +482,7 @@
       
         <categories>
             
-            <category> nginx </category>
+            <category> 杂说 </category>
             
         </categories>
         
@@ -440,7 +504,7 @@
       
         <categories>
             
-            <category> docker </category>
+            <category> 杂说 </category>
             
         </categories>
         
@@ -460,7 +524,7 @@
       
         <categories>
             
-            <category> vue </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -500,7 +564,7 @@
       
         <categories>
             
-            <category> nginx </category>
+            <category> 杂说 </category>
             
         </categories>
         
@@ -520,7 +584,7 @@
       
         <categories>
             
-            <category> linux </category>
+            <category> 杂说 </category>
             
         </categories>
         
@@ -529,7 +593,7 @@
             
             <tag> linux </tag>
             
-            <tag> 云 </tag>
+            <tag> 谷歌云 </tag>
             
         </tags>
         
@@ -542,7 +606,7 @@
       
         <categories>
             
-            <category> linux </category>
+            <category> 杂说 </category>
             
         </categories>
         
@@ -562,14 +626,14 @@
       
         <categories>
             
-            <category> Javascript </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> 前端 </tag>
+            <tag> javascript </tag>
             
         </tags>
         
@@ -582,7 +646,7 @@
       
         <categories>
             
-            <category> vue </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -590,8 +654,6 @@
         <tags>
             
             <tag> vue </tag>
-            
-            <tag> webpack </tag>
             
         </tags>
         
@@ -604,7 +666,7 @@
       
         <categories>
             
-            <category> Javascript </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -626,7 +688,7 @@
       
         <categories>
             
-            <category> vue </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -646,7 +708,7 @@
       
         <categories>
             
-            <category> Javascript </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -666,7 +728,7 @@
       
         <categories>
             
-            <category> vue </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -674,10 +736,6 @@
         <tags>
             
             <tag> vue </tag>
-            
-            <tag> tree </tag>
-            
-            <tag> 自定义组件 </tag>
             
         </tags>
         
@@ -690,7 +748,7 @@
       
         <categories>
             
-            <category> vue </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -698,8 +756,6 @@
         <tags>
             
             <tag> vue </tag>
-            
-            <tag> File </tag>
             
         </tags>
         
@@ -712,7 +768,7 @@
       
         <categories>
             
-            <category> vue </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -720,8 +776,6 @@
         <tags>
             
             <tag> vue </tag>
-            
-            <tag> marked </tag>
             
             <tag> highlight.js </tag>
             
@@ -736,14 +790,14 @@
       
         <categories>
             
-            <category> Javascript </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> question </tag>
+            <tag> javascript </tag>
             
         </tags>
         
@@ -756,14 +810,14 @@
       
         <categories>
             
-            <category> music </category>
+            <category> 闲语 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> music </tag>
+            <tag> 闲语 </tag>
             
         </tags>
         
@@ -776,14 +830,14 @@
       
         <categories>
             
-            <category> music </category>
+            <category> 闲语 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> music </tag>
+            <tag> 闲语 </tag>
             
         </tags>
         
@@ -796,7 +850,7 @@
       
         <categories>
             
-            <category> 博客 </category>
+            <category> 杂说 </category>
             
         </categories>
         
@@ -805,9 +859,7 @@
             
             <tag> hexo </tag>
             
-            <tag> next </tag>
-            
-            <tag> duoshuo </tag>
+            <tag> 博客 </tag>
             
         </tags>
         
@@ -820,7 +872,7 @@
       
         <categories>
             
-            <category> Css </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -844,7 +896,7 @@
       
         <categories>
             
-            <category> css </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -866,7 +918,7 @@
       
         <categories>
             
-            <category> Css </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -888,7 +940,7 @@
       
         <categories>
             
-            <category> Javascript </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -908,16 +960,16 @@
       
         <categories>
             
-            <category> jQuery </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> handsontable </tag>
+            <tag> jQuery </tag>
             
-            <tag> jq </tag>
+            <tag> handsontable </tag>
             
         </tags>
         
@@ -930,7 +982,7 @@
       
         <categories>
             
-            <category> Javascript </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -950,7 +1002,7 @@
       
         <categories>
             
-            <category> HTML5 </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -970,14 +1022,12 @@
       
         <categories>
             
-            <category> HTML </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
-            
-            <tag> 前端 </tag>
             
             <tag> html </tag>
             
@@ -992,7 +1042,7 @@
       
         <categories>
             
-            <category> jQuery </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1002,8 +1052,6 @@
             <tag> promise </tag>
             
             <tag> jQuery </tag>
-            
-            <tag> ajax </tag>
             
         </tags>
         
@@ -1016,7 +1064,7 @@
       
         <categories>
             
-            <category> Javascript </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1024,8 +1072,6 @@
         <tags>
             
             <tag> seajs </tag>
-            
-            <tag> 模块化 </tag>
             
         </tags>
         
@@ -1038,7 +1084,7 @@
       
         <categories>
             
-            <category> Grunt </category>
+            <category> 杂说 </category>
             
         </categories>
         
@@ -1060,14 +1106,12 @@
       
         <categories>
             
-            <category> HTML </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
-            
-            <tag> 前端 </tag>
             
             <tag> SSI </tag>
             
@@ -1082,16 +1126,14 @@
       
         <categories>
             
-            <category> Javascript </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> 前端 </tag>
-            
-            <tag> js </tag>
+            <tag> javascript </tag>
             
         </tags>
         
@@ -1104,7 +1146,7 @@
       
         <categories>
             
-            <category> git </category>
+            <category> 工具 </category>
             
         </categories>
         
@@ -1124,7 +1166,7 @@
       
         <categories>
             
-            <category> ionic </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1132,8 +1174,6 @@
         <tags>
             
             <tag> ionic </tag>
-            
-            <tag> $ionicPlatform </tag>
             
         </tags>
         
@@ -1146,14 +1186,14 @@
       
         <categories>
             
-            <category> angular </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> angular数据双向绑定 </tag>
+            <tag> angular </tag>
             
         </tags>
         
@@ -1186,7 +1226,7 @@
       
         <categories>
             
-            <category> angular </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1208,7 +1248,7 @@
       
         <categories>
             
-            <category> Css </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1216,8 +1256,6 @@
         <tags>
             
             <tag> css </tag>
-            
-            <tag> 前端 </tag>
             
         </tags>
         
@@ -1230,7 +1268,7 @@
       
         <categories>
             
-            <category> angular </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1238,10 +1276,6 @@
         <tags>
             
             <tag> ionic </tag>
-            
-            <tag> cordova </tag>
-            
-            <tag> $cordovaImagePicker </tag>
             
         </tags>
         
@@ -1254,7 +1288,7 @@
       
         <categories>
             
-            <category> HTML </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1262,6 +1296,8 @@
         <tags>
             
             <tag> css </tag>
+            
+            <tag> html </tag>
             
         </tags>
         
@@ -1274,14 +1310,14 @@
       
         <categories>
             
-            <category> angular </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> angular下拉列表 </tag>
+            <tag> angular </tag>
             
         </tags>
         
@@ -1295,7 +1331,7 @@
       
         <categories>
             
-            <category> Css </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1303,8 +1339,6 @@
         <tags>
             
             <tag> css </tag>
-            
-            <tag> 前端 </tag>
             
         </tags>
         
@@ -1317,14 +1351,14 @@
       
         <categories>
             
-            <category> angular </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> angular需知 </tag>
+            <tag> angular </tag>
             
         </tags>
         
@@ -1339,14 +1373,14 @@
       
         <categories>
             
-            <category> angular </category>
+            <category> 前端 </category>
             
         </categories>
         
         
         <tags>
             
-            <tag> angular常见错误 </tag>
+            <tag> angular </tag>
             
         </tags>
         
@@ -1361,14 +1395,12 @@
       
         <categories>
             
-            <category> sublime </category>
+            <category> 杂说 </category>
             
         </categories>
         
         
         <tags>
-            
-            <tag> windows </tag>
             
             <tag> sublime3 </tag>
             
@@ -1383,7 +1415,7 @@
       
         <categories>
             
-            <category> angular </category>
+            <category> 前端 </category>
             
         </categories>
         
@@ -1405,14 +1437,12 @@
       
         <categories>
             
-            <category> 博客 </category>
+            <category> 杂说 </category>
             
         </categories>
         
         
         <tags>
-            
-            <tag> git </tag>
             
             <tag> hexo </tag>
             
