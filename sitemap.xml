@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jintang.github.io/2018/09/05/react-vs-vue/</loc>
+    
+    <lastmod>2019-07-10T08:00:55.435Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jintang.github.io/2016/06/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2019-07-10T07:59:29.663Z</lastmod>
@@ -467,13 +474,6 @@
     <loc>http://jintang.github.io/2018/10/11/%E7%94%A8truffle%E6%A1%86%E6%9E%B6%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/</loc>
     
     <lastmod>2018-10-26T10:05:19.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jintang.github.io/2018/09/05/react-vs-vue/</loc>
-    
-    <lastmod>2018-09-14T03:03:27.222Z</lastmod>
     
   </url>
   
