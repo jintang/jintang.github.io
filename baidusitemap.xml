@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jintang.github.io/2016/08/29/Grunt%E5%AE%9E%E4%BE%8B%E5%85%A8%E8%A7%A3/</loc>
+    <lastmod>2019-07-10T08:02:07.789Z</lastmod>
+  </url>  <url>
     <loc>http://jintang.github.io/2019/04/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2019-07-10T08:01:44.210Z</lastmod>
   </url>  <url>
@@ -57,9 +60,6 @@
   </url>  <url>
     <loc>http://jintang.github.io/2018/04/24/docker%E5%88%9D%E8%AF%86/</loc>
     <lastmod>2019-07-10T07:53:10.233Z</lastmod>
-  </url>  <url>
-    <loc>http://jintang.github.io/2016/08/29/Grunt%E5%AE%9E%E4%BE%8B%E5%85%A8%E8%A7%A3/</loc>
-    <lastmod>2019-07-10T07:53:02.778Z</lastmod>
   </url>  <url>
     <loc>http://jintang.github.io/2018/01/23/linux%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:52:47.059Z</lastmod>
