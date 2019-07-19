@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jintang.github.io/2019/07/12/Service-Workers-%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E4%B8%8E%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2019-07-19T07:28:29.129Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jintang.github.io/2016/08/29/Grunt%E5%AE%9E%E4%BE%8B%E5%85%A8%E8%A7%A3/</loc>
     
     <lastmod>2019-07-10T08:02:07.789Z</lastmod>
@@ -478,20 +485,6 @@
   </url>
   
   <url>
-    <loc>http://jintang.github.io/categories/index.html</loc>
-    
-    <lastmod>2018-08-12T07:26:35.258Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jintang.github.io/tags/index.html</loc>
-    
-    <lastmod>2018-08-12T07:26:35.258Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://jintang.github.io/baidu_verify_IcWGtkpLLP.html</loc>
     
     <lastmod>2018-08-12T07:26:35.258Z</lastmod>
@@ -507,6 +500,20 @@
   
   <url>
     <loc>http://jintang.github.io/about/index.html</loc>
+    
+    <lastmod>2018-08-12T07:26:35.258Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jintang.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-08-12T07:26:35.258Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jintang.github.io/tags/index.html</loc>
     
     <lastmod>2018-08-12T07:26:35.258Z</lastmod>
     

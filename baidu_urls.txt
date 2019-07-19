@@ -1,1 +1,1 @@
-http://jintang.github.io/2019/07/02/网页关键渲染路径/
+http://jintang.github.io/2019/07/12/Service-Workers-简单实例与学习/
