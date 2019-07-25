@@ -77,11 +77,10 @@ theme: next
 
 # Social links
 social:
-  GitHub: https://github.com/jintangWang
+  GitHub: https://github.com/jintangWang || github
   # Weibo: http://weibo.com/iissnan
-  简书: http://www.jianshu.com/users/3e9bf6c9437f
   知乎: http://www.zhihu.com/people/shu-tang-23
-  豆瓣: https://www.douban.com/people/139000964/
+  QQ群: https://shang.qq.com/wpa/qunwpa?idkey=9c48bdfb08c94a52fc17d891e09c700a3b42d18f9fa80de519731fd3797e98f8 || qq
 
 feed:
   type: atom
