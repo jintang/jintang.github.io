@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jintang.github.io/2019/06/03/flutter%20%E4%BD%BF%E7%94%A8%20CI%20%E6%89%93%E5%8C%85/</loc>
+    
+    <lastmod>2019-08-15T08:32:10.897Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jintang.github.io/about/index.html</loc>
     
     <lastmod>2019-07-25T09:54:43.342Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://jintang.github.io/2016/06/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2019-07-10T07:59:29.663Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jintang.github.io/2019/06/03/flutter%20%E4%BD%BF%E7%94%A8%20CI%20%E6%89%93%E5%8C%85/</loc>
-    
-    <lastmod>2019-07-10T07:58:51.047Z</lastmod>
     
   </url>
   
