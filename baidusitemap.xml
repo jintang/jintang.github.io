@@ -1,217 +1,1470 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
   <url>
     <loc>http://jintang.github.io/2019/06/03/flutter%20%E4%BD%BF%E7%94%A8%20CI%20%E6%89%93%E5%8C%85/</loc>
     <lastmod>2019-08-15T08:32:10.897Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>flutter 使用 CI 打包</title>
+        <pubTime>2019-06-03T02:01:06.000Z</pubTime>
+        
+        <tag>flutter</tag>
+         
+        <tag>CI</tag>
+         
+         
+           
+             
+              <breadCrumb title="flutter" url="http://jintang.github.io/categories/flutter/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://jintang.github.io/2019/07/12/Service-Workers-%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E4%B8%8E%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-19T07:39:35.138Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>Service Workers 简单实例与学习</title>
+        <pubTime>2019-07-12T08:41:15.000Z</pubTime>
+        
+        <tag>Service Workers</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/08/29/Grunt%E5%AE%9E%E4%BE%8B%E5%85%A8%E8%A7%A3/</loc>
     <lastmod>2019-07-10T08:02:07.789Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>Grunt实例全解</title>
+        <pubTime>2016-08-29T09:02:08.000Z</pubTime>
+        
+        <tag>Grunt</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2019/04/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2019-07-10T08:01:44.210Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>计算机知识</title>
+        <pubTime>2019-04-10T14:35:44.000Z</pubTime>
+        
+        <tag>计算机知识</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/09/05/react-vs-vue/</loc>
     <lastmod>2019-07-10T08:00:55.435Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>react vs vue</title>
+        <pubTime>2018-09-05T08:14:03.000Z</pubTime>
+        
+        <tag>react-native</tag>
+         
+        <tag>react</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/06/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-07-10T07:59:29.663Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>git常用命令</title>
+        <pubTime>2016-06-24T01:14:44.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2015/12/16/windows%E5%AE%89%E8%A3%85sublime3%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%AE%BE%E7%BD%AE%E9%A3%8E%E6%A0%BC/</loc>
     <lastmod>2019-07-10T07:56:00.294Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>windows安装sublime3遇到的问题与设置风格</title>
+        <pubTime>2015-12-16T14:58:21.000Z</pubTime>
+        
+        <tag>sublime3</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/04/18/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%91%E7%BB%84%E4%BB%B6s-tree/</loc>
     <lastmod>2019-07-10T07:55:46.159Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>vue自定义树组件s-tree</title>
+        <pubTime>2017-04-18T05:14:14.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/05/17/vue%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</loc>
     <lastmod>2019-07-10T07:55:27.419Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>vue中遇到的坑</title>
+        <pubTime>2017-05-17T02:04:05.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/03/22/vue%E4%B8%AD%E5%B0%81%E8%A3%85%E4%BD%BF%E7%94%A8markdown%E5%B9%B6%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE/</loc>
     <lastmod>2019-07-10T07:55:16.438Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>vue中封装使用markdown并语法高亮</title>
+        <pubTime>2017-03-22T01:23:15.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+        <tag>highlight.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/05/11/vue%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:54:53.528Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>vue我们应该知道的</title>
+        <pubTime>2018-05-11T01:42:20.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/11/03/vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%94%BE%E5%9C%A8src-assets%E4%B8%8Estatic%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2019-07-10T07:54:44.081Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>vue静态资源放在src/assets与static目录下的区别</title>
+        <pubTime>2017-11-03T01:22:02.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/03/27/vue%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/</loc>
     <lastmod>2019-07-10T07:54:33.096Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>vue动态添加组件</title>
+        <pubTime>2018-03-27T09:24:21.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/07/13/shtml%E4%B8%ADinclude%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2019-07-10T07:54:27.299Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>.shtml中include标签的用法</title>
+        <pubTime>2016-07-13T06:34:40.000Z</pubTime>
+        
+        <tag>SSI</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/09/21/seajs%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E5%9D%91/</loc>
     <lastmod>2019-07-10T07:54:18.795Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>seajs使用中的坑</title>
+        <pubTime>2016-09-21T10:44:45.000Z</pubTime>
+        
+        <tag>seajs</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/11/17/sass%20VS%20less/</loc>
     <lastmod>2019-07-10T07:54:10.842Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>sass VS less</title>
+        <pubTime>2016-11-17T02:53:41.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>less</tag>
+         
+        <tag>sass</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/05/11/react-native%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:53:48.427Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>react-native我们应该知道的</title>
+        <pubTime>2018-05-11T01:16:20.000Z</pubTime>
+        
+        <tag>react-native</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/12/04/react-native-%E4%B9%8B-webview/</loc>
     <lastmod>2019-07-10T07:53:43.242Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>react-native 之 webview</title>
+        <pubTime>2018-12-04T08:07:11.000Z</pubTime>
+        
+        <tag>react-native</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/04/27/nginx%E5%BC%80%E5%90%AFhttps/</loc>
     <lastmod>2019-07-10T07:53:29.748Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>nginx开启https</title>
+        <pubTime>2018-04-27T06:22:42.000Z</pubTime>
+        
+        <tag>https</tag>
+         
+        <tag>nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/03/05/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%B1%86%E7%93%A3%E6%8E%A5%E5%8F%A3/</loc>
     <lastmod>2019-07-10T07:53:18.515Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>nginx反向代理豆瓣接口</title>
+        <pubTime>2018-03-05T08:57:36.000Z</pubTime>
+        
+        <tag>nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/04/24/docker%E5%88%9D%E8%AF%86/</loc>
     <lastmod>2019-07-10T07:53:10.233Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>docker初识</title>
+        <pubTime>2018-04-24T01:11:44.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/01/23/linux%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:52:47.059Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>linux学习</title>
+        <pubTime>2018-01-23T06:38:48.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/11/07/less%E4%BD%BF%E7%94%A8mixin%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2019-07-10T07:52:13.817Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>less使用mixin的小技巧</title>
+        <pubTime>2016-11-07T09:43:14.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>less</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/11/10/less%E5%AE%9E%E6%88%98%E5%85%A8%E8%A7%A3/</loc>
     <lastmod>2019-07-10T07:52:03.779Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>less实战全解</title>
+        <pubTime>2016-11-10T11:55:49.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>less</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/07/08/js%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:51:51.725Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>js我们应该知道的</title>
+        <pubTime>2016-07-08T07:09:44.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2019/02/11/js%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2019-07-10T07:51:37.611Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>js发布订阅者模式简单实现</title>
+        <pubTime>2019-02-11T10:00:07.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/09/30/jq%E7%9A%84promise/</loc>
     <lastmod>2019-07-10T07:51:23.333Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>jq的promise</title>
+        <pubTime>2016-09-30T01:23:51.000Z</pubTime>
+        
+        <tag>promise</tag>
+         
+        <tag>jQuery</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/09/30/html%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:51:10.926Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>html我们应该知道的</title>
+        <pubTime>2016-09-30T09:05:49.000Z</pubTime>
+        
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/02/19/html%E5%B1%8F%E5%B9%95%E8%87%AA%E9%80%82%E5%BA%94/</loc>
     <lastmod>2019-07-10T07:51:02.941Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>html屏幕自适应</title>
+        <pubTime>2016-02-19T03:14:28.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/08/03/hello-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/</loc>
     <lastmod>2019-07-10T07:50:43.644Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>hello 智能合约</title>
+        <pubTime>2018-08-02T17:46:20.000Z</pubTime>
+        
+        <tag>智能合约</tag>
+         
+         
+           
+             
+              <breadCrumb title="区块链" url="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/04/20/es6%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2019-07-10T07:49:43.711Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>es6常用语法</title>
+        <pubTime>2017-04-20T02:16:30.000Z</pubTime>
+        
+        <tag>es6</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/12/23/debounce%E4%B8%8Ethrottle/</loc>
     <lastmod>2019-07-10T07:49:18.359Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>debounce与throttle</title>
+        <pubTime>2017-12-23T06:31:00.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2019/04/24/dart%E9%9C%80%E7%9F%A5/</loc>
     <lastmod>2019-07-10T07:48:51.980Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>dart需知</title>
+        <pubTime>2019-04-24T08:12:30.000Z</pubTime>
+        
+        <tag>dart</tag>
+         
+         
+           
+             
+              <breadCrumb title="flutter" url="http://jintang.github.io/categories/flutter/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2015/12/24/CSS%E6%88%91%E4%BB%AC%E6%89%80%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:48:35.143Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>CSS我们所应该知道的</title>
+        <pubTime>2015-12-24T09:34:54.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2015/12/23/angularJs%E6%88%91%E4%BB%AC%E6%89%80%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:48:25.828Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>angularJs我们所应该知道的</title>
+        <pubTime>2015-12-23T07:45:09.000Z</pubTime>
+        
+        <tag>angular</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2015/12/17/angularJs%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2019-07-10T07:48:15.310Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>angularJs 常见错误</title>
+        <pubTime>2015-12-17T13:53:24.000Z</pubTime>
+        
+        <tag>angular</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2015/12/13/angularJs-directive%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2019-07-10T07:48:07.236Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>angularJs———directive创建自定义指令</title>
+        <pubTime>2015-12-13T06:40:37.000Z</pubTime>
+        
+        <tag>angular</tag>
+         
+        <tag>directive</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/04/19/angular%E4%B9%8Bpromise%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2019-07-10T07:47:37.022Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>angular中promise的用法</title>
+        <pubTime>2016-04-19T09:22:57.000Z</pubTime>
+        
+        <tag>angular</tag>
+         
+        <tag>promise</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/01/07/angular%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/</loc>
     <lastmod>2019-07-10T07:47:23.094Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>angular下拉列表</title>
+        <pubTime>2016-01-07T15:26:18.000Z</pubTime>
+        
+        <tag>angular</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/05/05/angular%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</loc>
     <lastmod>2019-07-10T07:47:10.848Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>angular数据双向绑定bug</title>
+        <pubTime>2016-05-05T05:40:58.000Z</pubTime>
+        
+        <tag>angular</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/10/25/%E6%AD%A3%E5%88%99RegExp%E4%B8%AD%E7%9A%84%E4%B9%9D%E6%9B%B2%E5%8D%81%E5%85%AB%E5%BC%AF/</loc>
     <lastmod>2019-07-10T07:46:59.326Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>正则RegExp中的九曲十八弯</title>
+        <pubTime>2016-10-25T10:01:23.000Z</pubTime>
+        
+        <tag>正则</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/12/01/%E4%BC%98%E5%8C%96hexo%E4%B9%8Bnext%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2019-07-10T07:46:46.890Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>优化hexo之next主题</title>
+        <pubTime>2016-12-01T05:13:07.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/07/10/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95%E7%BD%91%E9%A1%B5%E9%9C%80%E7%9F%A5/</loc>
     <lastmod>2019-07-10T07:46:03.893Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>移动端调试网页需知</title>
+        <pubTime>2018-07-10T02:56:33.000Z</pubTime>
+        
+        <tag>移动端</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/12/10/%E5%AD%A6%E4%B9%A0vue%E6%BA%90%E5%BE%97%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2019-07-10T07:45:58.248Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>学习vue源码得到的知识</title>
+        <pubTime>2018-12-10T09:57:59.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/10/18/%E4%BF%AE%E6%94%B9handsontable%E6%8F%92%E4%BB%B6%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2019-07-10T07:45:44.250Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>使用handsontable插件修改bug心得</title>
+        <pubTime>2016-10-18T02:33:32.000Z</pubTime>
+        
+        <tag>jQuery</tag>
+         
+        <tag>handsontable</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/01/19/%E5%B0%8F%E7%96%91%E9%97%AE/</loc>
     <lastmod>2019-07-10T07:45:25.119Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>小疑问</title>
+        <pubTime>2017-01-19T09:13:18.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/12/02/%E5%B0%8F%E6%A3%8B%E7%AB%A5/</loc>
     <lastmod>2019-07-10T07:44:51.273Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>小棋童</title>
+        <pubTime>2016-12-02T03:59:35.000Z</pubTime>
+        
+        <tag>闲语</tag>
+         
+         
+           
+             
+              <breadCrumb title="闲语" url="http://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2019/03/19/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:44:34.968Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>线性代数学习</title>
+        <pubTime>2019-03-19T15:29:56.000Z</pubTime>
+        
+        <tag>线性代数</tag>
+         
+         
+           
+             
+              <breadCrumb title="机器学习" url="http://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/12/01/%E6%88%8F%E8%A8%80/</loc>
     <lastmod>2019-07-10T07:43:56.447Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>戏言</title>
+        <pubTime>2016-12-01T09:50:26.000Z</pubTime>
+        
+        <tag>闲语</tag>
+         
+         
+           
+             
+              <breadCrumb title="闲语" url="http://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2019/07/02/%E7%BD%91%E9%A1%B5%E5%85%B3%E9%94%AE%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%84/</loc>
     <lastmod>2019-07-10T07:43:16.674Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>网页关键渲染路径</title>
+        <pubTime>2019-07-02T09:29:45.000Z</pubTime>
+        
+        <tag>优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/11/11/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:43:05.898Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>算法与数据结构</title>
+        <pubTime>2018-11-11T13:33:47.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+        <tag>数据结构</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/04/21/%E5%85%94%E5%AD%90%E9%97%AE%E9%A2%98-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</loc>
     <lastmod>2019-07-10T07:42:52.890Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>兔子问题(斐波那契数列)</title>
+        <pubTime>2016-04-21T06:31:21.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2015/12/09/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E4%B8%8Ehexo%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2019-07-10T07:42:36.676Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>如何使用github与hexo建立个人博客</title>
+        <pubTime>2015-12-09T06:38:10.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/08/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:42:20.502Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>区块链学习</title>
+        <pubTime>2018-08-13T14:57:20.000Z</pubTime>
+        
+        <tag>区块链</tag>
+         
+         
+           
+             
+              <breadCrumb title="区块链" url="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/04/17/%E5%89%8D%E7%AB%AF%E6%B5%AE%E5%8A%A8%E9%97%AD%E5%90%88%E7%9A%84css%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2019-07-10T07:41:17.860Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>浮动闭合的css方法</title>
+        <pubTime>2016-04-17T03:52:53.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/05/29/%E9%9D%A2%E8%AF%95%E9%81%87%E5%88%B0%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:41:05.602Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>面试遇到的</title>
+        <pubTime>2018-05-29T12:34:58.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/10/08/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2019-07-10T07:39:23.000Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>浏览器中常用的存储</title>
+        <pubTime>2016-10-08T03:19:01.000Z</pubTime>
+        
+        <tag>HTML5</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/01/24/%E8%B0%B7%E6%AD%8C%E4%BA%91%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2019-07-10T07:37:40.312Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>谷歌云部署个人网站</title>
+        <pubTime>2018-01-24T09:09:26.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>谷歌云</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2019/03/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%20%E2%80%94%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/</loc>
     <lastmod>2019-07-10T07:37:22.201Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>机器学习算法 — 奇异值分解</title>
+        <pubTime>2019-03-26T14:22:13.000Z</pubTime>
+        
+        <tag>奇异值分解</tag>
+         
+         
+           
+             
+              <breadCrumb title="机器学习" url="http://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/09/28/%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8es6/</loc>
     <lastmod>2019-07-10T07:34:22.947Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>各种环境下使用es6</title>
+        <pubTime>2017-09-28T06:07:23.000Z</pubTime>
+        
+        <tag>es6</tag>
+         
+        <tag>babel</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/10/08/%E4%B8%8D%E5%90%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%9A%E7%94%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
     <lastmod>2019-07-10T07:34:16.985Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>不同浏览器通用的事件处理</title>
+        <pubTime>2016-10-08T06:04:34.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2017/04/13/vue%E4%B8%AD%E4%B8%8A%E4%BC%A0%E7%85%A7%E7%89%87%E7%94%9F%E6%88%90%E5%B8%A6%E5%9B%BE%E7%89%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81/</loc>
     <lastmod>2019-07-10T07:33:40.774Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>vue中上传照片生成带图片的二维码</title>
+        <pubTime>2017-04-13T05:33:01.000Z</pubTime>
+        
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/06/22/Ionic%E7%9B%91%E5%90%AC%E6%89%8B%E6%9C%BA%E7%A1%AC%E9%94%AE%E7%9B%98%E7%9A%84%E8%BF%94%E5%9B%9E%E9%94%AE/</loc>
     <lastmod>2019-07-10T07:30:54.683Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>Ionic监听手机硬键盘的返回键</title>
+        <pubTime>2016-06-22T09:45:35.000Z</pubTime>
+        
+        <tag>ionic</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2016/03/15/angularJs%E3%80%81Ionic%E4%B8%8B%E4%B8%8A%E4%BC%A0%E7%85%A7%E7%89%87/</loc>
     <lastmod>2019-07-10T07:30:50.625Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>Ionic.AngularJs下上传照片</title>
+        <pubTime>2016-03-15T08:58:14.000Z</pubTime>
+        
+        <tag>ionic</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2019/04/02/flutter-%E7%88%B6%E5%AD%90%E9%80%9A%E4%BF%A1/</loc>
     <lastmod>2019-06-11T02:08:13.961Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>flutter 父子通信</title>
+        <pubTime>2019-04-02T09:28:22.000Z</pubTime>
+        
+        <tag>flutter</tag>
+         
+         
+           
+             
+              <breadCrumb title="flutter" url="http://jintang.github.io/categories/flutter/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/03/21/%E7%BB%8F%E5%B8%B8%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2019-04-06T02:55:48.846Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>经常遇到的小算法</title>
+        <pubTime>2018-03-21T02:20:13.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法" url="http://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/10/26/%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/</loc>
     <lastmod>2018-11-08T06:45:36.051Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>开发部署以太坊DAPP</title>
+        <pubTime>2018-10-26T06:35:24.000Z</pubTime>
+        
+        <tag>DAPP</tag>
+         
+         
+           
+             
+              <breadCrumb title="区块链" url="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/06/26/%E6%B4%9B%E9%98%B3%E7%BA%B8%E8%B4%B5/</loc>
     <lastmod>2018-11-08T06:33:26.179Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>洛阳纸贵</title>
+        <pubTime>2018-06-26T06:33:29.000Z</pubTime>
+        
+        <tag>闲语</tag>
+         
+         
+           
+             
+              <breadCrumb title="闲语" url="http://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/10/11/%E7%94%A8truffle%E6%A1%86%E6%9E%B6%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/</loc>
     <lastmod>2018-10-26T10:05:19.173Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>用truffle框架开发部署以太坊DAPP</title>
+        <pubTime>2018-10-11T13:33:11.000Z</pubTime>
+        
+        <tag>DAPP</tag>
+         
+         
+           
+             
+              <breadCrumb title="区块链" url="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+  <url>
     <loc>http://jintang.github.io/2018/07/12/%E7%BD%91%E9%A1%B5%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2018-08-12T07:26:35.257Z</lastmod>
-  </url>  <url>
+    <data>
+        <display>
+        <title>网页适配问题</title>
+        <pubTime>2018-07-12T02:36:41.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+        <tag>html</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jintang.github.io/2018/07/16/node%E5%B8%B8%E7%94%A8/</loc>
     <lastmod>2018-08-12T07:26:35.252Z</lastmod>
-  </url>
+    <data>
+        <display>
+        <title>node常用</title>
+        <pubTime>2018-07-16T01:53:51.000Z</pubTime>
+        
+        <tag>node</tag>
+         
+         
+           
+             
+              <breadCrumb title="node" url="http://jintang.github.io/categories/node/"/>
+          
+        </display>
+    </data>
+    </url>
+
 </urlset>
