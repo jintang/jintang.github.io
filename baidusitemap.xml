@@ -4,7 +4,27 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2019/06/03/flutter%20%E4%BD%BF%E7%94%A8%20CI%20%E6%89%93%E5%8C%85/</loc>
+    <loc>https://jintang.github.io/Service-Workers-%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E4%B8%8E%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2019-08-20T02:08:08.736Z</lastmod>
+    <data>
+        <display>
+        <title>Service Workers 简单实例与学习</title>
+        <pubTime>2019-07-12T08:41:15.000Z</pubTime>
+        
+        <tag>Service Workers</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jintang.github.io/flutter%20%E4%BD%BF%E7%94%A8%20CI%20%E6%89%93%E5%8C%85/</loc>
     <lastmod>2019-08-15T08:32:10.897Z</lastmod>
     <data>
         <display>
@@ -18,7 +38,7 @@
          
            
              
-              <breadCrumb title="flutter" url="http://jintang.github.io/categories/flutter/"/>
+              <breadCrumb title="flutter" url="https://jintang.github.io/categories/flutter/"/>
           
         </display>
     </data>
@@ -27,27 +47,7 @@
     
     
   <url>
-    <loc>http://jintang.github.io/2019/07/12/Service-Workers-%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E4%B8%8E%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2019-07-19T07:39:35.138Z</lastmod>
-    <data>
-        <display>
-        <title>Service Workers 简单实例与学习</title>
-        <pubTime>2019-07-12T08:41:15.000Z</pubTime>
-        
-        <tag>Service Workers</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jintang.github.io/2016/08/29/Grunt%E5%AE%9E%E4%BE%8B%E5%85%A8%E8%A7%A3/</loc>
+    <loc>https://jintang.github.io/Grunt%E5%AE%9E%E4%BE%8B%E5%85%A8%E8%A7%A3/</loc>
     <lastmod>2019-07-10T08:02:07.789Z</lastmod>
     <data>
         <display>
@@ -59,7 +59,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -67,7 +67,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2019/04/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/</loc>
+    <loc>https://jintang.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2019-07-10T08:01:44.210Z</lastmod>
     <data>
         <display>
@@ -79,7 +79,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -87,7 +87,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/09/05/react-vs-vue/</loc>
+    <loc>https://jintang.github.io/react-vs-vue/</loc>
     <lastmod>2019-07-10T08:00:55.435Z</lastmod>
     <data>
         <display>
@@ -103,7 +103,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -111,7 +111,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/06/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://jintang.github.io/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-07-10T07:59:29.663Z</lastmod>
     <data>
         <display>
@@ -123,7 +123,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -131,7 +131,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2015/12/16/windows%E5%AE%89%E8%A3%85sublime3%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%AE%BE%E7%BD%AE%E9%A3%8E%E6%A0%BC/</loc>
+    <loc>https://jintang.github.io/windows%E5%AE%89%E8%A3%85sublime3%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%B8%8E%E8%AE%BE%E7%BD%AE%E9%A3%8E%E6%A0%BC/</loc>
     <lastmod>2019-07-10T07:56:00.294Z</lastmod>
     <data>
         <display>
@@ -143,7 +143,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -151,7 +151,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/04/18/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%91%E7%BB%84%E4%BB%B6s-tree/</loc>
+    <loc>https://jintang.github.io/vue%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%91%E7%BB%84%E4%BB%B6s-tree/</loc>
     <lastmod>2019-07-10T07:55:46.159Z</lastmod>
     <data>
         <display>
@@ -163,7 +163,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -171,7 +171,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/05/17/vue%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</loc>
+    <loc>https://jintang.github.io/vue%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</loc>
     <lastmod>2019-07-10T07:55:27.419Z</lastmod>
     <data>
         <display>
@@ -183,7 +183,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -191,7 +191,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/03/22/vue%E4%B8%AD%E5%B0%81%E8%A3%85%E4%BD%BF%E7%94%A8markdown%E5%B9%B6%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE/</loc>
+    <loc>https://jintang.github.io/vue%E4%B8%AD%E5%B0%81%E8%A3%85%E4%BD%BF%E7%94%A8markdown%E5%B9%B6%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE/</loc>
     <lastmod>2019-07-10T07:55:16.438Z</lastmod>
     <data>
         <display>
@@ -205,7 +205,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -213,7 +213,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/05/11/vue%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
+    <loc>https://jintang.github.io/vue%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:54:53.528Z</lastmod>
     <data>
         <display>
@@ -225,7 +225,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -233,7 +233,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/11/03/vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%94%BE%E5%9C%A8src-assets%E4%B8%8Estatic%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <loc>https://jintang.github.io/vue%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%94%BE%E5%9C%A8src-assets%E4%B8%8Estatic%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2019-07-10T07:54:44.081Z</lastmod>
     <data>
         <display>
@@ -245,7 +245,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -253,7 +253,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/03/27/vue%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/</loc>
+    <loc>https://jintang.github.io/vue%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6/</loc>
     <lastmod>2019-07-10T07:54:33.096Z</lastmod>
     <data>
         <display>
@@ -265,7 +265,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -273,7 +273,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/07/13/shtml%E4%B8%ADinclude%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
+    <loc>https://jintang.github.io/shtml%E4%B8%ADinclude%E6%A0%87%E7%AD%BE%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2019-07-10T07:54:27.299Z</lastmod>
     <data>
         <display>
@@ -285,7 +285,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -293,7 +293,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/09/21/seajs%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E5%9D%91/</loc>
+    <loc>https://jintang.github.io/seajs%E4%BD%BF%E7%94%A8%E4%B8%AD%E7%9A%84%E5%9D%91/</loc>
     <lastmod>2019-07-10T07:54:18.795Z</lastmod>
     <data>
         <display>
@@ -305,7 +305,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -313,7 +313,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/11/17/sass%20VS%20less/</loc>
+    <loc>https://jintang.github.io/sass%20VS%20less/</loc>
     <lastmod>2019-07-10T07:54:10.842Z</lastmod>
     <data>
         <display>
@@ -329,7 +329,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -337,7 +337,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/05/11/react-native%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
+    <loc>https://jintang.github.io/react-native%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:53:48.427Z</lastmod>
     <data>
         <display>
@@ -349,7 +349,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -357,7 +357,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/12/04/react-native-%E4%B9%8B-webview/</loc>
+    <loc>https://jintang.github.io/react-native-%E4%B9%8B-webview/</loc>
     <lastmod>2019-07-10T07:53:43.242Z</lastmod>
     <data>
         <display>
@@ -369,7 +369,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -377,21 +377,21 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/04/27/nginx%E5%BC%80%E5%90%AFhttps/</loc>
+    <loc>https://jintang.github.io/nginx%E5%BC%80%E5%90%AFhttps/</loc>
     <lastmod>2019-07-10T07:53:29.748Z</lastmod>
     <data>
         <display>
         <title>nginx开启https</title>
         <pubTime>2018-04-27T06:22:42.000Z</pubTime>
         
-        <tag>https</tag>
-         
         <tag>nginx</tag>
+         
+        <tag>https</tag>
          
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -399,7 +399,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/03/05/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%B1%86%E7%93%A3%E6%8E%A5%E5%8F%A3/</loc>
+    <loc>https://jintang.github.io/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%B1%86%E7%93%A3%E6%8E%A5%E5%8F%A3/</loc>
     <lastmod>2019-07-10T07:53:18.515Z</lastmod>
     <data>
         <display>
@@ -411,7 +411,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -419,7 +419,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/04/24/docker%E5%88%9D%E8%AF%86/</loc>
+    <loc>https://jintang.github.io/docker%E5%88%9D%E8%AF%86/</loc>
     <lastmod>2019-07-10T07:53:10.233Z</lastmod>
     <data>
         <display>
@@ -431,7 +431,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -439,7 +439,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/01/23/linux%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://jintang.github.io/linux%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:52:47.059Z</lastmod>
     <data>
         <display>
@@ -451,7 +451,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -459,7 +459,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/11/07/less%E4%BD%BF%E7%94%A8mixin%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    <loc>https://jintang.github.io/less%E4%BD%BF%E7%94%A8mixin%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2019-07-10T07:52:13.817Z</lastmod>
     <data>
         <display>
@@ -473,7 +473,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -481,7 +481,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/11/10/less%E5%AE%9E%E6%88%98%E5%85%A8%E8%A7%A3/</loc>
+    <loc>https://jintang.github.io/less%E5%AE%9E%E6%88%98%E5%85%A8%E8%A7%A3/</loc>
     <lastmod>2019-07-10T07:52:03.779Z</lastmod>
     <data>
         <display>
@@ -495,7 +495,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -503,7 +503,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/07/08/js%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
+    <loc>https://jintang.github.io/js%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:51:51.725Z</lastmod>
     <data>
         <display>
@@ -515,7 +515,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -523,7 +523,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2019/02/11/js%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
+    <loc>https://jintang.github.io/js%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2019-07-10T07:51:37.611Z</lastmod>
     <data>
         <display>
@@ -535,7 +535,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -543,7 +543,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/09/30/jq%E7%9A%84promise/</loc>
+    <loc>https://jintang.github.io/jq%E7%9A%84promise/</loc>
     <lastmod>2019-07-10T07:51:23.333Z</lastmod>
     <data>
         <display>
@@ -557,7 +557,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -565,7 +565,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/09/30/html%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
+    <loc>https://jintang.github.io/html%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:51:10.926Z</lastmod>
     <data>
         <display>
@@ -577,7 +577,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -585,7 +585,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/02/19/html%E5%B1%8F%E5%B9%95%E8%87%AA%E9%80%82%E5%BA%94/</loc>
+    <loc>https://jintang.github.io/html%E5%B1%8F%E5%B9%95%E8%87%AA%E9%80%82%E5%BA%94/</loc>
     <lastmod>2019-07-10T07:51:02.941Z</lastmod>
     <data>
         <display>
@@ -599,7 +599,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -607,7 +607,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/08/03/hello-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/</loc>
+    <loc>https://jintang.github.io/hello-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/</loc>
     <lastmod>2019-07-10T07:50:43.644Z</lastmod>
     <data>
         <display>
@@ -619,7 +619,7 @@
          
            
              
-              <breadCrumb title="区块链" url="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+              <breadCrumb title="区块链" url="https://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
           
         </display>
     </data>
@@ -627,7 +627,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/04/20/es6%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
+    <loc>https://jintang.github.io/es6%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2019-07-10T07:49:43.711Z</lastmod>
     <data>
         <display>
@@ -639,7 +639,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -647,7 +647,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/12/23/debounce%E4%B8%8Ethrottle/</loc>
+    <loc>https://jintang.github.io/debounce%E4%B8%8Ethrottle/</loc>
     <lastmod>2019-07-10T07:49:18.359Z</lastmod>
     <data>
         <display>
@@ -659,7 +659,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -667,7 +667,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2019/04/24/dart%E9%9C%80%E7%9F%A5/</loc>
+    <loc>https://jintang.github.io/dart%E9%9C%80%E7%9F%A5/</loc>
     <lastmod>2019-07-10T07:48:51.980Z</lastmod>
     <data>
         <display>
@@ -679,7 +679,7 @@
          
            
              
-              <breadCrumb title="flutter" url="http://jintang.github.io/categories/flutter/"/>
+              <breadCrumb title="flutter" url="https://jintang.github.io/categories/flutter/"/>
           
         </display>
     </data>
@@ -687,7 +687,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2015/12/24/CSS%E6%88%91%E4%BB%AC%E6%89%80%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
+    <loc>https://jintang.github.io/CSS%E6%88%91%E4%BB%AC%E6%89%80%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:48:35.143Z</lastmod>
     <data>
         <display>
@@ -699,7 +699,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -707,7 +707,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2015/12/23/angularJs%E6%88%91%E4%BB%AC%E6%89%80%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
+    <loc>https://jintang.github.io/angularJs%E6%88%91%E4%BB%AC%E6%89%80%E5%BA%94%E8%AF%A5%E7%9F%A5%E9%81%93%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:48:25.828Z</lastmod>
     <data>
         <display>
@@ -719,7 +719,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -727,7 +727,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2015/12/17/angularJs%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://jintang.github.io/angularJs%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2019-07-10T07:48:15.310Z</lastmod>
     <data>
         <display>
@@ -739,7 +739,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -747,7 +747,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2015/12/13/angularJs-directive%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</loc>
+    <loc>https://jintang.github.io/angularJs-directive%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2019-07-10T07:48:07.236Z</lastmod>
     <data>
         <display>
@@ -761,7 +761,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -769,7 +769,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/04/19/angular%E4%B9%8Bpromise%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
+    <loc>https://jintang.github.io/angular%E4%B9%8Bpromise%E7%9A%84%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2019-07-10T07:47:37.022Z</lastmod>
     <data>
         <display>
@@ -783,7 +783,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -791,7 +791,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/01/07/angular%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/</loc>
+    <loc>https://jintang.github.io/angular%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/</loc>
     <lastmod>2019-07-10T07:47:23.094Z</lastmod>
     <data>
         <display>
@@ -803,7 +803,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -811,7 +811,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/05/05/angular%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</loc>
+    <loc>https://jintang.github.io/angular%E6%95%B0%E6%8D%AE%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/</loc>
     <lastmod>2019-07-10T07:47:10.848Z</lastmod>
     <data>
         <display>
@@ -823,7 +823,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -831,7 +831,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/10/25/%E6%AD%A3%E5%88%99RegExp%E4%B8%AD%E7%9A%84%E4%B9%9D%E6%9B%B2%E5%8D%81%E5%85%AB%E5%BC%AF/</loc>
+    <loc>https://jintang.github.io/%E6%AD%A3%E5%88%99RegExp%E4%B8%AD%E7%9A%84%E4%B9%9D%E6%9B%B2%E5%8D%81%E5%85%AB%E5%BC%AF/</loc>
     <lastmod>2019-07-10T07:46:59.326Z</lastmod>
     <data>
         <display>
@@ -843,7 +843,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -851,7 +851,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/12/01/%E4%BC%98%E5%8C%96hexo%E4%B9%8Bnext%E4%B8%BB%E9%A2%98/</loc>
+    <loc>https://jintang.github.io/%E4%BC%98%E5%8C%96hexo%E4%B9%8Bnext%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2019-07-10T07:46:46.890Z</lastmod>
     <data>
         <display>
@@ -865,7 +865,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -873,7 +873,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/07/10/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95%E7%BD%91%E9%A1%B5%E9%9C%80%E7%9F%A5/</loc>
+    <loc>https://jintang.github.io/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95%E7%BD%91%E9%A1%B5%E9%9C%80%E7%9F%A5/</loc>
     <lastmod>2019-07-10T07:46:03.893Z</lastmod>
     <data>
         <display>
@@ -885,7 +885,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -893,7 +893,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/12/10/%E5%AD%A6%E4%B9%A0vue%E6%BA%90%E5%BE%97%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/</loc>
+    <loc>https://jintang.github.io/%E5%AD%A6%E4%B9%A0vue%E6%BA%90%E5%BE%97%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2019-07-10T07:45:58.248Z</lastmod>
     <data>
         <display>
@@ -905,7 +905,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -913,7 +913,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/10/18/%E4%BF%AE%E6%94%B9handsontable%E6%8F%92%E4%BB%B6%E5%BF%83%E5%BE%97/</loc>
+    <loc>https://jintang.github.io/%E4%BF%AE%E6%94%B9handsontable%E6%8F%92%E4%BB%B6%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2019-07-10T07:45:44.250Z</lastmod>
     <data>
         <display>
@@ -927,7 +927,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -935,7 +935,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/01/19/%E5%B0%8F%E7%96%91%E9%97%AE/</loc>
+    <loc>https://jintang.github.io/%E5%B0%8F%E7%96%91%E9%97%AE/</loc>
     <lastmod>2019-07-10T07:45:25.119Z</lastmod>
     <data>
         <display>
@@ -947,7 +947,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -955,7 +955,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/12/02/%E5%B0%8F%E6%A3%8B%E7%AB%A5/</loc>
+    <loc>https://jintang.github.io/%E5%B0%8F%E6%A3%8B%E7%AB%A5/</loc>
     <lastmod>2019-07-10T07:44:51.273Z</lastmod>
     <data>
         <display>
@@ -967,7 +967,7 @@
          
            
              
-              <breadCrumb title="闲语" url="http://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
+              <breadCrumb title="闲语" url="https://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
           
         </display>
     </data>
@@ -975,7 +975,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2019/03/19/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://jintang.github.io/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:44:34.968Z</lastmod>
     <data>
         <display>
@@ -987,7 +987,7 @@
          
            
              
-              <breadCrumb title="机器学习" url="http://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+              <breadCrumb title="机器学习" url="https://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
           
         </display>
     </data>
@@ -995,7 +995,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/12/01/%E6%88%8F%E8%A8%80/</loc>
+    <loc>https://jintang.github.io/%E6%88%8F%E8%A8%80/</loc>
     <lastmod>2019-07-10T07:43:56.447Z</lastmod>
     <data>
         <display>
@@ -1007,7 +1007,7 @@
          
            
              
-              <breadCrumb title="闲语" url="http://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
+              <breadCrumb title="闲语" url="https://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
           
         </display>
     </data>
@@ -1015,7 +1015,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2019/07/02/%E7%BD%91%E9%A1%B5%E5%85%B3%E9%94%AE%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%84/</loc>
+    <loc>https://jintang.github.io/%E7%BD%91%E9%A1%B5%E5%85%B3%E9%94%AE%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%84/</loc>
     <lastmod>2019-07-10T07:43:16.674Z</lastmod>
     <data>
         <display>
@@ -1027,7 +1027,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1035,7 +1035,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/11/11/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://jintang.github.io/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:43:05.898Z</lastmod>
     <data>
         <display>
@@ -1049,7 +1049,7 @@
          
            
              
-              <breadCrumb title="算法" url="http://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+              <breadCrumb title="算法" url="https://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
           
         </display>
     </data>
@@ -1057,7 +1057,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/04/21/%E5%85%94%E5%AD%90%E9%97%AE%E9%A2%98-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</loc>
+    <loc>https://jintang.github.io/%E5%85%94%E5%AD%90%E9%97%AE%E9%A2%98-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</loc>
     <lastmod>2019-07-10T07:42:52.890Z</lastmod>
     <data>
         <display>
@@ -1069,7 +1069,7 @@
          
            
              
-              <breadCrumb title="算法" url="http://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+              <breadCrumb title="算法" url="https://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
           
         </display>
     </data>
@@ -1077,7 +1077,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2015/12/09/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E4%B8%8Ehexo%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://jintang.github.io/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8github%E4%B8%8Ehexo%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2019-07-10T07:42:36.676Z</lastmod>
     <data>
         <display>
@@ -1091,7 +1091,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -1099,7 +1099,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/08/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://jintang.github.io/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-07-10T07:42:20.502Z</lastmod>
     <data>
         <display>
@@ -1111,7 +1111,7 @@
          
            
              
-              <breadCrumb title="区块链" url="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+              <breadCrumb title="区块链" url="https://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
           
         </display>
     </data>
@@ -1119,7 +1119,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/04/17/%E5%89%8D%E7%AB%AF%E6%B5%AE%E5%8A%A8%E9%97%AD%E5%90%88%E7%9A%84css%E6%96%B9%E6%B3%95/</loc>
+    <loc>https://jintang.github.io/%E5%89%8D%E7%AB%AF%E6%B5%AE%E5%8A%A8%E9%97%AD%E5%90%88%E7%9A%84css%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2019-07-10T07:41:17.860Z</lastmod>
     <data>
         <display>
@@ -1131,7 +1131,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1139,7 +1139,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/05/29/%E9%9D%A2%E8%AF%95%E9%81%87%E5%88%B0%E7%9A%84/</loc>
+    <loc>https://jintang.github.io/%E9%9D%A2%E8%AF%95%E9%81%87%E5%88%B0%E7%9A%84/</loc>
     <lastmod>2019-07-10T07:41:05.602Z</lastmod>
     <data>
         <display>
@@ -1151,7 +1151,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -1159,7 +1159,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/10/08/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%AD%98%E5%82%A8/</loc>
+    <loc>https://jintang.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2019-07-10T07:39:23.000Z</lastmod>
     <data>
         <display>
@@ -1171,7 +1171,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1179,7 +1179,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/01/24/%E8%B0%B7%E6%AD%8C%E4%BA%91%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</loc>
+    <loc>https://jintang.github.io/%E8%B0%B7%E6%AD%8C%E4%BA%91%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2019-07-10T07:37:40.312Z</lastmod>
     <data>
         <display>
@@ -1193,7 +1193,7 @@
          
            
              
-              <breadCrumb title="杂说" url="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -1201,7 +1201,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2019/03/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%20%E2%80%94%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/</loc>
+    <loc>https://jintang.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%20%E2%80%94%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/</loc>
     <lastmod>2019-07-10T07:37:22.201Z</lastmod>
     <data>
         <display>
@@ -1213,7 +1213,7 @@
          
            
              
-              <breadCrumb title="机器学习" url="http://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+              <breadCrumb title="机器学习" url="https://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
           
         </display>
     </data>
@@ -1221,7 +1221,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/09/28/%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8es6/</loc>
+    <loc>https://jintang.github.io/%E5%90%84%E7%A7%8D%E7%8E%AF%E5%A2%83%E4%B8%8B%E4%BD%BF%E7%94%A8es6/</loc>
     <lastmod>2019-07-10T07:34:22.947Z</lastmod>
     <data>
         <display>
@@ -1235,7 +1235,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1243,7 +1243,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/10/08/%E4%B8%8D%E5%90%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%9A%E7%94%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
+    <loc>https://jintang.github.io/%E4%B8%8D%E5%90%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E9%80%9A%E7%94%A8%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
     <lastmod>2019-07-10T07:34:16.985Z</lastmod>
     <data>
         <display>
@@ -1255,7 +1255,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1263,7 +1263,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2017/04/13/vue%E4%B8%AD%E4%B8%8A%E4%BC%A0%E7%85%A7%E7%89%87%E7%94%9F%E6%88%90%E5%B8%A6%E5%9B%BE%E7%89%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81/</loc>
+    <loc>https://jintang.github.io/vue%E4%B8%AD%E4%B8%8A%E4%BC%A0%E7%85%A7%E7%89%87%E7%94%9F%E6%88%90%E5%B8%A6%E5%9B%BE%E7%89%87%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81/</loc>
     <lastmod>2019-07-10T07:33:40.774Z</lastmod>
     <data>
         <display>
@@ -1275,7 +1275,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1283,7 +1283,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/06/22/Ionic%E7%9B%91%E5%90%AC%E6%89%8B%E6%9C%BA%E7%A1%AC%E9%94%AE%E7%9B%98%E7%9A%84%E8%BF%94%E5%9B%9E%E9%94%AE/</loc>
+    <loc>https://jintang.github.io/Ionic%E7%9B%91%E5%90%AC%E6%89%8B%E6%9C%BA%E7%A1%AC%E9%94%AE%E7%9B%98%E7%9A%84%E8%BF%94%E5%9B%9E%E9%94%AE/</loc>
     <lastmod>2019-07-10T07:30:54.683Z</lastmod>
     <data>
         <display>
@@ -1295,7 +1295,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1303,7 +1303,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2016/03/15/angularJs%E3%80%81Ionic%E4%B8%8B%E4%B8%8A%E4%BC%A0%E7%85%A7%E7%89%87/</loc>
+    <loc>https://jintang.github.io/angularJs%E3%80%81Ionic%E4%B8%8B%E4%B8%8A%E4%BC%A0%E7%85%A7%E7%89%87/</loc>
     <lastmod>2019-07-10T07:30:50.625Z</lastmod>
     <data>
         <display>
@@ -1315,7 +1315,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1323,7 +1323,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2019/04/02/flutter-%E7%88%B6%E5%AD%90%E9%80%9A%E4%BF%A1/</loc>
+    <loc>https://jintang.github.io/flutter-%E7%88%B6%E5%AD%90%E9%80%9A%E4%BF%A1/</loc>
     <lastmod>2019-06-11T02:08:13.961Z</lastmod>
     <data>
         <display>
@@ -1335,7 +1335,7 @@
          
            
              
-              <breadCrumb title="flutter" url="http://jintang.github.io/categories/flutter/"/>
+              <breadCrumb title="flutter" url="https://jintang.github.io/categories/flutter/"/>
           
         </display>
     </data>
@@ -1343,7 +1343,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/03/21/%E7%BB%8F%E5%B8%B8%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://jintang.github.io/%E7%BB%8F%E5%B8%B8%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2019-04-06T02:55:48.846Z</lastmod>
     <data>
         <display>
@@ -1355,7 +1355,7 @@
          
            
              
-              <breadCrumb title="算法" url="http://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+              <breadCrumb title="算法" url="https://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
           
         </display>
     </data>
@@ -1363,7 +1363,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/10/26/%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/</loc>
+    <loc>https://jintang.github.io/%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/</loc>
     <lastmod>2018-11-08T06:45:36.051Z</lastmod>
     <data>
         <display>
@@ -1375,7 +1375,7 @@
          
            
              
-              <breadCrumb title="区块链" url="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+              <breadCrumb title="区块链" url="https://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
           
         </display>
     </data>
@@ -1383,7 +1383,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/06/26/%E6%B4%9B%E9%98%B3%E7%BA%B8%E8%B4%B5/</loc>
+    <loc>https://jintang.github.io/%E6%B4%9B%E9%98%B3%E7%BA%B8%E8%B4%B5/</loc>
     <lastmod>2018-11-08T06:33:26.179Z</lastmod>
     <data>
         <display>
@@ -1395,7 +1395,7 @@
          
            
              
-              <breadCrumb title="闲语" url="http://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
+              <breadCrumb title="闲语" url="https://jintang.github.io/categories/%E9%97%B2%E8%AF%AD/"/>
           
         </display>
     </data>
@@ -1403,7 +1403,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/10/11/%E7%94%A8truffle%E6%A1%86%E6%9E%B6%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/</loc>
+    <loc>https://jintang.github.io/%E7%94%A8truffle%E6%A1%86%E6%9E%B6%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/</loc>
     <lastmod>2018-10-26T10:05:19.173Z</lastmod>
     <data>
         <display>
@@ -1415,7 +1415,7 @@
          
            
              
-              <breadCrumb title="区块链" url="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+              <breadCrumb title="区块链" url="https://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
           
         </display>
     </data>
@@ -1427,7 +1427,7 @@
     
     
   <url>
-    <loc>http://jintang.github.io/2018/07/12/%E7%BD%91%E9%A1%B5%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</loc>
+    <loc>https://jintang.github.io/%E7%BD%91%E9%A1%B5%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2018-08-12T07:26:35.257Z</lastmod>
     <data>
         <display>
@@ -1441,7 +1441,7 @@
          
            
              
-              <breadCrumb title="前端" url="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>
@@ -1449,7 +1449,7 @@
 
     
   <url>
-    <loc>http://jintang.github.io/2018/07/16/node%E5%B8%B8%E7%94%A8/</loc>
+    <loc>https://jintang.github.io/node%E5%B8%B8%E7%94%A8/</loc>
     <lastmod>2018-08-12T07:26:35.252Z</lastmod>
     <data>
         <display>
@@ -1461,7 +1461,7 @@
          
            
              
-              <breadCrumb title="node" url="http://jintang.github.io/categories/node/"/>
+              <breadCrumb title="node" url="https://jintang.github.io/categories/node/"/>
           
         </display>
     </data>

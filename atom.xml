@@ -4,9 +4,9 @@
   <subtitle>给岁月以学习,而不是给学习以岁月</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://jintang.github.io/"/>
-  <updated>2019-07-19T07:39:35.138Z</updated>
-  <id>http://jintang.github.io/</id>
+  <link href="https://jintang.github.io/"/>
+  <updated>2019-08-20T02:08:08.736Z</updated>
+  <id>https://jintang.github.io/</id>
   
   <author>
     <name>堂</name>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Service Workers 简单实例与学习</title>
-    <link href="http://jintang.github.io/2019/07/12/Service-Workers-%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E4%B8%8E%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://jintang.github.io/2019/07/12/Service-Workers-简单实例与学习/</id>
+    <link href="https://jintang.github.io/Service-Workers-%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E4%B8%8E%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://jintang.github.io/Service-Workers-简单实例与学习/</id>
     <published>2019-07-12T08:41:15.000Z</published>
-    <updated>2019-07-19T07:39:35.138Z</updated>
+    <updated>2019-08-20T02:08:08.736Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p><code>Service Workers</code> 可以让你的网页在离线模式下访问。 附几个链接：</p><ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers" target="_blank" rel="external">Service Workers 使用文档</a></li><li><a href="https://developers.google.com/web/tools/workbox/guides/get-started" target="_blank" rel="external">Workbox</a>：快速构建 <code>Service Workers</code> 的工具</li><li><a href="https://medium.com/google-developer-experts/a-5-minute-intro-to-workbox-3-0-156803952b3e" target="_blank" rel="external">A 5 minute intro to Workbox 3.0</a></li></ul></blockquote><h3 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h3><ul><li>目前有的浏览器还不支持，比如 <code>IE</code> … 使用前请用 <a href="https://caniuse.com/#search=service%20worker" target="_blank" rel="external">caniuse</a> 查询支持情况</li><li><code>https</code> 的页面才支持。为了调试，本地 <code>localhost</code> 也可以</li></ul><p>通过观察拥有 <code>Service Workers</code> 的网站，比如说 <a href="https://996.icu" target="_blank" rel="external">996.ICU</a> ,通过打开 <strong>Chrome dev tools =&gt; Application =&gt; Service Workers</strong> 选项，可以看到这个网站注册了一个 <code>Service Workers</code>， 它使用的源文件是 <a href="https://996.icu/service-worker.js" target="_blank" rel="external">service-worker.js</a> ，点击打开可以看到里面的代码，这个很简单，而且使用 <code>workbox</code> 生成的。</p><p>其实我们的浏览器会记录所有访问过的网站里面有 <code>Service Workers</code> 的。在上面的调试窗口下，可以看到 <strong>996.icu</strong> 下面还有一个 <strong>Service workers from other domains</strong> 的选项，打开就可以看到其他使用 <code>Service Workers</code> 的网站了。我看了我访问过的那些网站， 除了 <a href="https://lodash.com/sw.js" target="_blank" rel="external">lodash 的 sw.js</a> 不知道用什么生成的外，其他的都用的是 <code>workbox</code> 生成的。</p><p>下面简单说一下步骤，简单明了，保证你一看就会。就以 <a href="https://github.com/jintangWang/frontend-nanodegree-mobile-portfolio" target="_blank" rel="external">frontend-nanodegree-mobile-portfolio</a>（这是上一篇博文<a href="https://jintang.github.io/2019/07/02/%E7%BD%91%E9%A1%B5%E5%85%B3%E9%94%AE%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%84/">网页关键渲染路径</a>中的实例仓库） 为例</p><a id="more"></a><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install workbox-cli --<span class="built_in">save</span>-<span class="built_in">dev</span></div></pre></td></tr></table></figure><h3 id="生成配置文件"><a href="#生成配置文件" class="headerlink" title="生成配置文件"></a>生成配置文件</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">npx workbox wizard</span></div></pre></td></tr></table></figure><p>这个命令会产生交互式的操作，询问你要缓存的文件：<br><img src="https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/workbox-wizard.png" alt="workbox-wizard"><br>在填写完之后会在根目录生成一个 <code>workbox-config.js</code>， 里面就是你选择的内容</p><h3 id="生成-sw-js"><a href="#生成-sw-js" class="headerlink" title="生成 sw.js"></a>生成 sw.js</h3><p>从上图可以看到，命令行提示你输入<br></p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">workbox</span> <span class="selector-tag">generateSW</span> <span class="selector-tag">workbox-config</span><span class="selector-class">.js</span></div></pre></td></tr></table></figure><p></p><p>然后再 <code>dist/</code> 目录下就会多出一个 <code>sw.js</code> ，这就是我们需要的。</p><h3 id="注册-service-worker"><a href="#注册-service-worker" class="headerlink" title="注册 service worker"></a>注册 service worker</h3><p>在 <code>index.html</code> 下添加如下代码， 因为我 <code>dist/</code> 目录下的文件都是由 <code>src/</code> 下的文件生成的，所以我修改的是 <code>src/</code> 下的 <code>index.html</code> 并重新打包<br></p><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">if</span> (<span class="string">'serviceWorker'</span> <span class="keyword">in</span> navigator) &#123;</div><div class="line">   <span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, () =&gt; &#123;</div><div class="line">      navigator.serviceWorker.register(<span class="string">'/sw.js'</span>);</div><div class="line">   &#125;);</div><div class="line"> &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure><p></p><h3 id="部署并访问"><a href="#部署并访问" class="headerlink" title="部署并访问"></a>部署并访问</h3><p>本地启动服务测试一下，因为我这只是简单的静态页面，所以我用 <a href="http://www.browsersync.cn/" target="_blank" rel="external">Browsersync</a> 工具启动服务。</p><p><code>dist/</code> 目录下运行以下命令<br></p><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">browser-sync</span> <span class="selector-tag">start</span> <span class="selector-tag">--server</span> <span class="selector-tag">--files</span> "**<span class="comment">/*.css, **/</span>*<span class="selector-class">.html</span>, *<span class="selector-class">.html</span>"</div></pre></td></tr></table></figure><p></p><p>关闭网络后刷新页面，页面还是可以访问，说明缓存成功。</p><p>将这些代码重新部署到服务器上进行访问，这儿我用的是 <code>github pages</code> ，正好有 <code>https</code>。</p><p>在 <strong>Chrome dev tools =&gt; Network</strong> 下可以看到很多带有 ⚙️ 图标的请求，这些都是 <code>Service Workers</code> 的请求，同时可以在<strong>Chrome dev tools =&gt; Application =&gt; Service Workers</strong> 下看到当前网站注册的 <code>Service Workers</code>。</p><p><img src="https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/service-worker-result.png" alt="service worker result"></p><p>最后附上该实例的 <a href="https://jintangwang.github.io/frontend-nanodegree-mobile-portfolio/dist/" target="_blank" rel="external">地址</a></p><h3 id="添加自己的-sw-js-的代码"><a href="#添加自己的-sw-js-的代码" class="headerlink" title="添加自己的 sw.js 的代码"></a>添加自己的 <code>sw.js</code> 的代码</h3><p>上面我们的 <code>sw.js</code> 是由命令行生成的。如果我们想添加点自己的代码，直接修改 <code>sw.js</code> 是不行的，因为每次重新运行命令行都会重新生成。做法如下：</p><ol><li><p>创建 <code>src-sw.js</code>,如：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">importScripts(<span class="string">"https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js"</span>);</div><div class="line"></div><div class="line"><span class="comment">// 自己的代码开始...</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'this is my custom service worker'</span>); </div><div class="line"><span class="comment">// 自己的代码结束...</span></div><div class="line"></div><div class="line">workbox.precaching.precacheAndRoute([]);</div></pre></td></tr></table></figure></li><li><p>在 <code>workbox-config.js</code> 底部添加一行;</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"swSrc"</span>: <span class="string">"src-sw.js"</span></div></pre></td></tr></table></figure></li><li><p>运行命令将预缓存的资源数组注入：</p><pre><code class="js"><span class="comment">// 会注入到我们写的 workbox.precaching.precacheAndRoute([]);</span>
 <span class="comment">// 不能使用 workbox generateSW workbox-config.js 语句生成 sw.js 了。</span>
@@ -33,17 +33,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="前端" scheme="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Service Workers" scheme="http://jintang.github.io/tags/Service-Workers/"/>
+      <category term="Service Workers" scheme="https://jintang.github.io/tags/Service-Workers/"/>
     
   </entry>
   
   <entry>
     <title>网页关键渲染路径</title>
-    <link href="http://jintang.github.io/2019/07/02/%E7%BD%91%E9%A1%B5%E5%85%B3%E9%94%AE%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%84/"/>
-    <id>http://jintang.github.io/2019/07/02/网页关键渲染路径/</id>
+    <link href="https://jintang.github.io/%E7%BD%91%E9%A1%B5%E5%85%B3%E9%94%AE%E6%B8%B2%E6%9F%93%E8%B7%AF%E5%BE%84/"/>
+    <id>https://jintang.github.io/网页关键渲染路径/</id>
     <published>2019-07-02T09:29:45.000Z</published>
     <updated>2019-07-10T07:43:16.674Z</updated>
     
@@ -55,17 +55,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="前端" scheme="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="优化" scheme="http://jintang.github.io/tags/%E4%BC%98%E5%8C%96/"/>
+      <category term="优化" scheme="https://jintang.github.io/tags/%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>flutter 使用 CI 打包</title>
-    <link href="http://jintang.github.io/2019/06/03/flutter%20%E4%BD%BF%E7%94%A8%20CI%20%E6%89%93%E5%8C%85/"/>
-    <id>http://jintang.github.io/2019/06/03/flutter 使用 CI 打包/</id>
+    <link href="https://jintang.github.io/flutter%20%E4%BD%BF%E7%94%A8%20CI%20%E6%89%93%E5%8C%85/"/>
+    <id>https://jintang.github.io/flutter 使用 CI 打包/</id>
     <published>2019-06-03T02:01:06.000Z</published>
     <updated>2019-08-15T08:32:10.897Z</updated>
     
@@ -77,19 +77,19 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="flutter" scheme="http://jintang.github.io/categories/flutter/"/>
+      <category term="flutter" scheme="https://jintang.github.io/categories/flutter/"/>
     
     
-      <category term="flutter" scheme="http://jintang.github.io/tags/flutter/"/>
+      <category term="flutter" scheme="https://jintang.github.io/tags/flutter/"/>
     
-      <category term="CI" scheme="http://jintang.github.io/tags/CI/"/>
+      <category term="CI" scheme="https://jintang.github.io/tags/CI/"/>
     
   </entry>
   
   <entry>
     <title>dart需知</title>
-    <link href="http://jintang.github.io/2019/04/24/dart%E9%9C%80%E7%9F%A5/"/>
-    <id>http://jintang.github.io/2019/04/24/dart需知/</id>
+    <link href="https://jintang.github.io/dart%E9%9C%80%E7%9F%A5/"/>
+    <id>https://jintang.github.io/dart需知/</id>
     <published>2019-04-24T08:12:30.000Z</published>
     <updated>2019-07-10T07:48:51.980Z</updated>
     
@@ -101,17 +101,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="flutter" scheme="http://jintang.github.io/categories/flutter/"/>
+      <category term="flutter" scheme="https://jintang.github.io/categories/flutter/"/>
     
     
-      <category term="dart" scheme="http://jintang.github.io/tags/dart/"/>
+      <category term="dart" scheme="https://jintang.github.io/tags/dart/"/>
     
   </entry>
   
   <entry>
     <title>计算机知识</title>
-    <link href="http://jintang.github.io/2019/04/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/"/>
-    <id>http://jintang.github.io/2019/04/10/计算机知识/</id>
+    <link href="https://jintang.github.io/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/"/>
+    <id>https://jintang.github.io/计算机知识/</id>
     <published>2019-04-10T14:35:44.000Z</published>
     <updated>2019-07-10T08:01:44.210Z</updated>
     
@@ -123,17 +123,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="杂说" scheme="http://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+      <category term="杂说" scheme="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
     
     
-      <category term="计算机知识" scheme="http://jintang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/"/>
+      <category term="计算机知识" scheme="https://jintang.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
   <entry>
     <title>flutter 父子通信</title>
-    <link href="http://jintang.github.io/2019/04/02/flutter-%E7%88%B6%E5%AD%90%E9%80%9A%E4%BF%A1/"/>
-    <id>http://jintang.github.io/2019/04/02/flutter-父子通信/</id>
+    <link href="https://jintang.github.io/flutter-%E7%88%B6%E5%AD%90%E9%80%9A%E4%BF%A1/"/>
+    <id>https://jintang.github.io/flutter-父子通信/</id>
     <published>2019-04-02T09:28:22.000Z</published>
     <updated>2019-06-11T02:08:13.961Z</updated>
     
@@ -145,17 +145,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="flutter" scheme="http://jintang.github.io/categories/flutter/"/>
+      <category term="flutter" scheme="https://jintang.github.io/categories/flutter/"/>
     
     
-      <category term="flutter" scheme="http://jintang.github.io/tags/flutter/"/>
+      <category term="flutter" scheme="https://jintang.github.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>机器学习算法 — 奇异值分解</title>
-    <link href="http://jintang.github.io/2019/03/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%20%E2%80%94%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/"/>
-    <id>http://jintang.github.io/2019/03/26/机器学习算法 — 奇异值分解/</id>
+    <link href="https://jintang.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%20%E2%80%94%20%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/"/>
+    <id>https://jintang.github.io/机器学习算法 — 奇异值分解/</id>
     <published>2019-03-26T14:22:13.000Z</published>
     <updated>2019-07-10T07:37:22.201Z</updated>
     
@@ -167,17 +167,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="机器学习" scheme="http://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="奇异值分解" scheme="http://jintang.github.io/tags/%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/"/>
+      <category term="奇异值分解" scheme="https://jintang.github.io/tags/%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3/"/>
     
   </entry>
   
   <entry>
     <title>线性代数学习</title>
-    <link href="http://jintang.github.io/2019/03/19/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://jintang.github.io/2019/03/19/线性代数学习/</id>
+    <link href="https://jintang.github.io/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://jintang.github.io/线性代数学习/</id>
     <published>2019-03-19T15:29:56.000Z</published>
     <updated>2019-07-10T07:44:34.968Z</updated>
     
@@ -189,17 +189,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="机器学习" scheme="http://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://jintang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="线性代数" scheme="http://jintang.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+      <category term="线性代数" scheme="https://jintang.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
   <entry>
     <title>js发布订阅者模式简单实现</title>
-    <link href="http://jintang.github.io/2019/02/11/js%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/"/>
-    <id>http://jintang.github.io/2019/02/11/js发布订阅者模式简单实现/</id>
+    <link href="https://jintang.github.io/js%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E8%80%85%E6%A8%A1%E5%BC%8F%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://jintang.github.io/js发布订阅者模式简单实现/</id>
     <published>2019-02-11T10:00:07.000Z</published>
     <updated>2019-07-10T07:51:37.611Z</updated>
     
@@ -211,17 +211,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="前端" scheme="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="javascript" scheme="http://jintang.github.io/tags/javascript/"/>
+      <category term="javascript" scheme="https://jintang.github.io/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>学习vue源码得到的知识</title>
-    <link href="http://jintang.github.io/2018/12/10/%E5%AD%A6%E4%B9%A0vue%E6%BA%90%E5%BE%97%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
-    <id>http://jintang.github.io/2018/12/10/学习vue源得到的小知识/</id>
+    <link href="https://jintang.github.io/%E5%AD%A6%E4%B9%A0vue%E6%BA%90%E5%BE%97%E5%88%B0%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
+    <id>https://jintang.github.io/学习vue源得到的小知识/</id>
     <published>2018-12-10T09:57:59.000Z</published>
     <updated>2019-07-10T07:45:58.248Z</updated>
     
@@ -233,17 +233,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="前端" scheme="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="vue" scheme="http://jintang.github.io/tags/vue/"/>
+      <category term="vue" scheme="https://jintang.github.io/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>react-native 之 webview</title>
-    <link href="http://jintang.github.io/2018/12/04/react-native-%E4%B9%8B-webview/"/>
-    <id>http://jintang.github.io/2018/12/04/react-native-之-webview/</id>
+    <link href="https://jintang.github.io/react-native-%E4%B9%8B-webview/"/>
+    <id>https://jintang.github.io/react-native-之-webview/</id>
     <published>2018-12-04T08:07:11.000Z</published>
     <updated>2019-07-10T07:53:43.242Z</updated>
     
@@ -255,17 +255,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="前端" scheme="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="react-native" scheme="http://jintang.github.io/tags/react-native/"/>
+      <category term="react-native" scheme="https://jintang.github.io/tags/react-native/"/>
     
   </entry>
   
   <entry>
     <title>算法与数据结构</title>
-    <link href="http://jintang.github.io/2018/11/11/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://jintang.github.io/2018/11/11/算法和数据结构学习/</id>
+    <link href="https://jintang.github.io/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://jintang.github.io/算法和数据结构学习/</id>
     <published>2018-11-11T13:33:47.000Z</published>
     <updated>2019-07-10T07:43:05.898Z</updated>
     
@@ -277,19 +277,19 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="算法" scheme="http://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://jintang.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="算法" scheme="http://jintang.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://jintang.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="数据结构" scheme="http://jintang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="https://jintang.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>开发部署以太坊DAPP</title>
-    <link href="http://jintang.github.io/2018/10/26/%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/"/>
-    <id>http://jintang.github.io/2018/10/26/开发部署以太坊DAPP/</id>
+    <link href="https://jintang.github.io/%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/"/>
+    <id>https://jintang.github.io/开发部署以太坊DAPP/</id>
     <published>2018-10-26T06:35:24.000Z</published>
     <updated>2018-11-08T06:45:36.051Z</updated>
     
@@ -301,17 +301,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="区块链" scheme="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="https://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="DAPP" scheme="http://jintang.github.io/tags/DAPP/"/>
+      <category term="DAPP" scheme="https://jintang.github.io/tags/DAPP/"/>
     
   </entry>
   
   <entry>
     <title>用truffle框架开发部署以太坊DAPP</title>
-    <link href="http://jintang.github.io/2018/10/11/%E7%94%A8truffle%E6%A1%86%E6%9E%B6%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/"/>
-    <id>http://jintang.github.io/2018/10/11/用truffle框架开发部署以太坊DAPP/</id>
+    <link href="https://jintang.github.io/%E7%94%A8truffle%E6%A1%86%E6%9E%B6%E5%BC%80%E5%8F%91%E9%83%A8%E7%BD%B2%E4%BB%A5%E5%A4%AA%E5%9D%8ADAPP/"/>
+    <id>https://jintang.github.io/用truffle框架开发部署以太坊DAPP/</id>
     <published>2018-10-11T13:33:11.000Z</published>
     <updated>2018-10-26T10:05:19.173Z</updated>
     
@@ -323,17 +323,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="区块链" scheme="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="https://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="DAPP" scheme="http://jintang.github.io/tags/DAPP/"/>
+      <category term="DAPP" scheme="https://jintang.github.io/tags/DAPP/"/>
     
   </entry>
   
   <entry>
     <title>react vs vue</title>
-    <link href="http://jintang.github.io/2018/09/05/react-vs-vue/"/>
-    <id>http://jintang.github.io/2018/09/05/react-vs-vue/</id>
+    <link href="https://jintang.github.io/react-vs-vue/"/>
+    <id>https://jintang.github.io/react-vs-vue/</id>
     <published>2018-09-05T08:14:03.000Z</published>
     <updated>2019-07-10T08:00:55.435Z</updated>
     
@@ -345,21 +345,21 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="前端" scheme="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="react-native" scheme="http://jintang.github.io/tags/react-native/"/>
+      <category term="react-native" scheme="https://jintang.github.io/tags/react-native/"/>
     
-      <category term="react" scheme="http://jintang.github.io/tags/react/"/>
+      <category term="react" scheme="https://jintang.github.io/tags/react/"/>
     
-      <category term="vue" scheme="http://jintang.github.io/tags/vue/"/>
+      <category term="vue" scheme="https://jintang.github.io/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>区块链学习</title>
-    <link href="http://jintang.github.io/2018/08/13/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://jintang.github.io/2018/08/13/区块链学习/</id>
+    <link href="https://jintang.github.io/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://jintang.github.io/区块链学习/</id>
     <published>2018-08-13T14:57:20.000Z</published>
     <updated>2019-07-10T07:42:20.502Z</updated>
     
@@ -371,17 +371,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="区块链" scheme="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="https://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="区块链" scheme="http://jintang.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="https://jintang.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
   </entry>
   
   <entry>
     <title>hello 智能合约</title>
-    <link href="http://jintang.github.io/2018/08/03/hello-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"/>
-    <id>http://jintang.github.io/2018/08/03/hello-智能合约/</id>
+    <link href="https://jintang.github.io/hello-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"/>
+    <id>https://jintang.github.io/hello-智能合约/</id>
     <published>2018-08-02T17:46:20.000Z</published>
     <updated>2019-07-10T07:50:43.644Z</updated>
     
@@ -393,17 +393,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="区块链" scheme="http://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+      <category term="区块链" scheme="https://jintang.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="智能合约" scheme="http://jintang.github.io/tags/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"/>
+      <category term="智能合约" scheme="https://jintang.github.io/tags/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"/>
     
   </entry>
   
   <entry>
     <title>node常用</title>
-    <link href="http://jintang.github.io/2018/07/16/node%E5%B8%B8%E7%94%A8/"/>
-    <id>http://jintang.github.io/2018/07/16/node常用/</id>
+    <link href="https://jintang.github.io/node%E5%B8%B8%E7%94%A8/"/>
+    <id>https://jintang.github.io/node常用/</id>
     <published>2018-07-16T01:53:51.000Z</published>
     <updated>2018-08-12T07:26:35.252Z</updated>
     
@@ -415,17 +415,17 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="node" scheme="http://jintang.github.io/categories/node/"/>
+      <category term="node" scheme="https://jintang.github.io/categories/node/"/>
     
     
-      <category term="node" scheme="http://jintang.github.io/tags/node/"/>
+      <category term="node" scheme="https://jintang.github.io/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>网页适配问题</title>
-    <link href="http://jintang.github.io/2018/07/12/%E7%BD%91%E9%A1%B5%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/"/>
-    <id>http://jintang.github.io/2018/07/12/网页适配问题/</id>
+    <link href="https://jintang.github.io/%E7%BD%91%E9%A1%B5%E9%80%82%E9%85%8D%E9%97%AE%E9%A2%98/"/>
+    <id>https://jintang.github.io/网页适配问题/</id>
     <published>2018-07-12T02:36:41.000Z</published>
     <updated>2018-08-12T07:26:35.257Z</updated>
     
@@ -437,19 +437,19 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="前端" scheme="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="css" scheme="http://jintang.github.io/tags/css/"/>
+      <category term="css" scheme="https://jintang.github.io/tags/css/"/>
     
-      <category term="html" scheme="http://jintang.github.io/tags/html/"/>
+      <category term="html" scheme="https://jintang.github.io/tags/html/"/>
     
   </entry>
   
   <entry>
     <title>移动端调试网页需知</title>
-    <link href="http://jintang.github.io/2018/07/10/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95%E7%BD%91%E9%A1%B5%E9%9C%80%E7%9F%A5/"/>
-    <id>http://jintang.github.io/2018/07/10/移动端调试网页需知/</id>
+    <link href="https://jintang.github.io/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%B0%83%E8%AF%95%E7%BD%91%E9%A1%B5%E9%9C%80%E7%9F%A5/"/>
+    <id>https://jintang.github.io/移动端调试网页需知/</id>
     <published>2018-07-10T02:56:33.000Z</published>
     <updated>2019-07-10T07:46:03.893Z</updated>
     
@@ -461,10 +461,10 @@ npx workbox injectManifest
     
     </summary>
     
-      <category term="前端" scheme="http://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="移动端" scheme="http://jintang.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+      <category term="移动端" scheme="https://jintang.github.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
     
   </entry>
   

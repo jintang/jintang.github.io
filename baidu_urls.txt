@@ -1,1 +1,1 @@
-http://jintang.github.io/2019/07/12/Service-Workers-简单实例与学习/
+https://jintang.github.io/Service-Workers-简单实例与学习/
