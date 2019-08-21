@@ -171,9 +171,12 @@ deploy:
     ```
     `alpine:latest` 是一个非常小的 `docker` 镜像，`linux` 系统。由于我们一般会在 `.gitlab-ci.yml` 中声明 `docker` 镜像，而且那个优先级比这儿的高。所以一般填写 `alpine:latest` 就行了
  
- 这些步骤完成后就可以在上面图片的下面看到你注册成功的 `runner`， 如图： ![registed_runner](https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/ci/registed_runner.png)
+这些步骤完成后就可以在上面图片的下面看到你注册成功的 `runner`， 如图： ![registed_runner](https://tang-blog-1257996120.cos.ap-chengdu.myqcloud.com/ci/registed_runner.png)
 
-> 我这儿只能使用 `Specific Runners` 。 我使用的 `gitlab` 实例是公司注册的，管理员可以通过设置为某个仓库打开 `Shared Runners`。个人在 `gitlab.com` 里开源项目可以直接使用 `Shared Runners` 
+这个命令会在注册完成后运行起来这个 `docker` 镜像，你可以通过 `docker ps` 看到。所以图上那个 `Runner` 是 `active` 状态。
+
+> - 我这儿只能使用 `Specific Runners` 。 我使用的 `gitlab` 实例是公司注册的，管理员可以通过设置为某个仓库打开 `Shared Runners`。个人在 `gitlab.com` 里开源项目可以直接使用 `Shared Runners` 
+> - `Gitlab Runner` 只需要安装一次，对于不同项目的 `CI` ，可以使用同一个 `docker` 镜像，只需要第一次注册一下，后面直接运行就可以了。
 
 ### `.gitlab-ci.yml`
 
@@ -183,7 +186,7 @@ deploy:
 
  我的 `.gitlab-ci.yml` 中对于 `apk` 的打包只有简单的两句， 因为关于 `fastlane` 的配置文件与脚本我都已经在本地生成并上传了 [demo仓库](https://gitlab.com/jintangWang/test_fastlane) 里面，这儿只实现 `Andriod` 的无签名打包，感兴趣的可以看 [fastlane 相关文件](https://gitlab.com/jintangWang/test_fastlane/tree/master/android/fastlane)。
 
-`.gitlab-ci.yml` :
+`.gitlab-ci.yml` :  [官方语法说明](https://docs.gitlab.com/ee/ci/yaml/#when)
 ``` yml
 # 使用此镜像运行打包
 image: cirrusci/flutter

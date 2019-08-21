@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.7.1"
+    "version": "3.2.2"
   },
   "dependencies": {
     "hexo": "^3.1.1",
@@ -19,11 +19,18 @@
     "hexo-generator-search": "^1.0.2",
     "hexo-generator-sitemap": "^1.1.2",
     "hexo-generator-tag": "^0.1.1",
+    "hexo-helper-live2d": "^3.1.1",
     "hexo-renderer-ejs": "^0.1.0",
     "hexo-renderer-marked": "^0.2.4",
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.1.2",
     "hexo-util": "^0.6.3",
+    "live2d-widget-model-epsilon2_1": "^1.0.5",
+    "live2d-widget-model-hibiki": "^1.0.5",
+    "live2d-widget-model-hijiki": "^1.0.5",
+    "live2d-widget-model-shizuku": "^1.0.5",
+    "live2d-widget-model-tororo": "^1.0.5",
+    "live2d-widget-model-z16": "^1.0.5",
     "save-dev": "^2.0.0"
   },
   "devDependencies": {}
