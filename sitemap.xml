@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jintang.github.io/2017/12/23/debounce%E4%B8%8Ethrottle/</loc>
+    
+    <lastmod>2019-08-22T10:02:03.252Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jintang.github.io/2019/07/12/Service-Workers-%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E4%B8%8E%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2019-08-20T02:08:08.736Z</lastmod>
@@ -222,13 +229,6 @@
     <loc>https://jintang.github.io/2017/04/20/es6%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2019-07-10T07:49:43.711Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jintang.github.io/2017/12/23/debounce%E4%B8%8Ethrottle/</loc>
-    
-    <lastmod>2019-07-10T07:49:18.359Z</lastmod>
     
   </url>
   

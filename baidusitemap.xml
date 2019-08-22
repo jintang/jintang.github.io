@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://jintang.github.io/2017/12/23/debounce%E4%B8%8Ethrottle/</loc>
+    <lastmod>2019-08-22T10:02:03.252Z</lastmod>
+    <data>
+        <display>
+        <title>debounce与throttle</title>
+        <pubTime>2017-12-23T06:31:00.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jintang.github.io/2019/07/12/Service-Workers-%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B%E4%B8%8E%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-08-20T02:08:08.736Z</lastmod>
     <data>
@@ -635,26 +655,6 @@
         <pubTime>2017-04-20T02:16:30.000Z</pubTime>
         
         <tag>es6</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jintang.github.io/2017/12/23/debounce%E4%B8%8Ethrottle/</loc>
-    <lastmod>2019-07-10T07:49:18.359Z</lastmod>
-    <data>
-        <display>
-        <title>debounce与throttle</title>
-        <pubTime>2017-12-23T06:31:00.000Z</pubTime>
-        
-        <tag>javascript</tag>
          
          
            
