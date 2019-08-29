@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jintang.github.io/2019/08/27/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E9%99%8D%E7%BB%B4%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94PCA/</loc>
+    
+    <lastmod>2019-08-29T03:40:44.053Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jintang.github.io/2019/08/23/ts-VS-js/</loc>
+    
+    <lastmod>2019-08-27T02:52:05.670Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jintang.github.io/2017/12/23/debounce%E4%B8%8Ethrottle/</loc>
     
-    <lastmod>2019-08-22T10:02:03.252Z</lastmod>
+    <lastmod>2019-08-23T08:08:22.851Z</lastmod>
     
   </url>
   
@@ -492,13 +506,6 @@
   </url>
   
   <url>
-    <loc>https://jintang.github.io/tags/index.html</loc>
-    
-    <lastmod>2018-08-12T07:26:35.258Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://jintang.github.io/baidu_verify_IcWGtkpLLP.html</loc>
     
     <lastmod>2018-08-12T07:26:35.258Z</lastmod>
@@ -514,6 +521,13 @@
   
   <url>
     <loc>https://jintang.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-08-12T07:26:35.258Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jintang.github.io/tags/index.html</loc>
     
     <lastmod>2018-08-12T07:26:35.258Z</lastmod>
     
