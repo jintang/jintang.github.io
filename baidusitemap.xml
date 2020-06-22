@@ -4,6 +4,66 @@
 
     
   <url>
+    <loc>https://jintang.github.io/2016/06/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-06-22T09:15:22.738Z</lastmod>
+    <data>
+        <display>
+        <title>git常用命令</title>
+        <pubTime>2016-06-24T01:14:44.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jintang.github.io/2018/01/23/linux%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-02-10T02:56:12.459Z</lastmod>
+    <data>
+        <display>
+        <title>linux学习</title>
+        <pubTime>2018-01-23T06:38:48.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jintang.github.io/2018/05/29/%E9%9D%A2%E8%AF%95%E9%81%87%E5%88%B0%E7%9A%84/</loc>
+    <lastmod>2019-12-25T07:57:44.257Z</lastmod>
+    <data>
+        <display>
+        <title>面试遇到的</title>
+        <pubTime>2018-05-29T12:34:58.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+         
+           
+             
+              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jintang.github.io/2019/12/19/EM%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2019-12-20T08:29:14.073Z</lastmod>
     <data>
@@ -184,26 +244,6 @@
            
              
               <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jintang.github.io/2016/06/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2019-07-10T07:59:29.663Z</lastmod>
-    <data>
-        <display>
-        <title>git常用命令</title>
-        <pubTime>2016-06-24T01:14:44.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
@@ -487,26 +527,6 @@
         <pubTime>2018-03-05T08:57:36.000Z</pubTime>
         
         <tag>nginx</tag>
-         
-         
-           
-             
-              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jintang.github.io/2018/01/23/linux%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2019-07-10T07:52:47.059Z</lastmod>
-    <data>
-        <display>
-        <title>linux学习</title>
-        <pubTime>2018-01-23T06:38:48.000Z</pubTime>
-        
-        <tag>linux</tag>
          
          
            
@@ -1172,26 +1192,6 @@
            
              
               <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jintang.github.io/2018/05/29/%E9%9D%A2%E8%AF%95%E9%81%87%E5%88%B0%E7%9A%84/</loc>
-    <lastmod>2019-07-10T07:41:05.602Z</lastmod>
-    <data>
-        <display>
-        <title>面试遇到的</title>
-        <pubTime>2018-05-29T12:34:58.000Z</pubTime>
-        
-        <tag>面试</tag>
-         
-         
-           
-             
-              <breadCrumb title="杂说" url="https://jintang.github.io/categories/%E6%9D%82%E8%AF%B4/"/>
           
         </display>
     </data>
