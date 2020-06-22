@@ -16,7 +16,7 @@ avatar: /uploads/avatar.jpg
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://jintang.github.io/
 root: /
-permalink: :title/
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -80,7 +80,7 @@ feed:
   path: atom.xml
   limit: 20
   hub:
-    
+
 # Creative Commons 4.0 International License.(一种许可协议)
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
@@ -102,7 +102,7 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
-# 百度主动推送,与自动推送相配合以让百度更快收录文章  
+# 百度主动推送,与自动推送相配合以让百度更快收录文章
 baidu_url_submit:
   count: 1 ## 提交最新的一个链接
   host: jintang.github.io ## 在百度站长平台中注册的域名
@@ -134,17 +134,17 @@ stylus:
 # minifier html,css,js,image
 html_minifier:
   enable: true
-  exclude: 
+  exclude:
 css_minifier:
   enable: true
-  exclude: 
+  exclude:
     - '*.min.css'
 js_minifier:
   enable: true
   mangle: true
   output:
   compress:
-  exclude: 
+  exclude:
     - '*.min.js'
 image_minifier:
   enable: true
@@ -154,13 +154,6 @@ image_minifier:
   pngquant: false
   progressive: false
 
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-- type: git
-  repository: git@github.com:jintang/jintang.github.io.git
-  branch: master
-- type: baidu_url_submitter ## 这是新加的
 
 live2d:
   enable: true
@@ -180,5 +173,12 @@ live2d:
   mobile:
     show: true
     scale: 0.5
-  react:
-    opacity: 0.7
+
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+- type: git
+  repository: git@github.com:jintang/jintang.github.io.git
+  branch: master
+- type: baidu_url_submitter ## 这是新加的

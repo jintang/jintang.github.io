@@ -10,6 +10,7 @@ categories: 杂说
 
 ## 通用的命令
 ``` bash
+$ lsb_release -a # 查看 linux 系统版本
 $ id # 查看当前用户与其所在的组
 $ which node # 查看node命令所在地址
 $ man ps # 查看ps命令的用法

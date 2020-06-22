@@ -66,7 +66,7 @@ $ sudo yum install -y yum-utils
 ``` bash
 $ sudo yum makecache fast
 $ sudo yum install docker-ce
-``` 
+```
 安装完成后，运行下面的命令，验证是否安装成功。
 ``` bash
 $ docker version 
@@ -89,7 +89,7 @@ $ docker run hello-world
 
 `image` 是二进制文件。实际开发中，一个 `image` 文件往往通过继承另一个 `image` 文件，加上一些个性化设置而生成。举例来说，你可以在 Ubuntu 的 `image` 基础上，往里面加入 Apache 服务器，形成你的 `image`。
 
-`iamge` 常用命令：
+`image` 常用命令：
 ``` bash
 # 获取image
 $ docker pull [imageName]
@@ -109,39 +109,7 @@ $ docker images
 $ docker rmi hello-world
 ```
 
-### container文件
-**image 运行时的实例，本身也是一个文件，称为容器文件。** 
-
-container 常用命令:
-``` bash
-# 根据image生成container并启动
-$ docker run [OPTIONS] imageName [command]
-# 启动已经停止的container
-$ docker start [containerId, ...]
-# 查看正在运行的container，加 -a 显示所有的container
-$ docker ps
-# 停止container
-$ docker stop [containerId]
-# 删除container
-$ docker rm [containerId]
-```
-`docker run` 常用的 options:
-- **-d:** 后台运行容器，并返回容器ID；
-- **-i:** 以交互模式运行容器，通常与 -t 同时使用；
-- **-t:** 为容器重新分配一个伪输入终端，通常与 -i 同时使用；-it一起使用表示，容器的 Shell 映射到当前的 Shell，然后你在本机窗口输入的命令，就会传入容器
-- **-p:** 端口映射，将 `docker` 内部端口映射到本机端口,如 -p 8080:3000，8080表示本机端口
-
-我们来使用下上面这些命令：
-``` bash
-$ docker run hello-world # 本地找不到会自动在仓库下载
-$ docker ps
-$ docker stop [containerId]
-$ docker ps # 只能看到正在运行的container
-$ docker ps -a
-$ docker rm [containerId]
-$ docker ps -a
-```
-### Dockerfile文件
+### 通过 Dockerfile 创建 image
 `Docker` 根据该文件生成二进制的 `image` 文件。
 
 常用相关命令：
@@ -244,6 +212,39 @@ $ docker logs containerId
 ```
 最后访问 [localhost:9000](localhost:9000)，可以看到结果： hello koa2
 
+### container文件
+**image 运行时的实例，本身也是一个文件，称为容器文件。** 
+
+container 常用命令:
+``` bash
+# 根据image生成container并启动
+$ docker run [OPTIONS] imageName [command]
+# 启动已经停止的container
+$ docker start [containerId, ...]
+# 查看正在运行的container，加 -a 显示所有的container
+$ docker ps
+# 停止container
+$ docker stop [containerId]
+# 删除container
+$ docker rm [containerId]
+```
+`docker run` 常用的 options:
+- **-d:** 后台运行容器，并返回容器ID；
+- **-i:** 以交互模式运行容器，通常与 -t 同时使用；
+- **-t:** 为容器重新分配一个伪输入终端，通常与 -i 同时使用；-it一起使用表示，容器的 Shell 映射到当前的 Shell，然后你在本机窗口输入的命令，就会传入容器
+- **-p:** 端口映射，将 `docker` 内部端口映射到本机端口,如 -p 8080:3000，8080表示本机端口
+
+我们来使用下上面这些命令：
+``` bash
+$ docker run hello-world # 本地找不到会自动在仓库下载
+$ docker ps
+$ docker stop [containerId]
+$ docker ps # 只能看到正在运行的container
+$ docker ps -a
+$ docker rm [containerId]
+$ docker ps -a
+```
+
 ### 发布 image 文件
 容器运行成功后，就确认了 `image` 文件的有效性。这时，我们就可以考虑把 `image` 文件分享到网上，让其他人使用。假设我们要发布上面用到的 `hello-koa2 image` ，进行如下步骤：
 
@@ -343,5 +344,40 @@ $ docker-compose stop
 $ docker-compose rm
 ```
 比起上面单独创建 container 的方式方便多了。
+
+### docker 常用命令
+`image` 相关命令简介：
+``` Bash
+# 仓库地址：地址的格式一般是 <域名/IP>[:端口号]。默认地址是 Docker Hub。
+# 仓库名：两段式名称，即 <用户名>/<软件名>。对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像。
+# 标签： 若没有写标签，默认是 latest
+$ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
+# 删除 虚悬镜像 , 虚悬镜像是指仓库名、标签都为 <none> 的镜像。
+$ docker image prune
+# 删除镜像， 可同时删除多个
+$ docker rmi imageID/image名称
+# 通过 dockerfile 创建 image ， .表示当前路径
+# options一般加上 -t 名称:tag，会给打包好的镜像加上名称和tag 
+$ docker build [options] .
+```
+`container` 相关命令简介：
+``` Bash
+# 启动容器，-i -t -d -p 的作用在 上面 container文件 的介绍部分
+$ docker run -dit -p 80:80 image名
+# 进入容器， -i -t 一起使用时，则可以看到我们熟悉的 Linux 命令提示符。
+$ docker exec -it containerID bash
+# 删除容器，添加 -f 可以删除运行中的容器，可同时删除多个。注意container名不是镜像名
+$ docker rm containerId/container名
+# 清理所有处于终止状态的容器
+$ docker container prune
+# 导出本地容器，导出为 xxx.tar
+$ docker export containerId > xxx.tar
+# 导入容器快照为本地镜像
+$ cat xxx.tar | docker import - image名[:tag]
+$ docker load -i xxx.tar
+```
+
+> 补充说明
+> - **虚悬镜像** ：假如你原来有一个 mongo:3.2 的镜像，官方发布新版本后，重新 `docker pull mongo:3.2` , mongo:3.2 的名称就会被转移到新下载的镜像上，而旧的镜像就会成为 `<none>` 。另外， `docker build` 也会导致这种现象，产生 虚悬镜像
 
 **ok, 本文结束。**
