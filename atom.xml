@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jintang.github.io/"/>
-  <updated>2019-12-20T08:29:14.073Z</updated>
+  <updated>2020-09-25T03:15:39.625Z</updated>
   <id>https://jintang.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js原生时间格式化</title>
+    <link href="https://jintang.github.io/2020/09/25/js%E5%8E%9F%E7%94%9F%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    <id>https://jintang.github.io/2020/09/25/js原生时间格式化/</id>
+    <published>2020-09-25T02:00:38.000Z</published>
+    <updated>2020-09-25T03:15:39.625Z</updated>
+    
+    <content type="html"><![CDATA[<p>js 原生的时间格式化挺强的，内部用的是 <code>Intl.DateTimeFormat()</code> ，附 文档[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat</a>] , <code>Intl</code> 对象是 <code>ECMAScript</code> 国际化 <code>API</code> 的名称空间，它提供语言敏感的字符串比较、数字格式化以及日期和时间格式化。</p><p>以下附实用：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2020/9/25 09:40:50'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 日期</span></span><br><span class="line"><span class="built_in">console</span>.log(date.toLocaleDateString(<span class="string">"zh-CN"</span>));</span><br><span class="line"><span class="comment">// 2020/9/25</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 时间</span></span><br><span class="line"><span class="built_in">console</span>.log(date.toLocaleTimeString(<span class="string">"zh-CN"</span>, &#123;</span><br><span class="line">  hour12: <span class="literal">false</span></span><br><span class="line">&#125;));</span><br><span class="line"><span class="comment">// 09:40:50 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="built_in">console</span>.log(date.toLocaleString(<span class="string">"zh-CN"</span>, &#123; </span><br><span class="line">  hour12: <span class="literal">false</span></span><br><span class="line"> &#125;));</span><br><span class="line"> <span class="comment">// 2020/9/25 09:40:50 </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(date.toLocaleString(<span class="string">"hc"</span>, &#123; </span><br><span class="line">  hour12: <span class="literal">false</span>,</span><br><span class="line">  year: <span class="string">'numeric'</span>,</span><br><span class="line">  month: <span class="string">'2-digit'</span>,</span><br><span class="line">  day: <span class="string">'2-digit'</span>,</span><br><span class="line">  hour: <span class="string">'2-digit'</span>,</span><br><span class="line">  minute: <span class="string">'2-digit'</span>,</span><br><span class="line">  second: <span class="string">'2-digit'</span></span><br><span class="line"> &#125;));</span><br><span class="line"> <span class="comment">// 2020/09/25 09:40:50</span></span><br></pre></td></tr></table></figure><p></p><p><strong>Tip:</strong> 每个日期时间组件属性的默认值都是 <code>undefined</code>，但如果所有组件属性都未定义，则假定年、月和日为 <code>numeric</code> 。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;js 原生的时间格式化挺强的，内部用的是 &lt;code&gt;Intl.DateTimeFormat()&lt;/code&gt; ，附 文档[&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
+    
+    </summary>
+    
+      <category term="前端" scheme="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="javascript" scheme="https://jintang.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>EM算法</title>
@@ -394,9 +416,9 @@ npx workbox injectManifest
     
       <category term="react-native" scheme="https://jintang.github.io/tags/react-native/"/>
     
-      <category term="vue" scheme="https://jintang.github.io/tags/vue/"/>
-    
       <category term="react" scheme="https://jintang.github.io/tags/react/"/>
+    
+      <category term="vue" scheme="https://jintang.github.io/tags/vue/"/>
     
   </entry>
   
@@ -441,28 +463,6 @@ npx workbox injectManifest
     
     
       <category term="智能合约" scheme="https://jintang.github.io/tags/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node常用</title>
-    <link href="https://jintang.github.io/2018/07/16/node%E5%B8%B8%E7%94%A8/"/>
-    <id>https://jintang.github.io/2018/07/16/node常用/</id>
-    <published>2018-07-16T01:53:51.000Z</published>
-    <updated>2018-08-12T07:26:35.252Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="node常用命令"><a href="#node常用命令" class="headerlink" title="node常用命令"></a>node常用命令</h2><h3 id="进入、退出命令行"><a href="#进入、退出命令行" class="headerlink" title="进入、退出命令行"></a>进入、退出命令行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入命令行</span></span><br><span class="line">node</span><br><span class="line"><span class="comment"># 正常退出退出命令行</span></span><br><span class="line">.<span class="built_in">exit</span></span><br><span class="line"><span class="comment"># 强制退出</span></span><br><span class="line">ctrl + c <span class="comment"># 两次</span></span><br></pre></td></tr></table></figure><h3 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h3><p>谷歌浏览器内置了 <code>node</code> 的调试器，可以很方便的打断点，看 log , 我们需要以调试模式运行 <code>node</code> 程序<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node --inspect index</span><br><span class="line"><span class="comment"># 也是以node --inspect的方式启动，只不过加了supervisor的保存即时生效</span></span><br><span class="line">supervisor --inspect index</span><br></pre></td></tr></table></figure><p></p><h3 id="软连接全局-node-包"><a href="#软连接全局-node-包" class="headerlink" title="软连接全局 node 包"></a>软连接全局 node 包</h3><p>我们可以通过 <code>npm install -g 包名</code> 的方式全局安装第远程包，但对于没有在 <code>node</code> 仓库的包无能为力。这儿有另一种方法全局添加自己写的包<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> 文件夹</span><br><span class="line">npm link</span><br></pre></td></tr></table></figure><p></p><p>在全局的包仓库下引用了此仓库，原理类似于快捷方式。然后就可以全局使用自己的包命令了，不想用了的话删除软连接<br></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm unlink</span><br></pre></td></tr></table></figure><p></p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;node常用命令&quot;&gt;&lt;a href=&quot;#node常用命令&quot; class=&quot;headerlink&quot; title=&quot;node常用命令&quot;&gt;&lt;/a&gt;node常用命令&lt;/h2&gt;&lt;h3 id=&quot;进入、退出命令行&quot;&gt;&lt;a href=&quot;#进入、退出命令行&quot; class=&quot;headerlink&quot; title=&quot;进入、退出命令行&quot;&gt;&lt;/a&gt;进入、退出命令行&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 进入命令行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;node&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 正常退出退出命令行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;.&lt;span class=&quot;built_in&quot;&gt;exit&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 强制退出&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ctrl + c &lt;span class=&quot;comment&quot;&gt;# 两次&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&quot;调试模式&quot;&gt;&lt;a href=&quot;#调试模式&quot; class=&quot;headerlink&quot; title=&quot;调试模式&quot;&gt;&lt;/a&gt;调试模式&lt;/h3&gt;&lt;p&gt;谷歌浏览器内置了 &lt;code&gt;node&lt;/code&gt; 的调试器，可以很方便的打断点，看 log , 我们需要以调试模式运行 &lt;code&gt;node&lt;/code&gt; 程序&lt;br&gt;&lt;/p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;node --inspect index&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 也是以node --inspect的方式启动，只不过加了supervisor的保存即时生效&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;supervisor --inspect index&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;&lt;h3 id=&quot;软连接全局-node-包&quot;&gt;&lt;a href=&quot;#软连接全局-node-包&quot; class=&quot;headerlink&quot; title=&quot;软连接全局 node 包&quot;&gt;&lt;/a&gt;软连接全局 node 包&lt;/h3&gt;&lt;p&gt;我们可以通过 &lt;code&gt;npm install -g 包名&lt;/code&gt; 的方式全局安装第远程包，但对于没有在 &lt;code&gt;node&lt;/code&gt; 仓库的包无能为力。这儿有另一种方法全局添加自己写的包&lt;br&gt;&lt;/p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; 文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm link&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;在全局的包仓库下引用了此仓库，原理类似于快捷方式。然后就可以全局使用自己的包命令了，不想用了的话删除软连接&lt;br&gt;&lt;/p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm unlink&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="node" scheme="https://jintang.github.io/categories/node/"/>
-    
-    
-      <category term="node" scheme="https://jintang.github.io/tags/node/"/>
     
   </entry>
   

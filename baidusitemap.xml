@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://jintang.github.io/2020/09/25/js%E5%8E%9F%E7%94%9F%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
+    <lastmod>2020-09-25T03:15:39.625Z</lastmod>
+    <data>
+        <display>
+        <title>js原生时间格式化</title>
+        <pubTime>2020-09-25T02:00:38.000Z</pubTime>
+        
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://jintang.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jintang.github.io/2016/06/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2020-08-07T01:34:48.270Z</lastmod>
     <data>
@@ -236,9 +256,9 @@
         
         <tag>react-native</tag>
          
-        <tag>vue</tag>
-         
         <tag>react</tag>
+         
+        <tag>vue</tag>
          
          
            
