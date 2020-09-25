@@ -40,7 +40,7 @@ git checkout -b 本地分支名x origin/远程分支名x
 ```
 创建新分支并关联到远程分支，不需要先commit或stash本地change。直接以远程分支名生成本地分支名，本地的change依然存在
 ``` shell
-git checkout -d origin/远程分支名x
+git checkout -t origin/远程分支名x
 ```
 查看本地分支与远程分支的关联关系
 ``` shell
